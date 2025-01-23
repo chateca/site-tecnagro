@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 
 function Parceiros() {
-    const [goal, setGoal] = React.useState(350)
+
     useEffect(()=>{
         
         document.querySelectorAll(".conteudo-actividades").forEach((item) => {
@@ -19,10 +19,7 @@ function Parceiros() {
       })
       },[])
  
-    function onClick(adjustment: number) {
-      setGoal(Math.max(200, Math.min(400, goal + adjustment)))
-    }
-
+   
    
    
   return (

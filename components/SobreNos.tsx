@@ -2,12 +2,12 @@
 import * as React from 'react'
 import {animate, scroll, stagger} from "motion"
 import { useEffect } from "react";
-import Image from 'next/image';
+
  
 
 
 function SobreNos() {
-    const [goal, setGoal] = React.useState(350)
+   
     useEffect(()=>{
         document.querySelectorAll(".conteudo-container").forEach((item) => {
           scroll(animate(item, { opacity: [0, 1, 1, 0], x: [100, 0] }, { delay: stagger(0.1) }), {

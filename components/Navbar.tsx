@@ -7,8 +7,8 @@ function Navbar() {
     useEffect(()=>{
        
         document.addEventListener('scroll', ()=>{
-            const ative:any =  window.scrollY;
-            let nav:any = document.querySelector('.nav')
+            const ative =  window.scrollY;
+            const  nav = document.querySelector('.nav')
             if(ative > 20){
               
                 nav?.classList.add('bg-green-500')
