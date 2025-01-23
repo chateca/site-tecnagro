@@ -91,8 +91,8 @@ function Noterreno(){
          </div>
 
           <div className='flex flex-col w-full h-full'>
-              <div className='w-[100px] h-[100px] '>
-             
+              <div className='w-[100%] h-[100%] '>
+              <video className='size-full' controls autoPlay={true} loop={true}  src="/video/video.mp4"/>
               
               </div>
           </div>
