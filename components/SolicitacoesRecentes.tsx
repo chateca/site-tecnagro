@@ -14,7 +14,7 @@ type Optios = [{
 }]
 
 function SolicitacoesRecentes({dados}:Props) {
-    const arrayItems:Optios = JSON.parse(dados)
+    const arrayItems:Optios = JSON.parse(dados)||[]
     
   return (
     <div className='w-full h-full mt-3'>
@@ -29,7 +29,7 @@ function SolicitacoesRecentes({dados}:Props) {
       </ul>
      <ul className='mt-4 flex flex-col gap-4'>
         {
-            arrayItems.map((item)=>(
+            arrayItems?.map((item)=>(
                 <Link key={item._id}  href="/">
                 <li className='flex gap-4 bg-yellow-300 p-2 rounded-xl justify-between'>
                     <span className='text-[14px] font-semibold  uppercase'>{item.nome}</span>
