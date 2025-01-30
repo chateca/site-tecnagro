@@ -7,8 +7,15 @@ interface Props{
     dados:string
 }
 
+type Optios = [{
+    _id:string, 
+    nome:string, 
+    dataRegistro:string
+}]
+
 function SolicitacoesRecentes({dados}:Props) {
-    const arrayItems = JSON.parse(dados)
+    const arrayItems:Optios = JSON.parse(dados)
+    
   return (
     <div className='w-full h-full mt-3'>
     <span className='text-[24px] font-semibold text-gray-500 '>Solicitações de produtos recentes:</span>
@@ -22,7 +29,7 @@ function SolicitacoesRecentes({dados}:Props) {
       </ul>
      <ul className='mt-4 flex flex-col gap-4'>
         {
-            arrayItems.map((item:any)=>(
+            arrayItems.map((item)=>(
                 <Link key={item._id}  href="/">
                 <li className='flex gap-4 bg-yellow-300 p-2 rounded-xl justify-between'>
                     <span className='text-[14px] font-semibold  uppercase'>{item.nome}</span>
