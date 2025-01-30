@@ -27,12 +27,15 @@ function Parceiros() {
     
       
       <div className='flex  gap-4 p-12  w-full justify-between bg-green-1/30 rounded-2xl'>
-            <Image
+      
+      <Image
             src={"/icons/gene-sequence-svgrepo-com.svg"}
             alt='Icons'
             width={100}
             height={100}
             />
+         
+           
 
             <Image
             src={"/icons/gene-sequence-svgrepo-com.svg"}

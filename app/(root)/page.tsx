@@ -1,17 +1,20 @@
 
 import ActividadesRecentes from "@/components/ActividadesRecentes";
 import BannerComponent from "@/components/BannerComponent";
+import Comentarios from "@/components/Comentarios";
 import Consultorias from "@/components/Consultorias";
+import Contacto from "@/components/Contacto";
 import Noterreno from "@/components/Noterreno";
 import Parceiros from "@/components/Parceiros";
 import ServicesComponents from "@/components/ServicesComponents";
+import SobreNos from "@/components/SobreNos";
 
 
 
 export default function Home() {
 
   return (
-    <section  className="flex flex-col w-full ">
+    <section  className="flex flex-col w-full bg-[url('/assets/fundoGeral.jpg')]   bg-scroll">
        <BannerComponent/>
        <div className="relative w-full">
       <ServicesComponents/>
@@ -43,6 +46,20 @@ export default function Home() {
         <Parceiros/>
         </div>
     
+        <div id="actividades" className="flex  flex-col w-full top-20 ">
+        
+        <SobreNos/>
+        </div>
+        <div id="actividades" className="flex  flex-col w-full top-20 ">
+        
+        <Contacto/>
+        </div>
+
+
+        <div id="actividades" className="flex  flex-col w-full top-20 ">
+        
+        <Comentarios/>
+        </div>
     </section>
   );
 }

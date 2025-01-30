@@ -2,6 +2,7 @@
 import React, { useEffect} from 'react'
 import { animate, stagger } from 'motion'
 import { useRouter } from 'next/navigation'
+ 
 
 function ServicesComponents() {
 
@@ -13,10 +14,7 @@ const router = useRouter()
    
 
   return (
-    <div
-     className="absolute -top-[25rem] max-xl:-top-[15rem]  w-full  grid grid-cols-3 gap-8 max-sm:gap-3 px-[18rem] max-sm:px-2 max-xl:px-[10rem] "
-   
-     >
+    <div className="absolute -top-[25rem] max-xl:-top-[15rem]  w-full  grid grid-cols-3 gap-8 max-sm:gap-3 px-[18rem] max-sm:px-2 max-xl:px-[10rem] ">
     <div onClick={()=>router.push('#servicos')} className="relative cursor-pointer flex h-[20rem]  max-xl:h-[12rem] w-full bg-[url('/assets/img9.png')] bg-cover  rounded-xl items-center justify-center servicoItem ">
       
     <div className='flex flex-col items-center justify-center rounded-2xl p-4  z-20'>
@@ -38,6 +36,8 @@ const router = useRouter()
     </div>
     </div>
 
+
+       
 
     </div>
   )
