@@ -13,7 +13,10 @@ export const connectDB = async ()=>{
         }
 
         try {
-            await mongoose.connect(process.env.MONGODB_URL)
+            await mongoose.connect(process.env.MONGODB_URL, {
+                bufferCommands: false,
+              serverSelectionTimeoutMS: 5000, //
+            })
             isConnected = true;
             console.log("Coneção com o mongodb Criada com sucesso")
         } catch (error) {
