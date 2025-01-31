@@ -18,7 +18,7 @@ async function page() {
   return (
     <section className='p-4'>
     <span className=' text-[28px] font-bold text-green-2'>
-         TecnoAgro Admin
+         TecnAgro Admin
     </span>
 
     <div className='border-[1px] border-black-3 rounded-2xl p-4'>

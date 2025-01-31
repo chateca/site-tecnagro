@@ -35,9 +35,10 @@ import { CrearPedido } from '@/lib/actions/pedidos.actions'
 
 const formSchema = z.object({
     nome:z.string().min(3), 
-    telefone:z.string().min(9).max(9),
+    telefone:z.string().min(9).max(17),
     email: z.string().email(),
-    descricao:z.string().min(3).max(100),
+    descricao:z.string().min(3),
+    endereco:z.string().min(3).max(50),
   })
 
   
@@ -100,6 +101,7 @@ function Consultorias() {
                   email: "",
                   descricao:"",
                   telefone:"",
+                  endereco:""
                 
                 },
               })
@@ -252,7 +254,22 @@ function Consultorias() {
                                           <FormItem>
                                           <FormLabel>Telefone</FormLabel>
                                           <FormControl>
-                                              <Input placeholder="Email" {...field} />
+                                              <Input placeholder="+244 999 999 999" {...field} />
+                                          </FormControl>
+                                         
+                                          <FormMessage />
+                                          </FormItem>
+                                      )}
+                                      />
+                                      
+                                       <FormField
+                                      control={form.control}
+                                      name="endereco"
+                                      render={({ field }) => (
+                                          <FormItem>
+                                          <FormLabel>Seu endereço completo</FormLabel>
+                                          <FormControl>
+                                              <Input placeholder="endereco inclui(Pais, Provincia, Municipio e Bairro)" {...field} />
                                           </FormControl>
                                          
                                           <FormMessage />

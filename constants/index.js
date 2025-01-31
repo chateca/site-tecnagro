@@ -2,7 +2,7 @@ export const links = [
     
     {
         nome:'Actividades', 
-        link:'/',
+        link:'/actividades',
         icon:''
     }, 
     {

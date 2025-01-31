@@ -5,6 +5,7 @@ const pedidosShema = new mongoose.Schema({
   email:String, 
   telefone:String,
   descricao:String, 
+  endereco:String,
   status:{
    type:String, 
    default:"Pendente"

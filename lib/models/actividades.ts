@@ -4,10 +4,7 @@ const actividadeShema = new mongoose.Schema({
   titulo:String, 
   imagem:String,
   descricao:String, 
-  status:{
-   type:String, 
-   default:"Pendente"
-  },
+  
   ativo:{
     type:Boolean, 
     default:false
@@ -18,5 +15,5 @@ const actividadeShema = new mongoose.Schema({
   }
 })
 
-const Actividade = mongoose.models.Pedidos||mongoose.model("Actividade", actividadeShema)
+const Actividade = mongoose.models.Actividade||mongoose.model("Actividade", actividadeShema)
 export default Actividade
