@@ -14,7 +14,7 @@ interface DadosPedido{
 
 export const CrearPedido = async (dados:DadosPedido)=>{
     try {
-        connectDB()
+        await connectDB()
         await Pedidos.create(dados)
         revalidatePath("/")
     } catch (error) {
@@ -25,7 +25,7 @@ export const CrearPedido = async (dados:DadosPedido)=>{
 
 export const BuscarPedidos = async ()=>{
     try {
-        connectDB()
+       await  connectDB()
        return  await Pedidos.find({ativo:true}).sort({dataRegsitro:-1}).limit(3)
         
     } catch (error) {
@@ -41,7 +41,7 @@ type DadosAccao = {
 export const AccaoDoPedido = async (dados:DadosAccao)=>{
     try {
         
-        connectDB()
+        await connectDB()
         await Pedidos.findOneAndUpdate({_id:dados.id},{$set : {status:dados.status}})
         revalidatePath("/admin")
     } catch (error) {
@@ -53,7 +53,7 @@ export const AccaoDoPedido = async (dados:DadosAccao)=>{
 export const DescartarPedido = async (id:string)=>{
     try {
         
-        connectDB()
+         await connectDB()
         await Pedidos.findOneAndUpdate({_id:id},{$set : {ativo:false}})
         revalidatePath("/admin")
     } catch (error) {
