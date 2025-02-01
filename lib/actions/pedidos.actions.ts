@@ -33,6 +33,28 @@ export const BuscarPedidos = async ()=>{
     }
 }
 
+export const BuscarPedidosTodos = async ()=>{
+    try {
+       connectDB()
+       return  await Pedidos.find({ativo:true}).sort({dataRegsitro:-1})
+        
+    } catch (error) {
+        throw new Error("não foi possivel buscar os pedido",{cause:error})
+    }
+}
+
+export const BuscarPedidosNaoAtivos = async ()=>{
+    try {
+       connectDB()
+       return  await Pedidos.find({ativo:false}).sort({dataRegsitro:-1})
+        
+    } catch (error) {
+        throw new Error("não foi possivel buscar os pedido",{cause:error})
+    }
+}
+
+
+
 type DadosAccao = {
     id:string, 
     status:string

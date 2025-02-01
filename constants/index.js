@@ -1,4 +1,9 @@
 export const links = [
+    {
+        nome:'Home', 
+        link:'/admin',
+        icon:''
+    }, 
     
     {
         nome:'Actividades', 
@@ -7,12 +12,12 @@ export const links = [
     }, 
     {
         nome:'Comentarios', 
-        link:'/',
+        link:'/comentarios',
         icon:''
     }, 
     {
         nome:'solicitações de compra', 
-        link:'/',
+        link:'/solicitacaoDeCompras',
         icon:''
     }
 ]
