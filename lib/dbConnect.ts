@@ -3,7 +3,7 @@ import mongoose from "mongoose"
 let isConnected = false; 
 
 export const connectDB = async ()=>{
-    mongoose.set("strictQuery", true)
+    mongoose.set("strictQuery", false)
 
     if(!process.env.NEXT_PUBLIC_MONGODB_URL) return console.log("URL de coneção não encontrada")
 
