@@ -5,7 +5,7 @@ let isConnected = false;
 export const connectDB = async ()=>{
     mongoose.set("strictQuery", true)
 
-    if(!process.env.MONGODB_URL) return console.log("URL de coneção não encontrada")
+    if(!process.env.NEXT_PUBLIC_MONGODB_URL) return console.log("URL de coneção não encontrada")
 
         if(isConnected){
             console.log("Já existe uma coneção estabelecida");
@@ -13,7 +13,7 @@ export const connectDB = async ()=>{
         }
 
         try {
-            await mongoose.connect(process.env.MONGODB_URL)
+            await mongoose.connect(process.env.NEXT_PUBLIC_MONGODB_URL)
             isConnected = true;
             console.log("Coneção com o mongodb Criada com sucesso")
         } catch (error) {
