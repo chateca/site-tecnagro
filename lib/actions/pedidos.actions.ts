@@ -14,7 +14,7 @@ interface DadosPedido{
 
 export const CrearPedido = async (dados:DadosPedido)=>{
     try {
-        await connectDB()
+        connectDB()
         await Pedidos.create(dados)
         revalidatePath("/")
     } catch (error) {
@@ -25,7 +25,7 @@ export const CrearPedido = async (dados:DadosPedido)=>{
 
 export const BuscarPedidos = async ()=>{
     try {
-       await  connectDB()
+       connectDB()
        return  await Pedidos.find({ativo:true}).sort({dataRegsitro:-1}).limit(3)
         
     } catch (error) {

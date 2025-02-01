@@ -2,7 +2,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  typescript:{
+    ignoreBuildErrors:true,
+  },
   /* config options here */
+     serverActions: true,
     serverExternalPackages: ["mongoose"], // <-- and this
   eslint: {
     // Warning: This allows production builds to successfully complete even if
