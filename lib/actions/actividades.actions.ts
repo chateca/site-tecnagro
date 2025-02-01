@@ -88,7 +88,7 @@ type DadosEditar = {
 export const EditarPublicacao = async (dados:DadosEditar)=>{
     try {
         
-        await connectDB()
+        connectDB()
         await Actividade.findOneAndUpdate({_id:dados.id},{$set : {titulo:dados.titulo, descricao:dados.descricao, imagem:dados.imagem }})
         revalidatePath("/actividades")
     } catch (error) {
@@ -100,7 +100,7 @@ export const EditarPublicacao = async (dados:DadosEditar)=>{
 export const DescartarPublicacao = async (id:string)=>{
     try {
         
-        await connectDB()
+        connectDB()
         await Actividade.findOneAndDelete({_id:id})
         revalidatePath("/actividades")
     } catch (error) {

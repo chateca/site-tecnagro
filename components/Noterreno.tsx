@@ -35,8 +35,8 @@ function Noterreno(){
         
         <div className='grid grid-cols-2 grid-flow-col max-sm:grid-flow-row max-sm:grid-cols-1 gap-1 p-8  max-sm:p-8 self-center'>
          <div className='grid grid-cols-2 w-full p-4'>
-         <div className=" w-full  justify-between items-center bg-black-3 rounded-xl conteudo-actividades">
-            <div className=' relative flex w-full h-[300] max-sm:h-[100px]'>
+         <div className=" w-full  justify-between items-center  rounded-xl conteudo-actividades">
+            <div className=' relative flex w-full h-full'>
               <Image
               src={"/assets/img12.jpg"}
               alt='consultoria'
@@ -47,8 +47,8 @@ function Noterreno(){
           
           </div>
 
-          <div className=" flex w-full flex-col  justify-between items-center bg-green-3 rounded-xl conteudo-actividades">
-            <div className='relative flex w-full h-[300px] max-sm:h-[100px]'>
+          <div className=" flex w-full flex-col  justify-between items-center  rounded-xl conteudo-actividades">
+            <div className='relative flex w-full h-full'>
               <Image
               src={"/assets/img14.jpg"}
               alt='consultoria'
@@ -59,8 +59,8 @@ function Noterreno(){
            
           </div>
 
-          <div className="flex w-full flex-col justify-between items-center bg-green-3 rounded-xl conteudo-actividades">
-            <div className='relative flex w-full h-[300px] max-sm:h-[100px]'>
+          <div className="flex w-full flex-col justify-between items-center rounded-xl conteudo-actividades">
+            <div className='relative flex w-full h-full'>
               <Image
               src={"/assets/img15.jpg"}
               alt='consultoria'
@@ -73,8 +73,8 @@ function Noterreno(){
           </div>
         
 
-          <div className="flex w-full flex-col  justify-between items-center bg-green-1 rounded-xl conteudo-actividades">
-          <div className='relative flex h-[300px] w-full max-sm:h-[100px]'>
+          <div className="flex w-full flex-col  justify-between items-center  rounded-xl conteudo-actividades">
+          <div className='relative flex h-full w-full '>
               <Image
               src={"/assets/img13.jpg"}
               alt='consultoria'

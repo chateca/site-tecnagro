@@ -41,7 +41,7 @@ type DadosAccao = {
 export const AccaoDoPedido = async (dados:DadosAccao)=>{
     try {
         
-        await connectDB()
+        connectDB()
         await Pedidos.findOneAndUpdate({_id:dados.id},{$set : {status:dados.status}})
         revalidatePath("/admin")
     } catch (error) {
@@ -53,7 +53,7 @@ export const AccaoDoPedido = async (dados:DadosAccao)=>{
 export const DescartarPedido = async (id:string)=>{
     try {
         
-         await connectDB()
+         connectDB()
         await Pedidos.findOneAndUpdate({_id:id},{$set : {ativo:false}})
         revalidatePath("/admin")
     } catch (error) {
