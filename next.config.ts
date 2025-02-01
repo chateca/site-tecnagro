@@ -1,13 +1,17 @@
-/** @type {import('next').NextConfig} */
-import type { NextConfig } from "next";
+/**
+ * @type {import('next').NextConfig}
+ */
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   typescript:{
     ignoreBuildErrors:true,
   },
   /* config options here */
-     serverActions: true,
+  experimental: {
+    serverActions: true,
     serverExternalPackages: ["mongoose"], // <-- and this
+  },
+    
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
@@ -18,4 +22,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig 
