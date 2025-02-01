@@ -15,7 +15,7 @@ const getDados = async ()=>{
 
 
 async function page() {
-  const dados = await getDados()||{pedidosRecentes:[]}
+  const dados = await getDados()
   
   return (
     <section className='p-4'>
