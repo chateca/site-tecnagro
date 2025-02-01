@@ -43,6 +43,38 @@ export const BuscarPedidosTodos = async ()=>{
     }
 }
 
+export const BuscarPedidosAceites = async ()=>{
+    try {
+       connectDB()
+       return  await Pedidos.find({status:'Aceite'}).sort({dataRegsitro:-1})
+        
+    } catch (error) {
+        throw new Error("não foi possivel buscar os pedido",{cause:error})
+    }
+}
+
+export const BuscarPedidosNegados = async ()=>{
+    try {
+       connectDB()
+       return  await Pedidos.find({status:'Negado'}).sort({dataRegsitro:-1})
+        
+    } catch (error) {
+        throw new Error("não foi possivel buscar os pedido",{cause:error})
+    }
+}
+
+export const BuscarPedidosPendente = async ()=>{
+    try {
+       connectDB()
+       return  await Pedidos.find({status:'Pendente'}).sort({dataRegsitro:-1})
+        
+    } catch (error) {
+        throw new Error("não foi possivel buscar os pedido",{cause:error})
+    }
+}
+
+
+
 export const BuscarPedidosNaoAtivos = async ()=>{
     try {
        connectDB()
