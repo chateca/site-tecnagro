@@ -3,6 +3,7 @@ import SolicitacoesRecentes from '@/components/SolicitacoesRecentes'
 import { BuscarPedidos } from '@/lib/actions/pedidos.actions'
 import React from 'react'
 
+
 const getDados = async ()=>{
   try {
     const pedidosRecentes = await BuscarPedidos()
@@ -12,8 +13,9 @@ const getDados = async ()=>{
   }
 }
 
+
 async function page() {
-  const dados = await getDados()
+  const dados = await getDados()||{pedidosRecentes:[]}
   
   return (
     <section className='p-4'>
