@@ -24,6 +24,28 @@ export const CrearPublicacao = async (dados:DadosPedido)=>{
     }
 }
 
+export const TotalActividades = async ()=>{
+    try {
+        connectDB()
+       return await Actividade.find().select('_id')
+        
+    } catch (error) {
+        throw new Error("não foi possivel buscar o pedido", {cause:error})
+    }
+}
+
+export const BuscarActividadesActivasPaginaPrincipal = async ()=>{
+    try {
+        connectDB()
+         const dados =   await Actividade.find({ativo:true}).sort({dataRegsitro:-1}).limit(4)
+        return JSON.stringify(dados)
+    } catch (error) {
+        throw new Error("não foi possivel buscar os pedido",{cause:error})
+    }
+}
+
+
+
 
 export const BuscarActividadesActivas = async ()=>{
     try {

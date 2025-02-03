@@ -34,13 +34,19 @@ interface Props{
   dados:string
 }
 
-type TodasActividades = {
- todas:[{ _id:string, 
+type Actividades = {
+  _id:string,
   titulo:string, 
   imagem:string, 
   descricao:string,
   dataRegistro:string, 
- }]
+  ativo:boolean
+}[]
+
+type TodasActividades = {
+ todas:Actividades, 
+ activas:Actividades, 
+ naoActivas:Actividades
 
 }
 
@@ -60,6 +66,7 @@ const formSchema = z.object({
 
 function PublicacoesAdmin({dados}:Props) {
   const [imageUrl , setImageUrl] = useState("")
+  const [menuNavegacao , setMenuNavegacao] = useState('')
   const [dadosActuais , setDadosActuais] = useState<{id:string, titulo:string, imagem:string, descricao:string}>({id:"", imagem:"", descricao:"", titulo:""})
 const  router = useRouter()
        const form = useForm<z.infer<typeof formSchema>>({
@@ -104,6 +111,147 @@ const  router = useRouter()
           }
   
       }
+
+      const todas = ()=>{
+        return (
+          <div className='grid grid-cols-4 gap-4 w-full mt-2 p-4'>
+          {
+           dadosActividade.todas.map((item)=>(
+                  <div key={item._id} className="flex flex-col  justify-between items-center rounded-xl ">
+                   <div className='relative flex w-full h-[200px]'>
+                     <Image
+                     src={item.imagem}
+                     alt='consultoria'
+                     fill
+                     className='absolute object-cover'
+                     />
+                   </div>
+                   <div className='flex size-full justify-between flex-col gap-2 p-2 bg-black-3 '>
+                        <h1 className='text-white font-bold text-[18px] max-xl:text-[20px]'>{item.titulo}</h1>
+                        <span className='text-[14px] font-semibold text-white text-wrap break-words truncate h-[100px] p-4  tracking-tighter'>{item.descricao}</span>
+                         <div className='flex w-full '>
+                       <Drawer>
+                                                           <DrawerTrigger asChild>
+                                                               <Button onClick={()=>setDadosActuais({id:item._id, titulo:item.titulo, imagem:item.imagem, descricao:item.descricao})} variant="outline">Ver detalhes</Button>
+                                                           </DrawerTrigger>
+                                                            {
+                                                             detalhesPublicacao({
+                                                               id : item._id,
+                                                               titulo:item.titulo, 
+                                                               descricao:item.descricao, 
+                                                               imagem:item.imagem, 
+                                                             
+                                                             }
+                                                             )
+                                                            }
+                                                       </Drawer>
+                         </div>
+                         <span className={`text-[14px] font-semibold upercase ${item.ativo ? 'text-green-3' : 'text-yellow-500'}`}>{item.ativo ?'Ativa':'Não Ativa'}</span>
+                   </div>
+       
+                 </div>
+           ))
+          }
+       
+       
+                 
+           </div>
+        )
+      } 
+
+      const ativas = ()=>{
+        return (
+          <div className='grid grid-cols-4 gap-4 w-full mt-2 p-4'>
+          {
+           dadosActividade.activas.map((item)=>(
+                  <div key={item._id} className="flex flex-col  justify-between items-center rounded-xl ">
+                   <div className='relative flex w-full h-[200px]'>
+                     <Image
+                     src={item.imagem}
+                     alt='consultoria'
+                     fill
+                     className='absolute object-cover'
+                     />
+                   </div>
+                   <div className='flex size-full justify-between flex-col gap-2 p-2 bg-black-3 '>
+                        <h1 className='text-white font-bold text-[18px] max-xl:text-[20px]'>{item.titulo}</h1>
+                        <span className='text-[14px] font-semibold text-white text-wrap break-words truncate h-[100px] p-4  tracking-tighter'>{item.descricao}</span>
+                         <div className='flex w-full '>
+                       <Drawer>
+                                                           <DrawerTrigger asChild>
+                                                               <Button onClick={()=>setDadosActuais({id:item._id, titulo:item.titulo, imagem:item.imagem, descricao:item.descricao})} variant="outline">Ver detalhes</Button>
+                                                           </DrawerTrigger>
+                                                            {
+                                                             detalhesPublicacao({
+                                                               id : item._id,
+                                                               titulo:item.titulo, 
+                                                               descricao:item.descricao, 
+                                                               imagem:item.imagem, 
+                                                             
+                                                             }
+                                                             )
+                                                            }
+                                                       </Drawer>
+                         </div>
+                         <span className={`text-[14px] font-semibold upercase ${item.ativo ? 'text-green-3' : 'text-yellow-500'}`}>{item.ativo ?'Ativa':'Não Ativa'}</span>
+                   </div>
+       
+                 </div>
+           ))
+          }
+       
+       
+                 
+           </div>
+        )
+      } 
+
+      const naoAtivas = ()=>{
+        return (
+          <div className='grid grid-cols-4 gap-4 w-full mt-2 p-4'>
+          {
+           dadosActividade.naoActivas.map((item)=>(
+                  <div key={item._id} className="flex flex-col  justify-between items-center rounded-xl ">
+                   <div className='relative flex w-full h-[200px]'>
+                     <Image
+                     src={item.imagem}
+                     alt='consultoria'
+                     fill
+                     className='absolute object-cover'
+                     />
+                   </div>
+                   <div className='flex size-full justify-between flex-col gap-2 p-2 bg-black-3 '>
+                        <h1 className='text-white font-bold text-[18px] max-xl:text-[20px]'>{item.titulo}</h1>
+                        <span className='text-[14px] font-semibold text-white text-wrap break-words truncate h-[100px] p-4  tracking-tighter'>{item.descricao}</span>
+                         <div className='flex w-full '>
+                       <Drawer>
+                                                           <DrawerTrigger asChild>
+                                                               <Button onClick={()=>setDadosActuais({id:item._id, titulo:item.titulo, imagem:item.imagem, descricao:item.descricao})} variant="outline">Ver detalhes</Button>
+                                                           </DrawerTrigger>
+                                                            {
+                                                             detalhesPublicacao({
+                                                               id : item._id,
+                                                               titulo:item.titulo, 
+                                                               descricao:item.descricao, 
+                                                               imagem:item.imagem, 
+                                                             
+                                                             }
+                                                             )
+                                                            }
+                                                       </Drawer>
+                         </div>
+                         <span className={`text-[14px] font-semibold upercase ${item.ativo ? 'text-green-3' : 'text-yellow-500'}`}>{item.ativo ?'Ativa':'Não Ativa'}</span>
+                   </div>
+       
+                 </div>
+           ))
+          }
+       
+       
+                 
+           </div>
+        )
+      } 
 
          async function onSubmit(values: z.infer<typeof formSchema>) {
                   try {
@@ -220,52 +368,20 @@ const  router = useRouter()
     <div className='flex flex-col w-full p-4'>
         <h2 className='text-[18px] font-bold text-gray-400 uppercase'>Publicações criadas : 20</h2>
         <div className='w-full p-2 flex justify-between gap-2'>
-            <button className='flex w-full text-[14px] transition hover:scale-[1.02] duration-75 bg-green-3/30 p-4 font-semibold justify-center uppercase'>Todas</button>
-            <button className='flex w-full text-[14px] transition hover:scale-[1.02] duration-75 bg-green-3/60 p-4 font-semibold justify-center uppercase'>Activas</button>
-            <button className='flex w-full text-[14px] transition hover:scale-[1.02] duration-75 bg-yellow-200/30 p-4 font-semibold justify-center uppercase'>Não Activas</button>
+            <button onClick={()=>setMenuNavegacao('todas')} className='flex w-full text-[14px] transition hover:scale-[1.02] duration-75 bg-green-3/30 p-4 font-semibold justify-center uppercase'>Todas</button>
+            <button  onClick={()=>setMenuNavegacao('ativas')}className='flex w-full text-[14px] transition hover:scale-[1.02] duration-75 bg-green-3/60 p-4 font-semibold justify-center uppercase'>Activas</button>
+            <button onClick={()=>setMenuNavegacao('naoAtivas')} className='flex w-full text-[14px] transition hover:scale-[1.02] duration-75 bg-yellow-200/30 p-4 font-semibold justify-center uppercase'>Não Activas</button>
 
         </div>
-    <div className='grid grid-cols-4 gap-4 w-full mt-2 p-4'>
-   {
-    dadosActividade.todas.map((item)=>(
-           <div key={item._id} className="flex flex-col  justify-between items-center rounded-xl ">
-            <div className='relative flex w-full h-[200px]'>
-              <Image
-              src={item.imagem}
-              alt='consultoria'
-              fill
-              className='absolute object-cover'
-              />
-            </div>
-            <div className='flex size-full flex-col gap-2 p-2 bg-black-3 '>
-                 <h1 className='text-white font-bold text-[18px] max-xl:text-[20px]'>{item.titulo}</h1>
-                 <span className='text-[14px] font-semibold text-white text-wrap break-words truncate h-[100px] p-4  tracking-tighter'>{item.descricao}</span>
-                  <div className='flex w-full '>
-                <Drawer>
-                                                    <DrawerTrigger asChild>
-                                                        <Button onClick={()=>setDadosActuais({id:item._id, titulo:item.titulo, imagem:item.imagem, descricao:item.descricao})} variant="outline">Ver detalhes</Button>
-                                                    </DrawerTrigger>
-                                                     {
-                                                      detalhesPublicacao({
-                                                        id : item._id,
-                                                        titulo:item.titulo, 
-                                                        descricao:item.descricao, 
-                                                        imagem:item.imagem, 
-                                                      
-                                                      }
-                                                      )
-                                                     }
-                                                </Drawer>
-                  </div>
-            </div>
-           
-          </div>
-    ))
-   }
-
-
-          
-    </div>
+        {
+          menuNavegacao === "todas" ?
+          todas()
+          :menuNavegacao === 'ativas' ?
+          ativas()
+          :menuNavegacao === 'naoAtivas'?
+          naoAtivas()
+          :todas()
+        }
     </div>
   )
 }

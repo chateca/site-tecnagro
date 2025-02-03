@@ -23,6 +23,17 @@ export const CrearPedido = async (dados:DadosPedido)=>{
 }
 
 
+export const TotalPedidos = async ()=>{
+    try {
+       connectDB()
+       return  await Pedidos.find().select('_id')
+        
+    } catch (error) {
+        throw new Error("não foi possivel buscar o total dos pedidos",{cause:error})
+    }
+}
+
+
 export const BuscarPedidos = async ()=>{
     try {
        connectDB()

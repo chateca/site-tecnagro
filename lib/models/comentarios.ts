@@ -19,5 +19,5 @@ const comentarioShema = new mongoose.Schema({
   }
 })
 
-const Comentario = mongoose.models.Pedidos||mongoose.model("Comentario", comentarioShema)
-export default Comentario
+const Comentar = mongoose.models.Comentar||mongoose.model("Comentar", comentarioShema)
+export default Comentar
