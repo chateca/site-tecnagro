@@ -32,13 +32,13 @@ function Parceiros() {
             parceiros.map((item)=>(
               <div
               key={item.id}
-              className='relative flex  h-[200px]'
+              className='relative flex  h-[100px]'
               >
                <Image
               src={`/icons/${item.image}`}
               alt='Icons'
               fill
-               className='bg-cover rounded-lg'
+               className='bg-contain rounded-lg'
               />
               </div>
              
