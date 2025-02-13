@@ -57,9 +57,9 @@ function ActividadesRecentes(){
 
    
   return (
-    <div className="flex flex-col gap-4 p-2 w-full h-full">
-      <div className="flex flex-col items-center justify-center p-4 rounded-2xl bg-green-3 md:w-[50%] w-full self-center conteudo-actividades">
-          <h1 className="md:text-[28px] text-[18px] font-extrabold uppercase font-ibm-plex-serif text-white">Actividades Recentes</h1>
+    <div className="flex flex-col gap-4 p-2 w-full h-full ">
+      <div className="flex flex-col items-center justify-center p-4 rounded-2xl  md:w-[50%] w-full self-center conteudo-actividades">
+          <h1 className="md:text-[28px] text-[18px] font-extrabold uppercase font-ibm-plex-serif text-green-2">Actividades Recentes</h1>
             <div className="w-full h-1 bg-green-2" />
         </div>
         <div className='grid grid-cols-4 max-sm:grid-cols-2 gap-4 md:p-12 p-2  flex-col w-full'>
@@ -72,7 +72,7 @@ function ActividadesRecentes(){
               src={item.imagem}
               alt='consultoria'
               fill
-              className='absolute object-cover size-full'
+              className='absolute object-cover rounded-t-xl size-full'
               />
             </div>
             <div className='flex flex-col w-full gap-2 p-2 '>
@@ -97,11 +97,8 @@ function ActividadesRecentes(){
                        fill
                        className='roundend-xl bg-cover'
                        />
-                       
-                     
                     </div>
                     <DrawerFooter>
-                        
                         <DrawerClose asChild>
                         <Button variant="outline">Sair</Button>
                         </DrawerClose>

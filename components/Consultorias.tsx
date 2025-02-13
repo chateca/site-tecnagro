@@ -332,21 +332,21 @@ function Consultorias() {
         <div className='grid  grid-cols-2 w-full self-center'>
          <div className='w-full p-2'>
           <div className='grid grid-cols-2 gap-2'>
-            <div className='relative flex h-[200px] w-full rounded-2xl'>
+            <div className='relative flex lg:h-[200px] xl:h-[500px] w-full rounded-2xl'>
             <Image
               src={"/assets/img4.jpg"}
               alt='consultoria'
               fill
-              className='absolute object-cover size-full rounded-2xl'
+              className='absolute object-cover size-full rounded-2xl w-full brightness-75'
               />
             </div>
 
-            <div className='relative flex h-[200px] w-full rounded-2xl'>
+            <div className='relative flex lg:h-[200px] xl:h-[500px] w-full rounded-2xl'>
             <Image
               src={"/assets/img7.jpg"}
               alt='consultoria'
               fill
-              className='absolute object-cover size-full rounded-2xl'
+              className='absolute object-cover size-full rounded-2xl brightness-75'
               />
             </div>
 
@@ -355,16 +355,16 @@ function Consultorias() {
               src={"/assets/img5.jpg"}
               alt='consultoria'
               fill
-              className='absolute object-cover size-full rounded-2xl'
+              className='absolute object-cover size-full rounded-2xl brightness-75'
               />
             </div>
 
-            <div className='relative flex h-[200px] w-full rounded-2xl'>
+            <div className='relative flex h-[200px]  w-full rounded-2xl'>
             <Image
               src={"/assets/img6.jpg"}
               alt='consultoria'
               fill
-              className='absolute object-cover size-full rounded-2xl'
+              className='absolute object-cover size-full rounded-2xl brightness-75'
               />
             </div>
           </div>
@@ -373,10 +373,10 @@ function Consultorias() {
 
          <div className='w-full hfull flex bg-white '>
             <div className='flex flex-col w-full gap-2 p-2 '>
-                 <h1 className='text-green-2 font-bold text-[18px] max-xl:text-[20px] max-sm:text-[14px]'>Entre os serviços oferecidos, destacamos:</h1>
+                 <h1 className='text-green-2 font-bold lg:text-[18px] xl:text-[28px]  text-[18px] '>Entre os serviços oferecidos, destacamos:</h1>
                 <div className='flex flex-col w-full h-full'>
-                   <ul className='flex flex-col gap-1'>
-                    <li className='flex gap-2 p-1 rounded-3xl bg-green-1'>
+                   <ul className=' relative flex flex-col gap-1 justify-between h-full -right-6 z-20'>
+                    <li className='flex gap-2 p-1 xl:p-4 rounded-l-3xl h-16 bg-gradient-to-r  from-green-1 to-black-3 items-center'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
@@ -385,48 +385,48 @@ function Consultorias() {
                         </span>
                     </li>
 
-                    <li className='flex gap-2 p-1 rounded-3xl bg-green-1/30'>
+                    <li className='flex gap-2 p-1 xl:p-4 xl:h-16 rounded-l-3xl bg-gradient-to-r h- from-green-1 to-black-3 items-center'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
                         <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
-                        Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
+                        Formação em Práticas Agroflorestais 
                         </span>
                     </li>
 
-                    <li className='flex gap-2 p-1 rounded-3xl bg-green-1/30'>
+                    <li className='flex gap-2 p-1 xl:p-4 xl:h-16  rounded-l-3xl bg-gradient-to-r  from-green-1 to-black-3 items-center'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
                         <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
-                        Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
+                        Estudos Ecológicos e Ambientais 
                         </span>
                     </li>
 
-                    <li className='flex gap-2 p-1 rounded-3xl bg-green-1/30'>
+                    <li className='flex gap-2 p-1 xl:p-4 xl:h-16  rounded-l-3xl bg-gradient-to-r  from-green-1 to-black-3 items-center'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
                         <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
-                        Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
+                        Instalação e Montagem de Sistemas de Irrigação 
                         </span>
                     </li>
 
-                    <li className='flex gap-2 p-1 rounded-3xl bg-green-1/30'>
+                    <li className='flex gap-2 p-1 xl:p-4 xl:h-16  rounded-l-3xl bg-gradient-to-r  from-green-1 to-black-3 items-center'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
                         <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
-                        Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
+                        Soluções de Agricultura Digital  
                         </span>
                     </li>
 
-                    <li className='flex gap-2 p-1 rounded-3xl bg-green-1/30'>
+                    <li className='flex gap-2 p-1 xl:p-4 xl:h-16  rounded-l-3xl bg-gradient-to-r  from-green-1 to-black-3 items-center'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
                         <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
-                        Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
+                        Comercialização de Sementes e Produção de Mudas 
                         </span>
                     </li>
                   </ul>   
@@ -444,13 +444,14 @@ function Consultorias() {
             </div>
 
            
-            <div className='relative flex w-[400px] h-full max-sm:h-[150px] max-sm:hidden'>
+            <div className='relative  w-[400px] xl:w-[1000px] h-full '>
               <Image
               src={"/assets/img2.jpg"}
               alt='consultoria'
               fill
               className='object-cover size-full rounded-l-2xl'
               />
+                <div className="absolute inset-0 bg-gradient-to-l size-full from-transparent to-black-3 opacity-100"></div>
             </div>
             
          </div>
@@ -464,10 +465,10 @@ function Consultorias() {
 
        
 
-        <div className='flex flex-col w-full  py-8 items-center justify-center conteudo-produtos rounded-3xl '>
+        <div className='flex flex-col w-full  py-8 items-center justify-center conteudo-produtos rounded-3xl'>
 
       
-  <div className="flex flex-col w-full h-[500px] md:flex-row  justify-between items-center bg-white rounded-l-xl conteudo-container">
+  <div className="flex flex-col w-full h-[500px] md:flex-row  justify-between items-center  bg-gradient-to-l from-green-1   rounded-l-xl conteudo-container">
             <div className='relative flex w-full  h-full'>
               <Image
               src={"/assets/img9.png"}
@@ -476,7 +477,7 @@ function Consultorias() {
               className='absolute object-cover rounded-l-xl size-full'
               />
             </div>
-            <div className='flex w-full flex-col gap-2 p-4 '>
+            <div className='flex w-full flex-col gap-2 p-4'>
                  <h1 className='text-black-3 font-bold text-[28px] max-xl:text-[20px] max-sm:text-[14px]'>Solicitar produto</h1>
                  <span className='text-[14px] font-semibold text-black-3 text-wrap break-words truncate h-[100px] max-sm:h-[50px] p-4  tracking-tighter'>ornecemos serviços de planejamento e gestão sustentável de florestas, incluindo o manejo de florestas nativas e plantadas e a restauração ecológica.</span>
                   <div className='flex w-full justify-center'>
