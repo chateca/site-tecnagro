@@ -1,5 +1,7 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Rodape() {
   return (
@@ -20,11 +22,11 @@ function Rodape() {
 <div>
 <h2 className="font-semibold text-lg text-green-3 mb-3">Navegação</h2>
 <ul className="space-y-2 text-sm">
-  <li><a href="#" className="hover:text-green-400">Home</a></li>
-  <li><a href="#" className="hover:text-green-400">Sobre nós</a></li>
-  <li><a href="#" className="hover:text-green-400">Produtos e serviços</a></li>
-  <li><a href="#" className="hover:text-green-400">Parceiros</a></li>
-  <li><a href="#" className="hover:text-green-400">Contactos</a></li>
+  <li><Link href="/" className="hover:text-green-400">Home</Link></li>
+  <li><Link href="#sobre-nos" className="hover:text-green-400">Sobre nós</Link></li>
+  <li><Link href="#produtos-servicos" className="hover:text-green-400">Produtos e serviços</Link></li>
+  <li><Link href="#parceiros" className="hover:text-green-400">Parceiros</Link></li>
+  <li><Link href="#contactos" className="hover:text-green-400">Contactos</Link></li>
 </ul>
 </div>
 

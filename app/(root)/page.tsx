@@ -52,7 +52,7 @@ export default function Home() {
         
         <SobreNos/>
         </div>
-        <div  className="flex  flex-col w-full top-20 ">
+        <div id="contactos" className="flex  flex-col w-full top-20 ">
         
         <Contacto/>
         </div>
