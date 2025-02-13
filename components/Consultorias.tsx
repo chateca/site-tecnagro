@@ -308,9 +308,9 @@ function Consultorias() {
    
   return (
     <div className="flex flex-col gap-4 p-2 w-full h-full conteudo-actividades">
-        <div className='grid  grid-cols-2 w-full self-center'>
+        <div className='grid  md:grid-cols-2 grid-cols-1 w-full self-center'>
          <div className='w-full p-2'>
-          <div className='grid grid-cols-2 gap-2'>
+          <div className='grid grid-cols-2   gap-2'>
             <div className='relative flex lg:h-[200px] xl:h-[500px] w-full rounded-2xl conteudo-actividades'>
             <Image
               src={"/assets/img4.jpg"}
@@ -347,7 +347,6 @@ function Consultorias() {
               />
             </div>
           </div>
-
          </div>
 
          <div className='w-full hfull flex bg-white '>

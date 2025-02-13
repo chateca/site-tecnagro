@@ -17,7 +17,7 @@ function BannerComponent() {
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
             }}
             >
-            <div  className="absolute 2xl:mt-[60px] lg:-mt-[30px]  md:mt-[200px] sm:mt-[300px]  mt-[120px] right-8 max-sm:right-0 flex flex-col rounded-2xl bg-white/30  w-[45%] max-sm:w-full items-center justify-center p-4">
+            <div  className="absolute xl:mt-[30px] lg:-mt-[30px]  md:mt-[100px] sm:mt-[100px]  mt-[60px] right-8 max-sm:right-0 flex flex-col rounded-2xl bg-white/30  w-[45%] max-sm:w-full items-center justify-center p-4">
                     <div className='flex gap-8 flex-wrap p-1 w-full items-center justify-center'>
                         <div className='flex p-2 rounded-full bg-green-2/30 border-[2px] border-green-3'>
                             <Image

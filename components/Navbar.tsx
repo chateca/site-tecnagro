@@ -64,10 +64,10 @@ function Navbar() {
                     
                     <ul className='flex flex-col gap-8 '>
                   <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/"}>Home</Link></li>
-                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/"}>Sobre-nós</Link></li>
-                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/"}>Produtos e serviços</Link></li>
-                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/"}>Parceiros</Link></li>
-                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/login"}>Contactos</Link></li>
+                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/#sobre-nos"}>Sobre-nós</Link></li>
+                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/#produtos-servicos"}>Produtos e serviços</Link></li>
+                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/#parceiros"}>Parceiros</Link></li>
+                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/#contactos"}>Contactos</Link></li>
                   </ul>
                     
                     </SheetHeader>
