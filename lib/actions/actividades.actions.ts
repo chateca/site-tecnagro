@@ -42,8 +42,8 @@ export const BuscarActividadesActivasPaginaPrincipal = async ()=>{
          const dados =   await Actividade.find({ativo:true}).sort({dataRegsitro:-1}).limit(4)
         return JSON.stringify(dados) 
     } catch (error) {
-        console.log("Algo deu raado ao buscar actividades", error)
-        return []
+        console.log("Algo deu erro ao buscar as actividades para a pagina principal ", error)
+        return JSON.stringify([])
         //throw new Error("não foi possivel buscar os pedido",{cause:error})
     }
 }
