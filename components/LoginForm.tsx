@@ -13,12 +13,13 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { AuthUser} from '@/lib/actions/atuth.actions'
 
 
 const formSchema = z.object({
+    name:z.string(),
     email: z.string().email(),
-  
-    senha:z.string().min(3)
+    password:z.string().min(3)
   })
 
   
@@ -30,16 +31,21 @@ function LoginForm() {
      const form = useForm<z.infer<typeof formSchema>>({
             resolver: zodResolver(formSchema),
             defaultValues: {
-              senha: "",
+              password: "",
               email: "",
+              name:""
             
             },
           })
          
     
-          function onSubmit(values: z.infer<typeof formSchema>) {
-            
-            console.log(values)
+         async  function onSubmit(values: z.infer<typeof formSchema>) {
+            try {
+                 await AuthUser(values)
+                 
+            } catch (error) {
+              console.log('Algo deu errado',error)
+            }
           }
        
   return (
@@ -56,14 +62,13 @@ function LoginForm() {
                             <FormControl>
                                 <Input placeholder="Email" {...field} />
                             </FormControl>
-                          
                             <FormMessage />
                             </FormItem>
                         )}
                         />
                          <FormField
                         control={form.control}
-                        name="senha"
+                        name="password"
                         render={({ field }) => (
                             <FormItem>
                             <FormLabel>Digitar senha</FormLabel>

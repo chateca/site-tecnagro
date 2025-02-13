@@ -1,7 +1,8 @@
-
 import SolicitacoesRecentes from '@/components/SolicitacoesRecentes'
 import { TotalActividades } from '@/lib/actions/actividades.actions'
 import { BuscarPedidos, TotalPedidos } from '@/lib/actions/pedidos.actions'
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 import React from 'react'
 
 
@@ -22,8 +23,9 @@ const getDados = async ()=>{
 
 
 async function page() {
+  const session = (await cookies()).get('session')?.value
+  if (!session) return redirect('/login')
   const dados = await getDados()
-  
   return (
     <section className='p-4'>
     <span className=' text-[28px] font-bold text-green-2'>

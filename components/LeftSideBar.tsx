@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import {links} from '@/constants/index'
+import { logout } from '@/lib/actions/atuth.actions'
 
 function LeftSideBar() {
   return (
@@ -34,9 +35,10 @@ function LeftSideBar() {
            </div>
            <div className='flex w-full  bottom-4'>
               <ul className='flex flex-col w-full gap-2 '>
-              <Link  href={'/'} className='flex bg-white/60 p-2 items-center justify-center' >
-                    <li  className='text-[18px] text-green-3 text-center font-semibold uppercase'>Sair</li>
-                    </Link>
+                    <li  className='text-[18px] text-green-3 text-center font-semibold uppercase'>
+                      <button onClick={logout} className='px-8 py-4 bg-white/60 '>Sair</button>
+                    </li>
+                  
               <Link  href={'/'} className='flex bg-white/60 p-2 items-center justify-center' >
                     <li  className='text-[18px] text-green-3 text-center font-semibold uppercase'>Config Site </li>
                     </Link>

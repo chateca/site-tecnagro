@@ -31,6 +31,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from './ui/textarea';
 import { CrearPedido } from '@/lib/actions/pedidos.actions'
+import Swal from 'sweetalert2'
 
 
 const formSchema = z.object({
@@ -113,7 +114,21 @@ function Consultorias() {
                      
                             await CrearPedido(values)
                             setEnviando(false)
+                          
+                          Swal.fire({
+                            title: "Pedido Enviado com sucesso",
+                            icon: "success",
+                       
+                            showConfirmButton: false,
+                            timer: 2000
+                          });
                     } catch (error) {
+                      Swal.fire({
+                        title: "Alfo deu errado porfavor tente novamente mais tarde!",
+                        icon: "error",
+                        showConfirmButton: false,
+                        timer: 2000
+                      });
                       console.log("erro ao enviar dados", error)
                     }
                
@@ -121,7 +136,7 @@ function Consultorias() {
 
     useEffect(()=>{
         document.querySelectorAll(".conteudo-container").forEach((item) => {
-          scroll(animate(item, { opacity: [0, 1, 1, 0], x: [100, 0] }, { delay: stagger(0.1) }), {
+          scroll(animate(item, { opacity: [0, 1, 1, 0], x: [0, 100] }, { delay: stagger(0.1) }), {
               target: item,
               offset: ["start end", "end end", "start start", "end start"],
           })
@@ -314,261 +329,145 @@ function Consultorias() {
    
   return (
     <div className="flex flex-col gap-4 p-2 w-full h-full">
-        <div className='grid md:grid-flow-col max-sm:grid-cols-1 md:grid-rows-3 gap-4 max-sm:gap-2 p-12 max-sm:p-2 flex-col w-full self-center'>
-          <div className="md:row-span-2  flex flex-col max-sm:flex-row w-full  justify-between items-center bg-black-3 rounded-xl conteudo-container">
-            <div className='relative flex w-full h-[400] max-sm:h-[150px] max-sm:hidden'>
-              <Image
-              src={"/assets/img2.jpg"}
-              alt='consultoria'
-              fill
-              className='absolute object-cover size-full'
-              />
-            </div>
-            <div className='flex flex-col w-full gap-2 p-2 '>
-                 <h1 className='text-white font-bold text-[18px] max-xl:text-[20px] max-sm:text-[14px]'>Consultoria e gestão</h1>
-                 <span className='text-[14px] font-semibold text-white text-wrap break-words truncate h-[100px] max-sm:h-[50px] p-4  tracking-tighter'>TecnAgro oferece consultoria especializada para optimizar a produção agrícola e gerenciar propriedades rurais de forma eficiente. Nossa equipe de especialistas trabalha em estreita colaboração com os clientes, fornecendo orientação estratégica, análise de dados e recomendações personalizadas para melhorar a produtividade, reduzir os custos e aumentar a rentabilidade.</span>
-                  <div className='flex w-full '>
-                  <Drawer>
-                <DrawerTrigger asChild>
-                    <Button variant="outline">Saber mais</Button>
-                </DrawerTrigger>
-                 {
-                  detalhes()
-                 }
-            </Drawer>
-                  </div>
-            </div>
-
-            <div className='hidden relative max-sm:flex  h-full w-[150px]'>
-              <Image
-              src={"/assets/img2.jpg"}
-              alt='consultoria'
-              fill
-              className='absolute object-cover size-full'
-              />
-            </div>
-           
-          </div>
-
-          <div className="md:col-span-2 md:row-span-1 flex w-full  justify-between items-center bg-green-3 rounded-xl conteudo-container">
-            <div className='relative flex w-[400px] max-sm:w-[150px] h-full'>
-              <Image
+        <div className='grid  grid-cols-2 w-full self-center'>
+         <div className='w-full p-2'>
+          <div className='grid grid-cols-2 gap-2'>
+            <div className='relative flex h-[200px] w-full rounded-2xl'>
+            <Image
               src={"/assets/img4.jpg"}
               alt='consultoria'
               fill
-              className='absolute object-cover size-full'
+              className='absolute object-cover size-full rounded-2xl'
               />
             </div>
-            <div className='flex flex-col w-full gap-2 p-4'>
-                 <h1 className='text-white font-bold text-[18px] max-xl:text-[20px] max-sm:text-[14px]'>Consultoria em Sistemas Florestais</h1>
-                 <span className='text-[14px] font-semibold text-white text-wrap break-words truncate h-[100px] max-sm:h-[50px] p-4  tracking-tighter'>ornecemos serviços de planejamento e gestão sustentável de florestas, incluindo o manejo de florestas nativas e plantadas e a restauração ecológica.</span>
-                  <div className='flex w-full '>
-                
-                  </div>
+
+            <div className='relative flex h-[200px] w-full rounded-2xl'>
+            <Image
+              src={"/assets/img7.jpg"}
+              alt='consultoria'
+              fill
+              className='absolute object-cover size-full rounded-2xl'
+              />
             </div>
-            <Drawer>
-                <DrawerTrigger asChild>
-                    <Button variant="outline">Saber mais</Button>
+
+            <div className='relative flex h-[200px] w-full rounded-2xl'>
+            <Image
+              src={"/assets/img5.jpg"}
+              alt='consultoria'
+              fill
+              className='absolute object-cover size-full rounded-2xl'
+              />
+            </div>
+
+            <div className='relative flex h-[200px] w-full rounded-2xl'>
+            <Image
+              src={"/assets/img6.jpg"}
+              alt='consultoria'
+              fill
+              className='absolute object-cover size-full rounded-2xl'
+              />
+            </div>
+          </div>
+
+         </div>
+
+         <div className='w-full hfull flex bg-white '>
+            <div className='flex flex-col w-full gap-2 p-2 '>
+                 <h1 className='text-green-2 font-bold text-[18px] max-xl:text-[20px] max-sm:text-[14px]'>Entre os serviços oferecidos, destacamos:</h1>
+                <div className='flex flex-col w-full h-full'>
+                   <ul className='flex flex-col gap-1'>
+                    <li className='flex gap-2 p-1 rounded-3xl bg-green-1'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
+                        </span>
+                    </li>
+
+                    <li className='flex gap-2 p-1 rounded-3xl bg-green-1/30'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
+                        </span>
+                    </li>
+
+                    <li className='flex gap-2 p-1 rounded-3xl bg-green-1/30'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
+                        </span>
+                    </li>
+
+                    <li className='flex gap-2 p-1 rounded-3xl bg-green-1/30'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
+                        </span>
+                    </li>
+
+                    <li className='flex gap-2 p-1 rounded-3xl bg-green-1/30'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
+                        </span>
+                    </li>
+
+                    <li className='flex gap-2 p-1 rounded-3xl bg-green-1/30'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
+                        </span>
+                    </li>
+                  </ul>   
+                </div>
+                  <div className='flex w-full '>
+                  <Drawer>
+                <DrawerTrigger className='flex w-full' asChild>
+                    <Button variant="outline" className='flex bg-black-3 hover:bg-green-3 text-white font-semibold text-[14px]'>Saber mais</Button>
                 </DrawerTrigger>
                  {
                   detalhes()
                  }
             </Drawer>
-           
-          </div>
-
-          <div className=" md:row-span-1  flex w-full  justify-between items-center bg-green-3 rounded-xl conteudo-container">
-            <div className=' max-sm:hidden relative flex w-[400px] max-sm:w-[150] h-full'>
-              <Image
-              src={"/assets/img5.jpg"}
-              alt='consultoria'
-              fill
-              className='absolute object-cover size-full'
-              />
-            </div>
-            <div className='flex flex-col w-full gap-2 p-4'>
-                 <h1 className='text-white font-bold text-[18px] max-xl:text-[20px] max-sm:text-[14px]'>Treinamento em Práticas Agroflorestais</h1>
-                 <span className='text-[14px] font-semibold text-white text-wrap break-words truncate h-[100px] max-sm:h-[50px] p-4  tracking-tighter'>ferecemos programas de capacitação e treinamento para agricultores, técnicos florestais e ambientalistas, promovendo a adoção de melhores práticas agrícolas e florestais com abordagens agroecológicas e o uso eficiente de tecnologias modernas.</span>
-                  <div className='flex w-full '>
-                  <Drawer>
-                <DrawerTrigger asChild>
-                    <Button variant="outline">Saber mais</Button>
-                </DrawerTrigger>
-                <DrawerContent>
-                    <div className="mx-auto w-full max-w-sm">
-                    <DrawerHeader>
-                        <DrawerTitle>Move Goal</DrawerTitle>
-                        <DrawerDescription>Set your daily activity goal.</DrawerDescription>
-                    </DrawerHeader>
-                    <div className="p-4 pb-0">
-                        <div className="flex items-center justify-center space-x-2">
-                        <Button
-                            variant="outline"
-                            size="icon"
-                            className="h-8 w-8 shrink-0 rounded-full"
-                            onClick={() => onClick(-10)}
-                            disabled={goal <= 200}
-                        >
-                            <Minus />
-                            <span className="sr-only">Decrease</span>
-                        </Button>
-                        <div className="flex-1 text-center">
-                            <div className="text-7xl font-bold tracking-tighter">
-                            {goal}
-                            </div>
-                            <div className="text-[0.70rem] uppercase text-muted-foreground">
-                            Calories/day
-                            </div>
-                        </div>
-                        <Button
-                            variant="outline"
-                            size="icon"
-                            className="h-8 w-8 shrink-0 rounded-full"
-                            onClick={() => onClick(10)}
-                            disabled={goal >= 400}
-                        >
-                            <Plus />
-                            <span className="sr-only">Increase</span>
-                        </Button>
-                        </div>
-                        <div className="mt-3 h-[120px]">
-                        <ResponsiveContainer width="100%" height="100%">
-                            <BarChart data={data}>
-                            <Bar
-                                dataKey="goal"
-                                style={
-                                {
-                                    fill: "hsl(var(--foreground))",
-                                    opacity: 0.9,
-                                } as React.CSSProperties
-                                }
-                            />
-                            </BarChart>
-                        </ResponsiveContainer>
-                        </div>
-                    </div>
-                    <DrawerFooter>
-                        <Button>Solicitar orçamento</Button>
-                        <DrawerClose asChild>
-                        <Button variant="outline">Cancel</Button>
-                        </DrawerClose>
-                    </DrawerFooter>
-                    </div>
-                </DrawerContent>
-            </Drawer>
                   </div>
             </div>
 
-            <div className='hidden relative max-sm:flex w-[400px] max-sm:w-[150] h-full'>
+           
+            <div className='relative flex w-[400px] h-full max-sm:h-[150px] max-sm:hidden'>
               <Image
-              src={"/assets/img5.jpg"}
+              src={"/assets/img2.jpg"}
               alt='consultoria'
               fill
-              className='absolute object-cover size-full'
+              className='object-cover size-full rounded-l-2xl'
               />
             </div>
-           
-          </div>
+            
+         </div>
+
+     
+
         
-
-          <div className=" md:row-span-1 flex w-full  justify-between items-center bg-green-3 rounded-xl conteudo-container">
-          <div className='hidden relative max-sm:flex w-[300px] max-sm:w-[150px] h-full'>
-              <Image
-              src={"/assets/img6.jpg"}
-              alt='consultoria'
-              fill
-              className='absolute object-cover size-full'
-              />
-            </div>
-            <div className='flex flex-col w-full gap-2 p-4'>
-                 <h1 className='text-white font-bold text-[18px] max-xl:text-[20px] max-sm:text-[14px]'>Formação, Treinamento e Capacitação Agrícola</h1>
-                 <span className='text-[14px] font-semibold text-white text-wrap break-words truncate h-[100px] max-sm:h-[50px] p-4  tracking-tighter'>nvestimos na capacitação dos profissionais do agronegócio por meio de programas de formação, treinamento e capacitação. Nossos programas abrangem diversas áreas, desde técnicas de cultivo até o uso eficiente de tecnologias agrícolas avançadas, permitindo que os agricultores adquiram conhecimentos actualizados e melhorem suas habilidades para obter melhores resultados.</span>
-                  <div className='flex w-full '>
-                  <Drawer>
-                <DrawerTrigger asChild>
-                    <Button variant="outline">Saber mais</Button>
-                </DrawerTrigger>
-                <DrawerContent>
-                    <div className="mx-auto w-full max-w-sm">
-                    <DrawerHeader>
-                        <DrawerTitle>Move Goal</DrawerTitle>
-                        <DrawerDescription>Set your daily activity goal.</DrawerDescription>
-                    </DrawerHeader>
-                    <div className="p-4 pb-0">
-                        <div className="flex items-center justify-center space-x-2">
-                        <Button
-                            variant="outline"
-                            size="icon"
-                            className="h-8 w-8 shrink-0 rounded-full"
-                            onClick={() => onClick(-10)}
-                            disabled={goal <= 200}
-                        >
-                            <Minus />
-                            <span className="sr-only">Decrease</span>
-                        </Button>
-                        <div className="flex-1 text-center">
-                            <div className="text-7xl font-bold tracking-tighter">
-                            {goal}
-                            </div>
-                            <div className="text-[0.70rem] uppercase text-muted-foreground">
-                            Calories/day
-                            </div>
-                        </div>
-                        <Button
-                            variant="outline"
-                            size="icon"
-                            className="h-8 w-8 shrink-0 rounded-full"
-                            onClick={() => onClick(10)}
-                            disabled={goal >= 400}
-                        >
-                            <Plus />
-                            <span className="sr-only">Increase</span>
-                        </Button>
-                        </div>
-                        <div className="mt-3 h-[120px]">
-                        <ResponsiveContainer width="100%" height="100%">
-                            <BarChart data={data}>
-                            <Bar
-                                dataKey="goal"
-                                style={
-                                {
-                                    fill: "hsl(var(--foreground))",
-                                    opacity: 0.9,
-                                } as React.CSSProperties
-                                }
-                            />
-                            </BarChart>
-                        </ResponsiveContainer>
-                        </div>
-                    </div>
-                    <DrawerFooter>
-                        <Button>Solicitar orçamento</Button>
-                        <DrawerClose asChild>
-                        <Button variant="outline">Cancel</Button>
-                        </DrawerClose>
-                    </DrawerFooter>
-                    </div>
-                </DrawerContent>
-            </Drawer>
-                  </div>
-            </div>
-
-            <div className='max-sm:hidden relative flex w-[300px] max-sm:w-[150px] h-full'>
-              <Image
-              src={"/assets/img6.jpg"}
-              alt='consultoria'
-              fill
-              className='absolute object-cover size-full'
-              />
-            </div>
-           
-          </div>
         </div>
 
-        <div className='flex flex-col w-full px-12 py-8 items-center justify-center conteudo-produtos rounded-3xl backdrop-brightness-75'>
+   
+
+       
+
+        <div className='flex flex-col w-full  py-8 items-center justify-center conteudo-produtos rounded-3xl '>
 
       
-  <div className="flex w-full h-[500px]  justify-between items-center bg-white rounded-l-xl conteudo-container">
+  <div className="flex flex-col w-full h-[500px] md:flex-row  justify-between items-center bg-white rounded-l-xl conteudo-container">
             <div className='relative flex w-full  h-full'>
               <Image
               src={"/assets/img9.png"}

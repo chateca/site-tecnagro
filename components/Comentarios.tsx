@@ -28,6 +28,7 @@ import { Textarea } from './ui/textarea'
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { BuscarComentariosPaginaInicia, CriarComentario } from '@/lib/actions/comentarioAc.actions';
+import Swal from 'sweetalert2';
 
 
 const formSchema = z.object({
@@ -58,8 +59,20 @@ function Comentarios() {
               try {
                
                await CriarComentario(values)
+               Swal.fire({
+                  title: "Comentario enviado com sucesso",
+                  icon: "success",
+                  showConfirmButton: false,
+                  timer: 2000
+                });
               } catch (error) {
-                console.log("nao deu enviar dados publicação", error)
+                Swal.fire({
+                  title: "Falha ao enviar comentario porfavor tente mais tarde",
+                  icon: "error",
+                  showConfirmButton: false,
+                  timer: 2000
+                });
+                console.log(" erro ao enviar comentario publicação", error)
               }
             }
             

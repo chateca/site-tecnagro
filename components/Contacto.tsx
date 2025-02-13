@@ -62,7 +62,7 @@ function Contacto() {
     <div className="flex flex-col gap-2 p-2 w-full h-[100vh] conteudo-actividades mt-10">
     
     <h1 className='text-center text-white text-[28px] uppercase font-ibm-plex-serif font-extrabold'>Contacto</h1>
-      <div className='flex flex-row  w-full h-full   rounded-2xl justify-between p-8'>
+      <div className='flex flex-row  w-full h-full   rounded-2xl justify-between p-8 max-sm:flex-col'>
         <div className="flex w-full  bg-[url('/assets/contatos.jpg')] bg-cover bg-center rounded-l-xl">
        
          <div className='flex flex-col justify-end p-8 gap-4'>

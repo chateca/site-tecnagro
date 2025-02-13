@@ -29,7 +29,9 @@ export const TotalPedidos = async ()=>{
        return  await Pedidos.find().select('_id')
         
     } catch (error) {
-        throw new Error("não foi possivel buscar o total dos pedidos",{cause:error})
+        console.log("Algo deu rado ao buscar os Pedido", error)
+        return []
+        //throw new Error("não foi possivel buscar o total dos pedidos",{cause:error})
     }
 }
 
@@ -40,7 +42,9 @@ export const BuscarPedidos = async ()=>{
        return  await Pedidos.find({ativo:true}).sort({dataRegsitro:-1}).limit(3)
         
     } catch (error) {
-        throw new Error("não foi possivel buscar os pedido",{cause:error})
+        console.log("Algo deu rado ao buscar os Pedido", error)
+        return []
+        //throw new Error("não foi possivel buscar os pedido",{cause:error})
     }
 }
 
@@ -50,7 +54,9 @@ export const BuscarPedidosTodos = async ()=>{
        return  await Pedidos.find({ativo:true}).sort({dataRegsitro:-1})
         
     } catch (error) {
-        throw new Error("não foi possivel buscar os pedido",{cause:error})
+        console.log("Algo deu rado ao buscar os Pedido", error)
+        return []
+        //throw new Error("não foi possivel buscar os pedido",{cause:error})
     }
 }
 
@@ -60,7 +66,9 @@ export const BuscarPedidosAceites = async ()=>{
        return  await Pedidos.find({status:'Aceite'}).sort({dataRegsitro:-1})
         
     } catch (error) {
-        throw new Error("não foi possivel buscar os pedido",{cause:error})
+        console.log("Algo deu rado ao buscar os Pedido", error)
+        return []
+        //throw new Error("não foi possivel buscar os pedido",{cause:error})
     }
 }
 
@@ -70,7 +78,9 @@ export const BuscarPedidosNegados = async ()=>{
        return  await Pedidos.find({status:'Negado'}).sort({dataRegsitro:-1})
         
     } catch (error) {
-        throw new Error("não foi possivel buscar os pedido",{cause:error})
+        console.log("Algo deu rado ao buscar os Pedido", error)
+        return []
+        //throw new Error("não foi possivel buscar os pedido",{cause:error})
     }
 }
 
@@ -80,7 +90,9 @@ export const BuscarPedidosPendente = async ()=>{
        return  await Pedidos.find({status:'Pendente'}).sort({dataRegsitro:-1})
         
     } catch (error) {
-        throw new Error("não foi possivel buscar os pedido",{cause:error})
+        console.log("Algo deu rado ao buscar os Pedido", error)
+        return []
+        //throw new Error("não foi possivel buscar os pedido",{cause:error})
     }
 }
 
@@ -92,7 +104,9 @@ export const BuscarPedidosNaoAtivos = async ()=>{
        return  await Pedidos.find({ativo:false}).sort({dataRegsitro:-1})
         
     } catch (error) {
-        throw new Error("não foi possivel buscar os pedido",{cause:error})
+        console.log("Algo deu rado ao buscar os Pedido", error)
+        return []
+       // throw new Error("não foi possivel buscar os pedido",{cause:error})
     }
 }
 

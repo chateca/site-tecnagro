@@ -4,6 +4,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
+import {
+    Sheet,
+    SheetContent,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+  } from "@/components/ui/sheet"
+
 function Navbar() {
     const [colorBar , setColorBar] = useState('bg-green-500/40')
     useEffect(()=>{
@@ -40,6 +48,35 @@ function Navbar() {
                   <li><Link className='text_link' href={"/"}>Parceiros</Link></li>
                   <li><Link className='text_link' href={"/login"}>Contactos</Link></li>
                   </ul>
+
+
+                    <div className='flex  md:hidden'>
+                   <Sheet >
+                <SheetTrigger>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 bg-white rounded-lg p-2 ">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+                </SheetTrigger>
+                <SheetContent side={'left'}>
+                    <SheetHeader>
+                    <SheetTitle className='text-[28px] mb-4 text-green-2'>TecnAgro</SheetTitle>
+                    
+                    <ul className='flex flex-col gap-8 '>
+                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/"}>Home</Link></li>
+                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/"}>Sobre-nós</Link></li>
+                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/"}>Produtos e serviços</Link></li>
+                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/"}>Parceiros</Link></li>
+                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/login"}>Contactos</Link></li>
+                  </ul>
+                    
+                    </SheetHeader>
+                </SheetContent>
+                </Sheet>
+                    </div>
+                
+
+
            </nav>
     </header>
        

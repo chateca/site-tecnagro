@@ -30,7 +30,9 @@ export const TotalActividades = async ()=>{
        return await Actividade.find().select('_id')
         
     } catch (error) {
-        throw new Error("não foi possivel buscar o pedido", {cause:error})
+        console.log("Algo deu raado ao buscar actividades", error)
+        return []
+        //throw new Error("não foi possivel buscar o pedido", {cause:error})
     }
 }
 
@@ -38,9 +40,11 @@ export const BuscarActividadesActivasPaginaPrincipal = async ()=>{
     try {
         connectDB()
          const dados =   await Actividade.find({ativo:true}).sort({dataRegsitro:-1}).limit(4)
-        return JSON.stringify(dados)
+        return JSON.stringify(dados) 
     } catch (error) {
-        throw new Error("não foi possivel buscar os pedido",{cause:error})
+        console.log("Algo deu raado ao buscar actividades", error)
+        return []
+        //throw new Error("não foi possivel buscar os pedido",{cause:error})
     }
 }
 
@@ -53,7 +57,9 @@ export const BuscarActividadesActivas = async ()=>{
        return  await Actividade.find({ativo:true}).sort({dataRegsitro:-1})
         
     } catch (error) {
-        throw new Error("não foi possivel buscar os pedido",{cause:error})
+        console.log("Algo deu raado ao buscar actividades", error)
+        return []
+        //throw new Error("não foi possivel buscar os pedido",{cause:error})
     }
 }
 
@@ -63,7 +69,10 @@ export const BuscarActividadeTodas = async ()=>{
        return  await Actividade.find().sort({dataRegsitro:-1})
         
     } catch (error) {
-        throw new Error("não foi possivel buscar os pedido",{cause:error})
+        console.log("Algo deu raado ao buscar actividades", error)
+        return []
+        //throw new Error("não foi possivel buscar os pedido",{cause:error})
+        
     }
 }
 
@@ -73,7 +82,9 @@ export const BuscarActividadesNaoActivas = async ()=>{
        return  await Actividade.find({ativo:false}).sort({dataRegsitro:-1})
         
     } catch (error) {
-        throw new Error("não foi possivel buscar os pedido",{cause:error})
+        console.log("Algo deu raado ao buscar actividades", error)
+        return []
+        //throw new Error("não foi possivel buscar os pedido",{cause:error})
     }
 }
 
