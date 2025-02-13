@@ -7,6 +7,7 @@ import { createSession, deleteSession} from "../session";
 
 
 
+
 type UserData = {
     name:string, 
     email:string, 
@@ -47,3 +48,5 @@ export async function logout() {
      await  deleteSession()
   revalidatePath('/login')
 }
+
+

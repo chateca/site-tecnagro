@@ -1,8 +1,7 @@
 "use client"
 import * as React from 'react'
 import Image from 'next/image'
-import { Minus, Plus } from "lucide-react"
-import { Bar, BarChart, ResponsiveContainer } from "recharts"
+
 import { Button } from "@/components/ui/button"
 import {
   Drawer,
@@ -14,8 +13,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
-import {animate, scroll, stagger} from "motion"
-import { useEffect } from "react";
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -45,52 +43,11 @@ const formSchema = z.object({
   
 
 
- 
-const data = [
-    {
-      goal: 400,
-    },
-    {
-      goal: 300,
-    },
-    {
-      goal: 200,
-    },
-    {
-      goal: 300,
-    },
-    {
-      goal: 200,
-    },
-    {
-      goal: 278,
-    },
-    {
-      goal: 189,
-    },
-    {
-      goal: 239,
-    },
-    {
-      goal: 300,
-    },
-    {
-      goal: 200,
-    },
-    {
-      goal: 278,
-    },
-    {
-      goal: 189,
-    },
-    {
-      goal: 349,
-    },
-  ]
+
    
 
 function Consultorias() {
-    const [goal, setGoal] = React.useState(350)
+  
        
     const [enviando , setEnviando] = React.useState(false)
 
@@ -134,86 +91,108 @@ function Consultorias() {
                
               }
 
-    useEffect(()=>{
-        document.querySelectorAll(".conteudo-container").forEach((item) => {
-          scroll(animate(item, { opacity: [0, 1, 1, 0], x: [0, 100] }, { delay: stagger(0.1) }), {
-              target: item,
-              offset: ["start end", "end end", "start start", "end start"],
-          })
-      })
-
-       document.querySelectorAll(".conteudo-produtos").forEach((item) => {
-                scroll(animate(item, { opacity: [0, 1, 1, 0], y: [150, 0] }, { delay: stagger(0.1) }), {
-                    target: item,
-                    offset: ["start end", "end end", "start start", "end start"],
-                    
-                })
-            })
-      },[])
- 
-    function onClick(adjustment: number) {
-      setGoal(Math.max(200, Math.min(400, goal + adjustment)))
-    }
-
+  
     const detalhes = ()=>{
       return(
         <DrawerContent>
-        <div className="mx-auto w-full max-w-sm">
+        <div className="w-full overflow-y-scroll">
         <DrawerHeader>
-            <DrawerTitle>Move Goal</DrawerTitle>
-            <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+            <DrawerTitle className='md:text-[28px] sm:text-[18px] text-[14px] text-green-2 font-mono font-extrabold'>Saiba mais sobre o que podemos oferecer</DrawerTitle>
+            <DrawerDescription></DrawerDescription>
         </DrawerHeader>
-        <div className="p-4 pb-0">
-            <div className="flex items-center justify-center space-x-2">
-            <Button
-                variant="outline"
-                size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
-                onClick={() => onClick(-10)}
-                disabled={goal <= 200}
-            >
-                <Minus />
-                <span className="sr-only">Decrease</span>
-            </Button>
-            <div className="flex-1 text-center">
-                <div className="text-7xl font-bold tracking-tighter">
-                {goal}
+        <div className="flex w-full p-4 pb-0">
+        <div className='w-full hfull flex bg-white '>
+            <div className='flex flex-col w-full gap-2 p-2 '>
+               
+                <div className='flex flex-col w-full h-full'>
+                   <ul className=' relative flex flex-col gap-1 justify-between h-full -right-6 z-20'>
+                    <li className='flex gap-2 p-1  rounded-l-3xl  bg-gradient-to-r  from-green-1 to-black-3 items-center'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px] flex flex-col'>
+                        Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
+                         <span className='mt-2 text-[14px] font-normal'>
+                        Elaboração de projetos personalizados e estudos de viabilidade econômica para novos empreendimentos agrícolas, garantindo a sustentabilidade e a rentabilidade dos investimentos.
+                        </span>
+                        </span>
+                    </li>
+
+                    <li className='flex gap-2 p-1  rounded-l-3xl bg-gradient-to-r h- from-green-1 to-black-3 items-center'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] flex flex-col text-[12px]'>
+                        Formação em Práticas Agroflorestais 
+                        <span className='mt-2 text-[14px] font-normal'>
+                        Programas de capacitação para agricultores, técnicos florestais e ambientalistas, promovendo as melhores práticas agroecológicas e o uso eficiente de tecnologias modernas.
+                        </span>
+                        </span>
+                    </li>
+
+                    <li className='flex gap-2 p-1  rounded-l-3xl bg-gradient-to-r  from-green-1 to-black-3 items-center'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] flex flex-col text-[12px]'>
+                        Estudos Ecológicos e Ambientais 
+                        <span className='mt-2 text-[14px] font-normal'>
+                        Levantamentos e estudos detalhados sobre biodiversidade, ecossistemas e impactos ambientais, incluindo análise de flora e fauna, avaliação de habitats, monitoramento ambiental e elaboração de relatórios de impacto ambiental.
+                        </span>
+                        </span>
+                    </li>
+
+                    <li className='flex gap-2 p-1  rounded-l-3xl bg-gradient-to-r  from-green-1 to-black-3 items-center'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] flex flex-col text-[12px]'>
+                        Instalação e Montagem de Sistemas de Irrigação 
+                        <span className='mt-2 text-[14px] font-normal'>
+                        Desenvolvimento e implementação de sistemas de irrigação eficientes e sustentáveis, adaptados às necessidades específicas de cada propriedade agrícola.
+                        </span>
+                        </span>
+                    </li>
+
+                    <li className='flex gap-2 p-1  rounded-l-3xl bg-gradient-to-r  from-green-1 to-black-3 items-center'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                        <span className='text-white font-extrabold flex flex-col 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        Soluções de Agricultura Digital  
+                        <span className='mt-2 text-[14px] font-normal'>
+                        Implementação de tecnologias digitais avançadas para monitoramento e gestão de operações agrícolas, promovendo a agricultura de precisão e a otimização de recursos.
+                        </span>
+                        </span>
+                    </li>
+
+                    <li className='flex gap-2 p-1  rounded-l-3xl bg-gradient-to-r  from-green-1 to-black-3 items-center'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                        <span className='text-white font-extrabold flex flex-col 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        Comercialização de Sementes e Produção de Mudas 
+                        <span className='mt-2 text-[14px] font-normal'>
+                        Oferta de sementes de espécies nativas e florestais, além da produção de mudas adaptadas ao bioma angolano, promovendo a conservação da biodiversidade e o reflorestamento sustentável
+                        </span>
+                        </span>
+                    </li>
+                  </ul>   
                 </div>
-                <div className="text-[0.70rem] uppercase text-muted-foreground">
-                Calories/day
-                </div>
+               
             </div>
-            <Button
-                variant="outline"
-                size="icon"
-                className="h-8 w-8 shrink-0 rounded-full"
-                onClick={() => onClick(10)}
-                disabled={goal >= 400}
-            >
-                <Plus />
-                <span className="sr-only">Increase</span>
-            </Button>
-            </div>
-            <div className="mt-3 h-[120px]">
-            <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={data}>
-                <Bar
-                    dataKey="goal"
-                    style={
-                    {
-                        fill: "hsl(var(--foreground))",
-                        opacity: 0.9,
-                    } as React.CSSProperties
-                    }
-                />
-                </BarChart>
-            </ResponsiveContainer>
-            </div>
+
+           
+            
+            
+         </div>
+
+            
         </div>
         <DrawerFooter>
-            <Button>Solicitar orçamento</Button>
+        
             <DrawerClose asChild>
-            <Button variant="outline">Cancel</Button>
+            <Button className='bg-green-3 text-white text-[14px] font-medium ' variant="outline">Sair</Button>
             </DrawerClose>
         </DrawerFooter>
         </div>
@@ -223,16 +202,16 @@ function Consultorias() {
 
     const detalhesPedido = ()=>{
       return(
-        <DrawerContent className='flex flex-col w-full ' >
-        <div className="flex flex-col w-full ">
+        <DrawerContent className='flex flex-col w-full p-2 gap-2' >
+        <div className="flex flex-col w-full overflow-y-scroll ">
         <DrawerHeader className='flex flex-col w-full '>
             <DrawerTitle>Solicitar Produto </DrawerTitle>
             <DrawerDescription>Solicite os seus produtos</DrawerDescription>
         </DrawerHeader>
-        <div className="flex w-full p-4 pb-0 overflow-y-scroll">
+        <div className="flex w-full p-4 pb-2">
            
                  <Form {...form}>
-                                  <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col space-y-1    p-4 justify-between w-full h-full ">
+                                  <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col   justify-between w-full h-full ">
                                     
                                       <FormField
                                       control={form.control}
@@ -309,7 +288,7 @@ function Consultorias() {
                                                   </FormItem>
                                           )}
                                           />
-                                        <DrawerFooter>
+                                        <DrawerFooter className=''>
                                       <Button  type='submit'  className={`${enviando ? 'disabled:opacity-75':""}`}>{enviando ? 'Enviando pedido':'Solicitar Produto'}</Button>
                                       <DrawerClose asChild>
                                       <Button variant="outline">Cancel</Button>
@@ -328,20 +307,20 @@ function Consultorias() {
     }
    
   return (
-    <div className="flex flex-col gap-4 p-2 w-full h-full">
+    <div className="flex flex-col gap-4 p-2 w-full h-full conteudo-actividades">
         <div className='grid  grid-cols-2 w-full self-center'>
          <div className='w-full p-2'>
           <div className='grid grid-cols-2 gap-2'>
-            <div className='relative flex lg:h-[200px] xl:h-[500px] w-full rounded-2xl'>
+            <div className='relative flex lg:h-[200px] xl:h-[500px] w-full rounded-2xl conteudo-actividades'>
             <Image
               src={"/assets/img4.jpg"}
               alt='consultoria'
               fill
-              className='absolute object-cover size-full rounded-2xl w-full brightness-75'
+              className='absolute object-cover size-full rounded-2xl w-full brightness-75 '
               />
             </div>
 
-            <div className='relative flex lg:h-[200px] xl:h-[500px] w-full rounded-2xl'>
+            <div className='relative flex lg:h-[200px] xl:h-[500px] w-full rounded-2xl conteudo-actividades'>
             <Image
               src={"/assets/img7.jpg"}
               alt='consultoria'
@@ -350,16 +329,16 @@ function Consultorias() {
               />
             </div>
 
-            <div className='relative flex h-[200px] w-full rounded-2xl'>
+            <div className='relative flex h-[200px] w-full rounded-2xl conteudo-actividades'>
             <Image
               src={"/assets/img5.jpg"}
               alt='consultoria'
               fill
-              className='absolute object-cover size-full rounded-2xl brightness-75'
+              className='absolute object-cover size-full rounded-2xl brightness-75 '
               />
             </div>
 
-            <div className='relative flex h-[200px]  w-full rounded-2xl'>
+            <div className='relative flex h-[200px]  w-full rounded-2xl conteudo-actividades'>
             <Image
               src={"/assets/img6.jpg"}
               alt='consultoria'
@@ -380,7 +359,7 @@ function Consultorias() {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
-                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        <span className='text-white font-extrabold font-mono 2xl:text-[18px] md:text-[14px] text-[12px]'>
                         Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade 
                         </span>
                     </li>
@@ -389,7 +368,7 @@ function Consultorias() {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
-                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        <span className='text-white font-extrabold font-mono 2xl:text-[18px] md:text-[14px] text-[12px]'>
                         Formação em Práticas Agroflorestais 
                         </span>
                     </li>
@@ -398,7 +377,7 @@ function Consultorias() {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
-                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        <span className='text-white font-extrabold font-mono 2xl:text-[18px] md:text-[14px] text-[12px]'>
                         Estudos Ecológicos e Ambientais 
                         </span>
                     </li>
@@ -407,7 +386,7 @@ function Consultorias() {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
-                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        <span className='text-white font-extrabold font-mono 2xl:text-[18px] md:text-[14px] text-[12px]'>
                         Instalação e Montagem de Sistemas de Irrigação 
                         </span>
                     </li>
@@ -416,7 +395,7 @@ function Consultorias() {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
-                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        <span className='text-white font-extrabold font-mono 2xl:text-[18px] md:text-[14px] text-[12px]'>
                         Soluções de Agricultura Digital  
                         </span>
                     </li>
@@ -425,7 +404,7 @@ function Consultorias() {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
-                        <span className='text-white font-extrabold 2xl:text-[18px] md:text-[14px] text-[12px]'>
+                        <span className='text-white font-extrabold font-mono 2xl:text-[18px] md:text-[14px] text-[12px]'>
                         Comercialização de Sementes e Produção de Mudas 
                         </span>
                     </li>
@@ -465,10 +444,10 @@ function Consultorias() {
 
        
 
-        <div className='flex flex-col w-full  py-8 items-center justify-center conteudo-produtos rounded-3xl'>
+        <div className='flex flex-col w-full  py-8 items-center justify-center  rounded-3xl'>
 
       
-  <div className="flex flex-col w-full h-[500px] md:flex-row  justify-between items-center  bg-gradient-to-l from-green-1   rounded-l-xl conteudo-container">
+  <div className="flex flex-col w-full h-[500px] md:flex-row  justify-between items-center  bg-gradient-to-l from-green-1   rounded-l-xl ">
             <div className='relative flex w-full  h-full'>
               <Image
               src={"/assets/img9.png"}

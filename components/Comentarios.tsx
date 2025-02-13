@@ -112,7 +112,7 @@ function Comentarios() {
     <div className='w-full flex items-center justify-center'>
     <Drawer>
                 <DrawerTrigger asChild>
-                    <Button variant="outline">Diga-nos alguma coisa!</Button>
+                    <Button className='bg-green-2' variant="outline">Diga-nos alguma coisa!</Button>
                 </DrawerTrigger>
                 <DrawerContent>
                     <div className="flex w-full flex-col items-center justify-center">
@@ -173,7 +173,7 @@ function Comentarios() {
                 </DrawerContent>
     </Drawer>
     </div>
-      <div className='grid grid-cols-4 gap-4 p-8 flex-wrap  w-full justify-between  rounded-2xl'>
+      <div className='grid md:grid-cols-4 grid-cols-2  gap-4 p-8 flex-wrap  w-full justify-between  rounded-2xl'>
     
       {comentarios?.map((item)=>(
           <Comentario key={item._id}

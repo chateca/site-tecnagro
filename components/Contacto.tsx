@@ -52,18 +52,18 @@ function Contacto() {
       })
      
 
-      function onSubmit(values: z.infer<typeof formSchema>) {
-        
+      async function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values)
+       
       }
    
    
   return (
-    <div className="flex flex-col gap-2 p-2 w-full h-[100vh] conteudo-actividades mt-10">
+    <div className="flex flex-col gap-2 p-2 w-full  conteudo-actividades mt-10">
     
-    <h1 className='text-center text-white text-[28px] uppercase font-ibm-plex-serif font-extrabold'>Contacto</h1>
-      <div className='flex flex-row  w-full h-full   rounded-2xl justify-between p-8 max-sm:flex-col'>
-        <div className="flex w-full  bg-[url('/assets/contatos.jpg')] bg-cover bg-center rounded-l-xl">
+    <h1 className='text-center text-green-2 text-[28px] uppercase font-ibm-plex-serif font-extrabold'>Contacto</h1>
+      <div className='flex flex-row  w-full h-full   rounded-2xl justify-between max-sm:flex-col bg-gradient-to-t from-green-2 to-green-3'>
+        <div className="flex w-full  bg-[url('/assets/img9.png')] bg-cover bg-center rounded-l-xl">
        
          <div className='flex flex-col justify-end p-8 gap-4'>
             <div className='flex gap-4 w-full items-center '>
@@ -121,16 +121,16 @@ function Contacto() {
 
          </div>
         </div>
-                <div className='flex flex-col w-full bg-white p-4 rounded-r-xl'>
-                    <h1 className='text-center text-green-2 text-[18px] font-extrabold uppercase'>Anvia-nos um email</h1>
+                <div className='flex flex-col w-full h-full  p-4 rounded-r-xl'>
+                    <h1 className='text-center text-green-2 text-[18px] font-extrabold uppercase'>Envia-nos um email</h1>
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className=" flex flex-col space-y-1 w-full border-green-3 border-[1px] rounded-2xl p-4 justify-between h-full">
+                    <form onSubmit={form.handleSubmit(onSubmit)} className=" flex flex-col  w-full border-green-3 border-[1px] rounded-2xl p-4 gap-1 h-full">
                         <FormField
                         control={form.control}
                         name="nome"
                         render={({ field }) => (
                             <FormItem>
-                            <FormLabel>Seu nome</FormLabel>
+                            <FormLabel className='text-green-2 text-[14px] font-bold'>Seu nome</FormLabel>
                             <FormControl>
                                 <Input placeholder="Nome" {...field} />
                             </FormControl>
@@ -144,7 +144,7 @@ function Contacto() {
                         name="email"
                         render={({ field }) => (
                             <FormItem>
-                            <FormLabel>Seu email</FormLabel>
+                            <FormLabel className='text-green-2 text-[14px] font-bold'>Seu email</FormLabel>
                             <FormControl>
                                 <Input placeholder="Email" {...field} />
                             </FormControl>
@@ -158,7 +158,7 @@ function Contacto() {
                         name="assunto"
                         render={({ field }) => (
                             <FormItem>
-                            <FormLabel>Assunto</FormLabel>
+                            <FormLabel className='text-green-2 text-[14px] font-bold'>Assunto</FormLabel>
                             <FormControl>
                                 <Input placeholder="Assunto" {...field} />
                             </FormControl>
@@ -172,8 +172,8 @@ function Contacto() {
                             control={form.control}
                             name="mensagem"
                             render={({ field }) => (
-                                <FormItem>
-                                <FormLabel>Mensagem</FormLabel>
+                                <FormItem className='h-full'>
+                                <FormLabel className='text-green-2 text-[14px] font-bold'>Mensagem</FormLabel>
                                 <FormControl>
                                     <Textarea
                                     placeholder="Digite a sua mensagem "
@@ -186,7 +186,7 @@ function Contacto() {
                                 </FormItem>
                             )}
                             />
-                        <Button className='flex  bg-green-1' type="submit">Enviar </Button>
+                        <Button className='flex py-2 bg-green-1 mt-3' type="submit">Enviar </Button>
                     </form>
                     </Form>
                 </div>

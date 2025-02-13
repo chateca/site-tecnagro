@@ -3,6 +3,7 @@ import * as React from 'react'
 import {animate, scroll, stagger} from "motion"
 import { useEffect } from "react";
 import Image from 'next/image';
+import { parceiros } from '@/constants';
  
 
 
@@ -20,44 +21,30 @@ function Parceiros() {
       },[])
  
    
-   
+  
    
   return (
     <div className="flex flex-col gap-4 p-2 w-full h-full">
     
-      
-      <div className='flex  gap-4 p-12  w-full justify-between bg-green-1/30 rounded-2xl'>
-      
-      <Image
-            src={"/icons/gene-sequence-svgrepo-com.svg"}
-            alt='Icons'
-            width={100}
-            height={100}
-            />
-         
+    <h1 className='text-center text-green-2 text-[28px] uppercase font-ibm-plex-serif font-extrabold'>Parceiros e Clientes</h1>
+      <div className='grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 self-center w-full gap-4 p-4  bg-gradient-to-r from-green-1 via-green-2 to-green-3 rounded-2xl'>
+           {
+            parceiros.map((item)=>(
+              <div
+              key={item.id}
+              className='relative flex  h-[200px]'
+              >
+               <Image
+              src={`/icons/${item.image}`}
+              alt='Icons'
+              fill
+               className='bg-cover rounded-lg'
+              />
+              </div>
+             
+            ))
+           }
            
-
-            <Image
-            src={"/icons/gene-sequence-svgrepo-com.svg"}
-            alt='Icons'
-            width={100}
-            height={100}
-            />
-
-            <Image
-            src={"/icons/protein-svgrepo-com.svg"}
-            alt='Icons'
-            width={100}
-            height={100}
-            />
-
-           <Image
-            src={"/icons/genetic-data-svgrepo-com.svg"}
-            alt='Icons'
-            width={100}
-            height={100}
-            />
-     
       </div>
         
 

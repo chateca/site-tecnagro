@@ -31,11 +31,11 @@ function Noterreno(){
   return (
     <div className="flex flex-col gap-4 p-2 w-full h-full ">
       <div className="flex flex-col items-center justify-center p-4 rounded-2xl  w-[50%] self-center conteudo-actividades">
-          <h1 className="text-[28px] font-extrabold uppercase font-ibm-plex-serif text-white">No terreno</h1>
+          <h1 className="text-[28px] font-extrabold uppercase font-ibm-plex-serif text-green-2">No terreno</h1>
             <div className="w-full h-1 bg-green-2" />
         </div>
         <div className='w-full flex items-center justify-center'>
-           <button onClick={()=>router.push('/galeriaNoTerreno')} className='px-4 py-1 bg-white rounded-lg text-[18px] font-semibold '>Ver mais </button>
+           <button onClick={()=>router.push('/galeriaNoTerreno')} className='px-4 py-1 bg-green-1 rounded-lg text-[18px] font-semibold '>Ver mais </button>
         </div>
         
         <div className='grid grid-cols-2 grid-flow-col max-sm:grid-flow-row max-sm:grid-cols-1 gap-1 p-8  max-sm:p-8 self-center'>

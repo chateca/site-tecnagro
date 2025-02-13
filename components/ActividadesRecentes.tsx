@@ -33,13 +33,17 @@ function ActividadesRecentes(){
 
     const [actividades , setActividades] = React.useState<Array<Dados>>()
     useEffect(()=>{
-        document.querySelectorAll(".conteudo-actividades").forEach((item) => {
-          scroll(animate(item, { opacity: [0, 1, 1, 0], y: [150, 0] }, { delay: stagger(0.1) }), {
-              target: item,
-              offset: ["start end", "end end", "start start", "end start"],
+    
               
-          })
-      })
+              document.querySelectorAll(".conteudo-actividades").forEach((item) => {
+                scroll(animate(item, { opacity: [0, 1, 1, 0], y: [150, 0] }, { delay: stagger(0.1) }), {
+                    target: item,
+                    offset: ["start end", "end end", "start start", "end start"],
+                    
+                })
+            })
+         
+       
 
       async function buscarPublicacoes (){
         try {
@@ -62,17 +66,17 @@ function ActividadesRecentes(){
           <h1 className="md:text-[28px] text-[18px] font-extrabold uppercase font-ibm-plex-serif text-green-2">Actividades Recentes</h1>
             <div className="w-full h-1 bg-green-2" />
         </div>
-        <div className='grid grid-cols-4 max-sm:grid-cols-2 gap-4 md:p-12 p-2  flex-col w-full'>
+        <div className='grid grid-cols-4 max-sm:grid-cols-2 gap-4 md:p-12 p-2  flex-col w-full conteudo-actividades'>
          
          {
           actividades?.map((item)=>(
-             <div key={JSON.stringify(item?._id)} className="flex flex-col w-full  justify-between items-center bg-black-3 rounded-xl conteudo-actividades">
-            <div className='relative flex w-full h-[400] max-sm:h-[200px]'>
+             <div key={JSON.stringify(item?._id)} className="flex flex-col w-full  justify-between items-center bg-black-3 rounded-xl ">
+            <div className='relative flex w-full h-[400px] max-sm:h-[200px]'>
               <Image
               src={item.imagem}
-              alt='consultoria'
+              alt='actividades'
               fill
-              className='absolute object-cover rounded-t-xl size-full'
+              className='object-cover rounded-t-xl size-full brightness-75'
               />
             </div>
             <div className='flex flex-col w-full gap-2 p-2 '>
@@ -112,10 +116,7 @@ function ActividadesRecentes(){
           </div>
           ))
          }
-          
-
-          
-       
+        
         </div>
 
           

@@ -43,10 +43,10 @@ function Navbar() {
             </div>
                   <ul className='flex gap-8 max-md:hidden'>
                   <li><Link className='text_link' href={"/"}>Home</Link></li>
-                  <li><Link className='text_link' href={"/"}>Sobre-nós</Link></li>
-                  <li><Link className='text_link' href={"/"}>Produtos e serviços</Link></li>
-                  <li><Link className='text_link' href={"/"}>Parceiros</Link></li>
-                  <li><Link className='text_link' href={"/login"}>Contactos</Link></li>
+                  <li><Link className='text_link' href={"/#sobre-nos"}>Sobre-nós</Link></li>
+                  <li><Link className='text_link' href={"/#produtos-servicos"}>Produtos e serviços</Link></li>
+                  <li><Link className='text_link' href={"/#parceiros"}>Parceiros</Link></li>
+                  <li><Link className='text_link' href={"/#contactos"}>Contactos</Link></li>
                   </ul>
 
 
