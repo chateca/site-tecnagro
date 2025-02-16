@@ -1,6 +1,6 @@
 "use client"
 import * as React from 'react'
-import {animate, scroll, stagger} from "motion"
+
 import { useEffect } from "react";
 import Comentario from './Comentario';
 import { Button } from "@/components/ui/button"
@@ -80,13 +80,6 @@ function Comentarios() {
    
   useEffect(()=>{
         
-        document.querySelectorAll(".conteudo-actividades").forEach((item) => {
-          scroll(animate(item, { opacity: [0, 1, 1, 0], y: [150, 0] }, { delay: stagger(0.1) }), {
-              target: item,
-              offset: ["start end", "end end", "start start", "end start"],
-              
-          })
-      })
 
       async function getComentarios(){
         try {

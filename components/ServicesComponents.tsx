@@ -1,16 +1,13 @@
 "use client"
-import React, { useEffect} from 'react'
-import { animate, stagger } from 'motion'
+import React from 'react'
+
 import { useRouter } from 'next/navigation'
  
 
 function ServicesComponents() {
 
 const router = useRouter()
-  useEffect(()=>{
-    animate(".servicoItem", { opacity: 1, y: [200, 0] }, { delay: stagger(0.5) })  
-   
-  },[])
+
    
 
   return (

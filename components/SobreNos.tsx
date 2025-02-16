@@ -1,7 +1,6 @@
 "use client"
 import * as React from 'react'
-import {animate, scroll, stagger} from "motion"
-import { useEffect } from "react";
+
 
 
  
@@ -9,24 +8,6 @@ import { useEffect } from "react";
 
 function SobreNos() {
    
-    useEffect(()=>{
-        document.querySelectorAll(".conteudo-container").forEach((item) => {
-          scroll(animate(item, { opacity: [0, 1, 1, 0], x: [100, 0] }, { delay: stagger(0.1) }), {
-              target: item,
-              offset: ["start end", "end end", "start start", "end start"],
-          })
-      })
-
-      document.querySelectorAll(".conteudo-activity").forEach((item) => {
-                      scroll(animate(item, { opacity: [0, 1, 1, 0], y: [150, 0] }, { delay: stagger(0.1) }), {
-                          target: item,
-                          offset: ["start end", "end end", "start start", "end start"],
-                          
-                      })
-                  })
-      },[])
- 
- 
    
    
   return (

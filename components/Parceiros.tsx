@@ -1,7 +1,6 @@
 "use client"
 import * as React from 'react'
-import {animate, scroll, stagger} from "motion"
-import { useEffect } from "react";
+
 import Image from 'next/image';
 import { parceiros } from '@/constants';
  
@@ -9,17 +8,7 @@ import { parceiros } from '@/constants';
 
 function Parceiros() {
 
-    useEffect(()=>{
-        
-        document.querySelectorAll(".conteudo-actividades").forEach((item) => {
-          scroll(animate(item, { opacity: [0, 1, 1, 0], y: [150, 0] }, { delay: stagger(0.1) }), {
-              target: item,
-              offset: ["start end", "end end", "start start", "end start"],
-              
-          })
-      })
-      },[])
- 
+   
    
   
    

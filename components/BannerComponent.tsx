@@ -38,7 +38,7 @@ function BannerComponent() {
                         
                     </div>
                  <h1 className="text-white max-xl:text-[18px] text-[28px]  font-extrabold">TecnAgro a solução para o seu agro negocio</h1>
-                 <span className="text-center text-[18px] max-xl:text-[12px] text-white font-ibm-plex-serif uppercase">Seja bem vindo a era moderna do Agro</span>
+                 <span className="text-center text-[18px] max-xl:text-[12px] text-white font-ibm-plex-serif uppercase">Seja bem vindo a éra moderna do Agro</span>
             </div>
             </motion.div>
             
