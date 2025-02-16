@@ -42,6 +42,7 @@ function LoginForm() {
          async  function onSubmit(values: z.infer<typeof formSchema>) {
             try {
                  await AuthUser(values)
+                 //await CreateUser(values)
                  
             } catch (error) {
               console.log('Algo deu errado',error)

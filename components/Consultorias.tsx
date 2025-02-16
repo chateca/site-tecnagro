@@ -457,7 +457,7 @@ function Consultorias() {
             </div>
             <div className='flex w-full flex-col gap-2 p-4'>
                  <h1 className='text-black-3 font-bold text-[28px] max-xl:text-[20px] max-sm:text-[14px]'>Solicitar produto</h1>
-                 <span className='text-[14px] font-semibold text-black-3 text-wrap break-words truncate h-[100px] max-sm:h-[50px] p-4  tracking-tighter'>ornecemos serviços de planejamento e gestão sustentável de florestas, incluindo o manejo de florestas nativas e plantadas e a restauração ecológica.</span>
+                 <span className='text-[14px] font-semibold text-black-3 text-wrap break-words truncate h-[100px] max-sm:h-[50px] p-4  tracking-tighter'>Fornecemos serviços e produtos variados, faça seu pedido e receba a quantidade solicitada em apenas um clique</span>
                   <div className='flex w-full justify-center'>
                   <Drawer>
                 <DrawerTrigger className='flex' asChild>
