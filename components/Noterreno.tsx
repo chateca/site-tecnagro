@@ -1,10 +1,6 @@
 "use client"
 import * as React from 'react'
 import Image from 'next/image'
-
-
-import {animate, scroll, stagger} from "motion"
-import { useEffect } from "react";
 import { useRouter } from 'next/navigation';
  
 
@@ -13,18 +9,7 @@ import { useRouter } from 'next/navigation';
 
 function Noterreno(){
   const router = useRouter()
-    useEffect(()=>{
-        
-        document.querySelectorAll(".conteudo-actividades").forEach((item) => {
-          scroll(animate(item, { opacity: [0, 1, 1, 0], y: [150, 0] }, { delay: stagger(0.1) }), {
-              target: item,
-              offset: ["start end", "end end", "start start", "end start"],
-              
-          })
-      })
-      },[])
- 
-  
+    
 
    
    
