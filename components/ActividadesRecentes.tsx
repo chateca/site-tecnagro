@@ -34,9 +34,6 @@ function ActividadesRecentes(){
     const [actividades , setActividades] = React.useState<Array<Dados>>()
     useEffect(()=>{
     
-              
-             
-       
 
       async function buscarPublicacoes (){
         try {
@@ -69,6 +66,7 @@ function ActividadesRecentes(){
               src={item.imagem}
               alt='actividades'
               fill
+           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className='object-cover rounded-t-xl size-full brightness-75'
               />
             </div>
@@ -92,6 +90,7 @@ function ActividadesRecentes(){
                        src={item.imagem}
                        alt={item.titulo}
                        fill
+                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                        className='roundend-xl bg-cover'
                        />
                     </div>

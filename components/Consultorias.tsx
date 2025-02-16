@@ -316,6 +316,7 @@ function Consultorias() {
               src={"/assets/img4.jpg"}
               alt='consultoria'
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className='absolute object-cover size-full rounded-2xl w-full brightness-75 '
               />
             </div>
@@ -325,6 +326,7 @@ function Consultorias() {
               src={"/assets/img7.jpg"}
               alt='consultoria'
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className='absolute object-cover size-full rounded-2xl brightness-75'
               />
             </div>
@@ -334,6 +336,7 @@ function Consultorias() {
               src={"/assets/img5.jpg"}
               alt='consultoria'
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className='absolute object-cover size-full rounded-2xl brightness-75 '
               />
             </div>
@@ -343,6 +346,7 @@ function Consultorias() {
               src={"/assets/img6.jpg"}
               alt='consultoria'
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className='absolute object-cover size-full rounded-2xl brightness-75'
               />
             </div>
@@ -427,6 +431,7 @@ function Consultorias() {
               src={"/assets/img2.jpg"}
               alt='consultoria'
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className='object-cover size-full rounded-l-2xl'
               />
                 <div className="absolute inset-0 bg-gradient-to-l size-full from-transparent to-black-3 opacity-100"></div>
@@ -452,6 +457,7 @@ function Consultorias() {
               src={"/assets/img9.png"}
               alt='consultoria'
               fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className='absolute object-cover rounded-l-xl size-full'
               />
             </div>

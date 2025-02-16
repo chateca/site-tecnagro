@@ -38,7 +38,7 @@ function Navbar() {
                 alt='Logo'
                 width={200}
                 height={200}
-                className=''
+                placeholder='empty'
                 />
             </div>
                   <ul className='flex gap-8 max-md:hidden'>

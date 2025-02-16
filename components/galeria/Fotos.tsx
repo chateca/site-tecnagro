@@ -10,6 +10,7 @@ function Fotos() {
                   src={"/assets/img12.jpg"}
                   alt='consultoria'
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='absolute object-cover size-full'
                   />
                 </div>
@@ -22,6 +23,7 @@ function Fotos() {
                   src={"/assets/img14.jpg"}
                   alt='consultoria'
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='absolute object-cover size-full'
                   />
                 </div>
@@ -35,6 +37,7 @@ function Fotos() {
                   src={"/assets/img13.jpg"}
                   alt='consultoria'
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='absolute object-cover size-full'
                   />
                 </div>   
@@ -46,6 +49,7 @@ function Fotos() {
                   src={"/assets/img15.jpg"}
                   alt='consultoria'
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='absolute object-cover size-full'
                   />
                 </div>
@@ -60,6 +64,7 @@ function Fotos() {
                   src={"/assets/img13.jpg"}
                   alt='consultoria'
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='absolute object-cover size-full'
                   />
                 </div>
@@ -75,6 +80,7 @@ function Fotos() {
                   src={"/assets/img15.jpg"}
                   alt='consultoria'
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='absolute object-cover size-full'
                   />
                 </div>
@@ -88,6 +94,7 @@ function Fotos() {
                   src={"/assets/img12.jpg"}
                   alt='consultoria'
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='absolute object-cover size-full'
                   />
                 </div>
@@ -100,6 +107,7 @@ function Fotos() {
                   src={"/assets/img14.jpg"}
                   alt='consultoria'
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='absolute object-cover size-full'
                   />
                 </div>
@@ -113,6 +121,7 @@ function Fotos() {
                   src={"/assets/img13.jpg"}
                   alt='consultoria'
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='absolute object-cover size-full'
                   />
                 </div>   
@@ -124,6 +133,7 @@ function Fotos() {
                   src={"/assets/img15.jpg"}
                   alt='consultoria'
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='absolute object-cover size-full'
                   />
                 </div>
@@ -138,6 +148,7 @@ function Fotos() {
                   src={"/assets/img13.jpg"}
                   alt='consultoria'
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='absolute object-cover size-full'
                   />
                 </div>
@@ -153,6 +164,7 @@ function Fotos() {
                   src={"/assets/img15.jpg"}
                   alt='consultoria'
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className='absolute object-cover size-full'
                   />
                 </div>

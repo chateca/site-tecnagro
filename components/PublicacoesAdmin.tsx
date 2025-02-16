@@ -123,6 +123,7 @@ const  router = useRouter()
                      src={item.imagem}
                      alt='consultoria'
                      fill
+                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                      className='absolute object-cover'
                      />
                    </div>
@@ -170,6 +171,7 @@ const  router = useRouter()
                      src={item.imagem}
                      alt='consultoria'
                      fill
+                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                      className='absolute object-cover'
                      />
                    </div>
@@ -217,6 +219,7 @@ const  router = useRouter()
                      src={item.imagem}
                      alt='consultoria'
                      fill
+                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                      className='absolute object-cover'
                      />
                    </div>
@@ -287,6 +290,7 @@ const  router = useRouter()
            src={imageUrl ? `${imageUrl}` : imagem}
            alt='Image Publicacao'
            fill
+           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
            unoptimized
            className='absolute object-cover'
            />           

@@ -25,6 +25,7 @@ function BannerComponent() {
                             alt='whatsapp'
                             width={25}
                             height={25}
+                            placeholder='empty'
                             />
                         </div> 
                         <div className='flex p-2 rounded-full bg-green-2/30 border-[2px] border-green-3'>
@@ -33,6 +34,7 @@ function BannerComponent() {
                             alt='whatsapp'
                             width={25}
                             height={25}
+                            placeholder='empty'
                             />
                         </div> 
                         
