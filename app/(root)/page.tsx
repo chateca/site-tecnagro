@@ -8,6 +8,7 @@ import Noterreno from "@/components/Noterreno";
 import Parceiros from "@/components/Parceiros";
 import ServicesComponents from "@/components/ServicesComponents";
 import SobreNos from "@/components/SobreNos";
+import { Suspense } from "react";
 
 
 
@@ -15,6 +16,8 @@ export default function Home() {
 
 
   return (
+    <>
+       <Suspense fallback={<Loading />}>
     <section  className="flex flex-col w-full scroll-section ">
        <BannerComponent/>
        <div className="relative w-full">
@@ -62,5 +65,12 @@ export default function Home() {
         <Comentarios/>
         </div>
     </section>
+    </Suspense>
+  </>
   );
 }
+
+function Loading() {
+  return <h2>🌀 Loading...</h2>;
+}
+
