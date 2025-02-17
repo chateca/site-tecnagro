@@ -32,7 +32,7 @@ function Noterreno(){
               alt='consultoria'
               fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full'
+              className='object-cover'
               />
             </div>
           
@@ -45,7 +45,7 @@ function Noterreno(){
               alt='consultoria'
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full'
+              className='object-cover'
               />
             </div>
            
@@ -58,7 +58,7 @@ function Noterreno(){
               alt='consultoria'
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full'
+              className='object-cover'
               />
             </div>
             
@@ -73,7 +73,7 @@ function Noterreno(){
               alt='consultoria'
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full'
+              className='object-cover'
               />
             </div>
           
@@ -102,7 +102,7 @@ function Noterreno(){
               alt='consultoria'
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full'
+              className='object-cover'
               />
             </div>
           
@@ -115,7 +115,7 @@ function Noterreno(){
               alt='consultoria'
               fill
              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full'
+              className='object-cover'
               />
             </div>
            
@@ -129,7 +129,7 @@ function Noterreno(){
               alt='consultoria'
               fill
              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full'
+              className='object-cover'
               />
             </div>   
           </div>
@@ -141,7 +141,7 @@ function Noterreno(){
               alt='consultoria'
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full'
+              className='object-cover'
               />
             </div>
             
@@ -156,7 +156,7 @@ function Noterreno(){
               alt='consultoria'
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full'
+              className='object-cover'
               />
             </div>
           
@@ -171,8 +171,8 @@ function Noterreno(){
               src={"/assets/img15.jpg"}
               alt='consultoria'
               fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full'
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className='object-cover '
               />
             </div>
             

@@ -311,23 +311,25 @@ function Consultorias() {
         <div className='grid  md:grid-cols-2 grid-cols-1 w-full self-center'>
          <div className='w-full p-2'>
           <div className='grid grid-cols-2   gap-2'>
-            <div className='relative flex lg:h-[200px] xl:h-[500px] w-full rounded-2xl conteudo-actividades'>
+            <div className='relative flex lg:h-[200px] xl:h-[500px] md:h-[200px] sm:h-[200px] h-[200px] w-full rounded-2xl conteudo-actividades'>
             <Image
               src={"/assets/img4.jpg"}
               alt='consultoria'
               fill
+              quality={50}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full rounded-2xl w-full brightness-75 '
+              className='object-cover size-full rounded-2xl w-full brightness-75 '
               />
             </div>
 
-            <div className='relative flex lg:h-[200px] xl:h-[500px] w-full rounded-2xl conteudo-actividades'>
+            <div className='relative flex lg:h-[200px] xl:h-[500px] md:h-[200px] sm:h-[200px] h-[200px] w-full rounded-2xl conteudo-actividades'>
             <Image
               src={"/assets/img7.jpg"}
               alt='consultoria'
               fill
+              quality={50}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full rounded-2xl brightness-75'
+              className='object-cover size-full rounded-2xl brightness-75'
               />
             </div>
 
@@ -337,7 +339,7 @@ function Consultorias() {
               alt='consultoria'
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full rounded-2xl brightness-75 '
+              className='object-cover size-full rounded-2xl brightness-75 '
               />
             </div>
 
@@ -346,8 +348,9 @@ function Consultorias() {
               src={"/assets/img6.jpg"}
               alt='consultoria'
               fill
+              quality={50}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='absolute object-cover size-full rounded-2xl brightness-75'
+              className='object-cover size-full rounded-2xl brightness-75'
               />
             </div>
           </div>

@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+       
     domains: ["utfs.io"], // Adiciona utfs.io como um domínio confiável
   },
 };
