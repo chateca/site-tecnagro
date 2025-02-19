@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -9,7 +10,8 @@ const config = {
     "./src/**/*.{ts,tsx}",
     "./constants/**/*.{ts,tsx}",
 	"./app/**/*.{ts,tsx,mdx}", 
-	"./src/**/*.{ts,tsx,mdx}"
+	"./src/**/*.{ts,tsx,mdx}",
+	"./*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -71,7 +73,8 @@ const config = {
   		
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins:[require("tailwindcss-animate")],
 } satisfies Config;
 
 export default config;
+	
