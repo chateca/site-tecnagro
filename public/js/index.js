@@ -88,5 +88,3 @@ const sr = ScrollReveal(({
 
 sr.reveal('.service__card', {interval:100})
 sr.reveal('.atividade__item', {interval:100})
-sr.reveal('.about__item__1-image',   {origin:"right"})
-sr.reveal('.about__item__1-content', {origin:"left"})

@@ -1,11 +1,11 @@
 "use client"
 import React from 'react';
-import Image from 'next/image';
+
 import Link from 'next/link';
 
 function Rodape() {
   return (
-    <footer className='flex w-full flex-col justify-between bg-gradient-to-t from-green-3 py-6'>
+    <footer className='flex w-full flex-col justify-between py-6'>
       <div className="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
         <div>
           <h2 className="text-xl font-bold mb-3 text-green-3">TecnAgro</h2>
@@ -42,24 +42,16 @@ function Rodape() {
 <div>
 <h2 className="font-semibold text-lg text-green-3 mb-3">Siga-nos</h2>
 <div className="flex justify-center md:justify-start space-x-4">
-  <a href="#" className="hover:scale-110 transition-transform">
-    <Image src="/icons/facebook.svg" alt='Facebook' width={24} height={24} />
-  </a>
-  <a href="#" className="hover:scale-110 transition-transform">
-    <Image src="/icons/whatsapp.svg" alt='WhatsApp' width={24} height={24} />
-  </a>
-  <a href="#" className="hover:scale-110 transition-transform">
-    <Image src="/icons/x.svg" alt='X' width={24} height={24} />
-  </a>
+  
 </div>
 </div>
 </div>
 
 <div className="text-center text-sm border-t border-gray-300 p-4 mt-6">
-<span className='text-gray-500'>&copy; {new Date().getFullYear()} TecnAgro. Todos os direitos reservados.</span>
+<span className='text-gray-500'>&copy; TecnAgro. Todos os direitos reservados.</span>
 </div>
 </footer>
 );
 }
 
-export default Rodape;
+export default Rodape;
