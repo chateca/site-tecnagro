@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import Link from 'next/link'
+
 import { useRouter } from 'next/navigation'
 import { useEffect} from 'react'
 
@@ -112,12 +112,7 @@ function BannerComponent() {
            className='object-cover w-[100%] h-[100%] brightness-50'
            />
             <div className='content'>
-            <p className='font-mono lg:text-5xl md:text-3xl text-2xl  text-green-2 tracking-widest uppercase sub'>Formações</p>
-           <h2 className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-green-1 titulo'> <span className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-white'>Tecn</span>Agro</h2>
-           <p className='text-gray-200 lg:text-3xl md:text-2xl text-2xl font-ibm-plex-serif desc'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quasi.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, sed.
-           </p>
+          
            <div className='flex flex-col gap-2 sm:flex-row mt-3'>
             <button onClick={()=>router.push("/solicitar-produto")} className='btn'>
               <span className='text-white flex'>
@@ -139,17 +134,7 @@ function BannerComponent() {
              </button>
            </div>
 
-           <div className='mediaSocial'>
-                <Link href="#" className="hover:scale-110 transition-transform">
-                   <Image src="/icons/facebook.svg" alt='Facebook' width={24} height={24} className=' animate-mediaAnimation' />
-                 </Link>
-                 <Link href="#" className="hover:scale-110 transition-transform">
-                   <Image src="/icons/whatsapp.svg" alt='WhatsApp' width={24} height={24} className=' animate-mediaAnimation' />
-                 </Link>
-                 <Link href="#" className="hover:scale-110 transition-transform">
-                   <Image src="/icons/x.svg" alt='X' width={24} height={24} className=' animate-mediaAnimation' />
-                 </Link>
-           </div>
+           
             </div>
       
           </div>
@@ -166,12 +151,7 @@ function BannerComponent() {
            className='object-cover w-[100%] h-[100%] brightness-50'
            />
             <div className='content'>
-           <p className='font-mono lg:text-5xl md:text-3xl text-2xl  text-green-2 tracking-widest uppercase sub'>Formações</p>
-           <h2 className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-green-1 titulo'><span className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-white'>Tecn</span>Agro</h2>
-           <p className='text-gray-200 lg:text-3xl md:text-2xl text-2xl font-ibm-plex-serif desc'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quasi.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, sed.
-           </p>
+          
            <div className='flex flex-col gap-2 sm:flex-row mt-3'>
             <button onClick={()=>router.push("/solicitar-produto")} className='btn'>
               <span className='text-white flex'>
@@ -193,17 +173,6 @@ function BannerComponent() {
              </button>
            </div>
 
-           <div className='mediaSocial'>
-                <Link href="#" className="hover:scale-110 transition-transform">
-                   <Image src="/icons/facebook.svg" alt='Facebook' width={24} height={24} className=' animate-mediaAnimation' />
-                 </Link>
-                 <Link href="#" className="hover:scale-110 transition-transform">
-                   <Image src="/icons/whatsapp.svg" alt='WhatsApp' width={24} height={24} className=' animate-mediaAnimation' />
-                 </Link>
-                 <Link href="#" className="hover:scale-110 transition-transform">
-                   <Image src="/icons/x.svg" alt='X' width={24} height={24} className=' animate-mediaAnimation' />
-                 </Link>
-           </div>
             </div>
       
           </div>
