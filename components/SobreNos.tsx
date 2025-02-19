@@ -9,7 +9,8 @@ import * as React from 'react'
 
 function SobreNos() {
   React.useEffect(()=>{
-    const sr = ScrollReveal(({
+   // @ts-ignore 
+  const sr = ScrollReveal(({
       origin:"top", 
       distance:"60px", 
       duration:2500, 
