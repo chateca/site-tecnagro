@@ -21,6 +21,7 @@ const router = useRouter()
                 <Image
                 src={"/assets/logo.png"}
                 alt='Logo'
+               sizes="150px"
                 width={150}
                 height={150}
                

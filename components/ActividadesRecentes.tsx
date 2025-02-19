@@ -42,12 +42,12 @@ function ActividadesRecentes(){
   return (
     <div className="container w-full grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-8">
           <div suppressHydrationWarning={true} className='atividade__item group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
-            <div className='h-96 w-72'>
+            <div className='relative h-96 w-72'>
                <Image
                src={"/assets/img2.jpg"}
                alt={"item image"}
                fill
-               sizes='auto'
+               sizes='384px'
                className='object-cover rounded-2xl h-full w-full group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500'
                />
             </div>
@@ -66,12 +66,12 @@ function ActividadesRecentes(){
           </div>
 
           <div suppressHydrationWarning={true} className='atividade__item group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
-            <div className='h-96 w-72'>
+            <div className='relative h-96 w-72'>
                <Image
                src={"/assets/img1.jpg"}
                alt={"item image"}
                fill
-               sizes='auto'
+               sizes='384px'
                className='object-cover rounded-2xl h-full w-full group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500'
                />
             </div>
@@ -90,12 +90,12 @@ function ActividadesRecentes(){
           </div>
 
           <div suppressHydrationWarning={true} className='atividade__item group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
-            <div className='h-96 w-72'>
+            <div className='relative h-96 w-72'>
                <Image
                src={"/assets/img5.jpg"}
                alt={"item image"}
                fill
-               sizes='auto'
+               sizes='384px'
                className='object-cover rounded-2xl h-full w-full group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500'
                />
             </div>
@@ -114,12 +114,12 @@ function ActividadesRecentes(){
           </div>
 
           <div suppressHydrationWarning={true} className='atividade__item group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
-            <div className='h-96 w-72'>
+            <div className='relative h-96 w-72'>
                <Image
                src={"/assets/img13.jpg"}
                alt={"item image"}
                fill
-               sizes='auto'
+               sizes='384px'
                className='object-cover rounded-2xl h-full w-full group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500'
                />
             </div>
