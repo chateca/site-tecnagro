@@ -41,8 +41,7 @@ export default function RootLayout({
         className={`${inter.variable} ${ibmPlaxSerif.variable}`}>
         
         {children}
-        <Script src="/js/scrollreveal.min.js"></Script>
-        <Script src="/js/index.js"></Script>
+      
        
       </body>
     </html>
