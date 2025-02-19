@@ -3,37 +3,69 @@ import * as React from 'react'
 
 import Image from 'next/image';
 import { parceiros } from '@/constants';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination , Autoplay} from 'swiper/modules';
+
  
-
-
 function Parceiros() {
-
-   
-   
-  
-   
   return (
-    <div className="flex flex-col gap-4 p-2 w-full h-full">
+    <div className="container flex flex-col w-full overflow-hidden ">
     
-    <h1 className='text-center text-green-2 text-[28px] uppercase font-ibm-plex-serif font-extrabold'>Parceiros e Clientes</h1>
-      <div className='grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 self-center w-full gap-4 p-4  bg-gradient-to-r from-green-1 via-green-2 to-green-3 rounded-2xl'>
-           {
-            parceiros.map((item)=>(
-              <div
-              key={item.id}
-              className='relative flex  h-[100px]'
-              >
-               <Image
-              src={`/icons/${item.image}`}
-              alt='Icons'
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-               className='bg-contain rounded-lg'
-              />
-              </div>
-             
-            ))
-           }
+      <div className='py-2'>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          200: {
+            slidesPerView: 1,
+            spaceBetween: 1,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 1,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Autoplay,Pagination]}
+        className="swiper"
+      >
+        {
+        
+        parceiros.map((item)=>(
+          <SwiperSlide key={item.id}>
+           <div
+             className='relative  w-full h-44 rounded-2xl'
+             >
+              <Image
+             src={`/icons/${item.image}`}
+             alt='Icons'
+             fill
+             sizes="auto"
+              className='object-contain rounded-2xl'
+             />
+             </div>
+          </SwiperSlide>
+      ))}
+      </Swiper>
+           
+
+            
+       
+          
            
       </div>
         

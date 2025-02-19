@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <main className="flex flex-col w-full h-full">
         <Navbar/>
-        <div className="flex flex-col size-full overflow-hidden">
+        <div className="flex flex-col size-full overflow-hidden bg-green-950">
         {children}
         </div>
         <Rodape/>

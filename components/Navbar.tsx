@@ -1,64 +1,57 @@
 "use client"
-
+import * as React from "react"
 import Image from 'next/image'
 import Link from 'next/link'
 
 
-import {
-    Sheet,
-    SheetContent,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-  } from "@/components/ui/sheet"
+import { Input } from "./ui/input"
+import { useRouter } from "next/navigation"
+
+   
+
 
 function Navbar() {
-
+ 
+const router = useRouter()
 
   return (
-    <header className={`fixed top-0 left-0 flex w-full h-[4rem] max-xl:h-[4rem] p-2 z-30 items-center justify-center bg-green-1`}>
-           <nav className='flex justify-between p-8 max-md:p-4 size-full items-center'>
-            <div className=''>
+    <header id="navBar" className={`fixed top-0 left-0 w-full  bg-green-950  z-50 `}>
+           <nav className='container flex items-center justify-between   h-16 sm:h-20'>
+            <div className='relative  cursor-pointer  items-center justify-center'>
                 <Image
                 src={"/assets/logo.png"}
                 alt='Logo'
-                width={200}
-                height={200}
-                placeholder='empty'
+                width={150}
+                height={150}
+               
+                className="object-contain"
+                onClick={()=>router.push("/")} 
                 />
             </div>
-                  <ul className='flex gap-8 max-md:hidden'>
-                  <li><Link className='text_link' href={"/"}>Home</Link></li>
-                  <li><Link className='text_link' href={"/#sobre-nos"}>Sobre-nós</Link></li>
-                  <li><Link className='text_link' href={"/#produtos-servicos"}>Produtos e serviços</Link></li>
-                  <li><Link className='text_link' href={"/#parceiros"}>Parceiros</Link></li>
-                  <li><Link className='text_link' href={"/#contactos"}>Contactos</Link></li>
+
+            <div id="nav-menu" className="absolute top-0 left-[-100%] min-h-[80vh] w-full bg-green-950/80 backdrop-blur-sm flex items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-full">
+            <ul className='flex flex-col items-center gap-8  lg:flex-row'>
+                  <li><Link className='nav-link activeLink' href={"/"}>Home</Link></li>
+                  <li><Link className='nav-link' href={"/#sobre-nos"}>Sobre-nós</Link></li>
+                  <li><Link className='nav-link' href={"/#produtos-servicos"}>Produtos e serviços</Link></li>
+                  <li><Link className='nav-link' href={"/#contactos"}>Contactos</Link></li>
                   </ul>
+                  
+                  </div>
+             
+             <div className="hidden lg:flex">
+                  <Input type="search" placeholder="Pesquisar" />
+             </div>
 
+                    <div  className='flex z-50 lg:hidden'>
+                    <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2 cursor-pointer">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
 
-                    <div className='flex  md:hidden'>
-                   <Sheet >
-                <SheetTrigger>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 bg-white rounded-lg p-2 ">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  <svg id="closedMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2 cursor-pointer hidden">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
 
-                </SheetTrigger>
-                <SheetContent side={'left'}>
-                    <SheetHeader>
-                    <SheetTitle className='text-[28px] mb-4 text-green-2'>TecnAgro</SheetTitle>
-                    
-                    <ul className='flex flex-col gap-8 '>
-                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/"}>Home</Link></li>
-                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/#sobre-nos"}>Sobre-nós</Link></li>
-                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/#produtos-servicos"}>Produtos e serviços</Link></li>
-                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/#parceiros"}>Parceiros</Link></li>
-                  <li><Link className='text-green-1 text-[14px] font-ibm-plex-serif uppercase bg-black-3/30 p-2 rounded-lg' href={"/#contactos"}>Contactos</Link></li>
-                  </ul>
-                    
-                    </SheetHeader>
-                </SheetContent>
-                </Sheet>
                     </div>
                 
 
@@ -69,4 +62,8 @@ function Navbar() {
   )
 }
 
+
+
 export default Navbar
+
+

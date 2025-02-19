@@ -4,7 +4,12 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 
 import "./globals.css";
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 import { ourFileRouter } from "./api/uploadthing/core";
+import Script from "next/script";
+
 
 const inter = Inter({subsets:['latin'], variable:'--font-inter'});
 const  ibmPlaxSerif = IBM_Plex_Serif({
@@ -43,6 +48,9 @@ export default function RootLayout({
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
         {children}
+        <Script src="/js/scrollreveal.min.js"></Script>
+        <Script src="/js/index.js"></Script>
+       
       </body>
     </html>
   );

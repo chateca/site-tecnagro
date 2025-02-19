@@ -2,17 +2,6 @@
 import * as React from 'react'
 import Image from 'next/image'
 
-import { Button } from "@/components/ui/button"
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer"
 
 import { useEffect } from "react";
 import { BuscarActividadesActivasPaginaPrincipal } from '@/lib/actions/actividades.actions'
@@ -51,67 +40,102 @@ function ActividadesRecentes(){
 
    
   return (
-    <div className="flex flex-col gap-4 p-2 w-full h-full ">
-      <div className="flex flex-col items-center justify-center p-4 rounded-2xl  md:w-[50%] w-full self-center conteudo-actividades">
-          <h1 className="md:text-[28px] text-[18px] font-extrabold uppercase font-ibm-plex-serif text-green-2">Actividades Recentes</h1>
-            <div className="w-full h-1 bg-green-2" />
-        </div>
-        <div className='grid grid-cols-4 max-sm:grid-cols-2 gap-4 md:p-12 p-2  flex-col w-full conteudo-actividades'>
-         
-         {
-          actividades?.map((item)=>(
-             <div key={JSON.stringify(item?._id)} className="flex flex-col w-full  justify-between items-center bg-black-3 rounded-xl ">
-            <div className='relative flex w-full h-[400px] max-sm:h-[200px]'>
-              <Image
-              src={item.imagem}
-              alt='actividades'
-              fill
-           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className='object-cover rounded-t-xl size-full brightness-75'
-              />
+    <div className="container w-full grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-8">
+          <div suppressHydrationWarning={true} className='atividade__item group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
+            <div className='h-96 w-72'>
+               <Image
+               src={"/assets/img2.jpg"}
+               alt={"item image"}
+               fill
+               sizes='auto'
+               className='object-cover rounded-2xl h-full w-full group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500'
+               />
             </div>
-            <div className='flex flex-col w-full gap-2 p-2 '>
-                 <h1 className='text-white font-bold md:text-[18px] text-[14px]'>{item.titulo}</h1>
-                 <span className='text-gray-300 text-[11px] font-bold'>Descrição:</span>
-                 <span className='text-[12px] md:text-[14px] font-semibold text-white text-wrap break-words truncate h-[80px] px-2  tracking-tighter'>{item.descricao}</span>
-                  <div className='flex w-full '>
-                  <Drawer>
-                <DrawerTrigger asChild>
-                    <Button variant="outline">Saber mais</Button>
-                </DrawerTrigger>
-                <DrawerContent>
-                    <div className="mx-auto w-full max-w-sm">
-                    <DrawerHeader>
-                        <DrawerTitle>{item.titulo}</DrawerTitle>
-                        <DrawerDescription>{item.descricao} </DrawerDescription>
-                    </DrawerHeader>
-                    <div className="relative flex p-4 pb-0 h-[500px]">
-                       <Image
-                       src={item.imagem}
-                       alt={item.titulo}
-                       fill
-                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                       className='roundend-xl bg-cover'
-                       />
-                    </div>
-                    <DrawerFooter>
-                        <DrawerClose asChild>
-                        <Button variant="outline">Sair</Button>
-                        </DrawerClose>
-                    </DrawerFooter>
-                    </div>
-                </DrawerContent>
-                  </Drawer>
-                  </div>
-            </div>
-           
+                <div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#000] group-hover:from-[#000]/30 group-hover:via-[#000]/60 group-hover:to-[#000]/70'></div>
+                <div className='absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500'>
+                        <h1 className='text-3xl font-bold text-green-2'>
+                          titulo
+                        </h1>   
+                        <p className='text-lg italic text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, alias.
+                        </p>
+                        <button className='rounded-full shadow shadow-black-3/60 bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white'>
+                          Ver Mais
+                        </button>
+                </div>
           </div>
-          ))
-         }
-        
-        </div>
 
-          
+          <div suppressHydrationWarning={true} className='atividade__item group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
+            <div className='h-96 w-72'>
+               <Image
+               src={"/assets/img1.jpg"}
+               alt={"item image"}
+               fill
+               sizes='auto'
+               className='object-cover rounded-2xl h-full w-full group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500'
+               />
+            </div>
+                <div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#000] group-hover:from-[#000]/30 group-hover:via-[#000]/60 group-hover:to-[#000]/70'></div>
+                <div className='absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500'>
+                        <h1 className='text-3xl font-bold text-green-2'>
+                          titulo
+                        </h1>   
+                        <p className='text-lg italic text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, alias.
+                        </p>
+                        <button className='rounded-full shadow shadow-black-3/60 bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white'>
+                          Ver Mais
+                        </button>
+                </div>
+          </div>
+
+          <div suppressHydrationWarning={true} className='atividade__item group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
+            <div className='h-96 w-72'>
+               <Image
+               src={"/assets/img5.jpg"}
+               alt={"item image"}
+               fill
+               sizes='auto'
+               className='object-cover rounded-2xl h-full w-full group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500'
+               />
+            </div>
+                <div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#000] group-hover:from-[#000]/30 group-hover:via-[#000]/60 group-hover:to-[#000]/70'></div>
+                <div className='absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500'>
+                        <h1 className='text-3xl font-bold text-green-2'>
+                          titulo
+                        </h1>   
+                        <p className='text-lg italic text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, alias.
+                        </p>
+                        <button className='rounded-full shadow shadow-black-3/60 bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white'>
+                          Ver Mais
+                        </button>
+                </div>
+          </div>
+
+          <div suppressHydrationWarning={true} className='atividade__item group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
+            <div className='h-96 w-72'>
+               <Image
+               src={"/assets/img13.jpg"}
+               alt={"item image"}
+               fill
+               sizes='auto'
+               className='object-cover rounded-2xl h-full w-full group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500'
+               />
+            </div>
+                <div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#000] group-hover:from-[#000]/30 group-hover:via-[#000]/60 group-hover:to-[#000]/70'></div>
+                <div className='absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500'>
+                        <h1 className='text-3xl font-bold text-green-2'>
+                          titulo
+                        </h1>   
+                        <p className='text-lg italic text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, alias.
+                        </p>
+                        <button className='rounded-full shadow shadow-black-3/60 bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white'>
+                          Ver Mais
+                        </button>
+                </div>
+          </div>
 
         </div>
   )

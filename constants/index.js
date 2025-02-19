@@ -49,3 +49,4 @@ export const parceiros = [
             id:6
         }
 ]
+

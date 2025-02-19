@@ -29,7 +29,8 @@ import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { BuscarComentariosPaginaInicia, CriarComentario } from '@/lib/actions/comentarioAc.actions';
 import Swal from 'sweetalert2';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination , Autoplay} from 'swiper/modules';
 
 const formSchema = z.object({
     nome: z.string().min(3),
@@ -42,6 +43,33 @@ type Dados = {
   descricao:string,
   dataRegistro:string
 }  
+
+const cometariosTexte = [
+  {
+    _id:"sqfqwefwef9wef", 
+    nome:"fulano", 
+    descricao:"çdkcnlsdnlksdnvklnvlknsdklvnlksdnvlkndlkvnskldnv", 
+    dataRegistro:"20/01/2025"
+  },
+  {
+    _id:"sqfqwefwef9wefcdcsdcsdc", 
+    nome:"fulano", 
+    descricao:"çdkcnlsdnlksdnvklnvlknsdklvnlksdnvlkndlkvnskldnv", 
+    dataRegistro:"20/01/2025"
+  }, 
+  {
+    _id:"sqfqwefwef9wefcsdcsd", 
+    nome:"fulano", 
+    descricao:"çdkcnlsdnlksdnvklnvlknsdklvnlksdnvlkndlkvnskldnv", 
+    dataRegistro:"20/01/2025"
+  }, 
+  {
+    _id:"sqfqwefwef9wefjsdbkcjs", 
+    nome:"fulano", 
+    descricao:"çdkcnlsdnlksdnvklnvlknsdklvnlksdnvlkndlkvnskldnv", 
+    dataRegistro:"20/01/2025"
+  }
+]
 
 function Comentarios() {
   const [comentarios, setComentarios] = React.useState<Array<Dados>>()
@@ -166,15 +194,52 @@ function Comentarios() {
                 </DrawerContent>
     </Drawer>
     </div>
-      <div className='grid md:grid-cols-4 grid-cols-2  gap-4 p-8 flex-wrap  w-full justify-between  rounded-2xl'>
-    
-      {comentarios?.map((item)=>(
-          <Comentario key={item._id}
+      <div className='container'>
+         <div className='py-12'>
+          <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+       
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          200: {
+            slidesPerView: 1,
+            spaceBetween: 1,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 1,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Autoplay,Pagination]}
+        className="swiper"
+      >
+        
+         {cometariosTexte?.map((item)=>(
+          <SwiperSlide key={item._id}>
+          <Comentario 
           nome={item.nome}
           descricao = {item.descricao}
           data={item.dataRegistro}
           />
+          </SwiperSlide>
       ))}
+      </Swiper>
+           
+
+            
+         </div>
+     
      
       </div>
         
