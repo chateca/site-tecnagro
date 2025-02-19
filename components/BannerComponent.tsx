@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useEffect} from 'react'
+
 
 const items = [
   {
@@ -35,67 +35,6 @@ function BannerComponent() {
   const router = useRouter()
 
 
-  useEffect(()=>{
-    const  items = document.querySelectorAll('.slider .list .item');
-   
-    const proximo = document.getElementById('proximo');
-    const anterior = document.getElementById('anterior');
-    if(!proximo) return 
-    if(!anterior) return
-
-    // slide
-    const  countItem = items.length;
-    let itemAtive = 0
-    
-    
-    
-    proximo.onclick = function(){
-      itemAtive = itemAtive +1
-      if(itemAtive >= countItem){
-        itemAtive = 0
-      }
-      showSlader()
-    } 
-    
-    
-    anterior.onclick = function(){
-     
-      itemAtive = itemAtive -1
-      if(itemAtive < 0){
-        itemAtive = countItem-1
-      }
-      showSlader()
-    } 
-    
-    let refreshSlides = setInterval(()=>{
-    
-      proximo?.click()
-    },9000)
-    
-    
-    function showSlader(){
-      let indice = 0
-       if(itemAtive ===0 ){
-         indice = 1 
-      }else if(itemAtive === 3){
-        indice = 0
-        }else{ 
-        indice =  itemAtive+1
-        }
-    
-       items[itemAtive]?.classList.remove('ative');
-        items[indice]?.classList.add('ative');
-     
-       
-
-         clearInterval(refreshSlides)
-         refreshSlides = setInterval(()=>{
-          proximo?.click()
-    },9000)
-    }
-  
-  },[])
-  
 
 
     
