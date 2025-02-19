@@ -13,31 +13,23 @@ const config = {
   ],
   prefix: "",
   theme: {
-  	container: {
-  		center: true,
-  		padding: '2rem',
-  		screens: {
-  			'2xl': '1400px'
-  		}
-  	},
+	fontSize: {
+		'xs': '.75rem', // 12px
+		'sm': '.875rem', // 14px
+		'base': '1rem', // 16px
+		'lg': '1.125rem', // 18px
+		'xl': '1.25rem', // 20px
+		'2xl': '1.5rem', // 24px
+		'3xl': '1.875rem', // 30px
+		'4xl': '2.25rem', // 36px
+		'5xl': '3rem', // 48px
+		'6xl': '4rem', // 64px
+		'7xl': '5rem', // 64px
+		'8xl': '6rem', // 64px
+	  },
   	extend: {
   		colors: {
-  			fill: {
-  				'1': 'rgba(255, 255, 255, 0.10)'
-  			},
-  			bankGradient: '#0179FE',
-  			indigo: {
-  				'500': '#6172F3',
-  				'700': '#3538CD'
-  			},
-  			success: {
-  				'25': '#F6FEF9',
-  				'50': '#ECFDF3',
-  				'100': '#D1FADF',
-  				'600': '#039855',
-  				'700': '#027A48',
-  				'900': '#054F31'
-  			},
+  			
   			black: {
   				'1': '#00214F',
   				'2': '#344054',
@@ -57,46 +49,8 @@ const config = {
   				'700': '#344054',
   				'900': '#101828'
   			},
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
-  			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
-  			},
-  			popover: {
-  				DEFAULT: 'hsl(var(--popover))',
-  				foreground: 'hsl(var(--popover-foreground))'
-  			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
-  			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
-  			},
-  			muted: {
-  				DEFAULT: 'hsl(var(--muted))',
-  				foreground: 'hsl(var(--muted-foreground))'
-  			},
-  			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
-  			},
-  			destructive: {
-  				DEFAULT: 'hsl(var(--destructive))',
-  				foreground: 'hsl(var(--destructive-foreground))'
-  			},
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
-  			}
+  		
+  			
   		},
   	
   		keyframes: {
