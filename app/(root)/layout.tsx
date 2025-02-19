@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Rodape from "@/components/Rodape";
+
 
 
 
@@ -16,7 +16,7 @@ export default function RootLayout({
         <div className="flex flex-col size-full overflow-hidden bg-green-950">
         {children}
         </div>
-        <Rodape/>
+        
     </main>
       
     
