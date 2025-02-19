@@ -93,7 +93,7 @@ function BannerComponent() {
     },5000)
     }
   
-  },[])
+  })
   
 
 

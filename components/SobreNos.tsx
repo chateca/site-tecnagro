@@ -21,7 +21,7 @@ function SobreNos() {
   sr.reveal('.about__item__1-image',   {origin:"right"})
   sr.reveal('.about__item__1-content', {origin:"left"})
   
-  },[])
+  })
    
    
    
