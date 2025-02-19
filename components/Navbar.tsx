@@ -11,6 +11,38 @@ import { useRouter } from "next/navigation"
 
 
 function Navbar() {
+  React.useEffect(()=>{
+    const navMenu = document.getElementById('nav-menu')
+const navLink = document.querySelectorAll('.nav-link')
+const hamburger = document.getElementById('hamburger')
+const closedMenu = document.getElementById('closedMenu')
+  if(!hamburger) return
+  if(!closedMenu) return    
+
+
+
+//menu 
+hamburger?.addEventListener("click",()=>{
+  navMenu?.classList?.toggle("left-[0%]")
+  hamburger.classList?.add("hidden")
+  closedMenu.classList?.remove("hidden")
+})
+
+closedMenu.addEventListener('click',()=>{
+    navMenu?.classList?.toggle("left-[0%]")
+    hamburger.classList?.remove("hidden")
+    closedMenu.classList?.add("hidden")
+})
+
+navLink.forEach(link =>{
+    link.addEventListener('click', ()=>{
+        navMenu?.classList?.toggle("left-[0%]")
+        hamburger.classList?.remove("hidden")
+        closedMenu.classList?.add("hidden")
+    })
+})
+
+  })
  
 const router = useRouter()
 
@@ -18,7 +50,7 @@ const router = useRouter()
   return (
     <header id="navBar" className={`fixed top-0 left-0 w-full  bg-green-950  z-50 `}>
            <nav className='container flex items-center justify-between   h-16 sm:h-20'>
-            <div className='relative  cursor-pointer  items-center justify-center'>
+            <div className='relative  cursor-pointer  items-center justify-center left-4'>
                 <Image
              
                 src={"/assets/logo.png"}
@@ -27,7 +59,8 @@ const router = useRouter()
                 height={120}
                 sizes="100px"
                 priority
-                className="object-contain size-32 left-4"
+                
+                className="object-contain size-32 right-4"
                 onClick={()=>router.push("/")} 
                 />
             </div>
@@ -46,7 +79,7 @@ const router = useRouter()
                   <Input type="search" placeholder="Pesquisar" />
              </div>
 
-                    <div  className='flex z-50 lg:hidden'>
+                    <div  className='relative flex z-50 lg:hidden ring-1 ring-white right-3'>
                     <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2 cursor-pointer">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                   </svg>
