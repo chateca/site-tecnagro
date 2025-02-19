@@ -1,9 +1,8 @@
 "use client"
-import * as React from 'react'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { useEffect} from 'react'
 
 const items = [
   {
@@ -35,8 +34,10 @@ const items = [
 function BannerComponent() {
   const router = useRouter()
 
-  React.useEffect(()=>{
+
+  useEffect(()=>{
     const  items = document.querySelectorAll('.slider .list .item');
+   
     const proximo = document.getElementById('proximo');
     const anterior = document.getElementById('anterior');
     if(!proximo) return 
@@ -93,7 +94,7 @@ function BannerComponent() {
     },9000)
     }
   
-  })
+  },[])
   
 
 
