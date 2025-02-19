@@ -117,13 +117,7 @@ span{
 
 
 @layer base {
-  html,
-:host {
-    -webkit-text-size-adjust: none;
-}
-:host {
-  -webkit-text-size-adjust: none;
-}
+ 
 }
 
 

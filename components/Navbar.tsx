@@ -14,18 +14,20 @@ function Navbar() {
  
 const router = useRouter()
 
+
   return (
     <header id="navBar" className={`fixed top-0 left-0 w-full  bg-green-950  z-50 `}>
            <nav className='container flex items-center justify-between   h-16 sm:h-20'>
             <div className='relative  cursor-pointer  items-center justify-center'>
                 <Image
+             
                 src={"/assets/logo.png"}
                 alt='Logo'
-               sizes="150px"
-                width={150}
-                height={150}
-               
-                className="object-contain"
+                width={120}
+                height={120}
+                sizes="100px"
+                priority
+                className="object-contain size-32 left-4"
                 onClick={()=>router.push("/")} 
                 />
             </div>
