@@ -7,9 +7,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 
-import Script from "next/script";
-
-
 const inter = Inter({subsets:['latin'], variable:'--font-inter'});
 const  ibmPlaxSerif = IBM_Plex_Serif({
   subsets:['latin'], 
