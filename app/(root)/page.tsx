@@ -7,10 +7,12 @@ const  SobreNos= dynamic(()=>import("@/components/SobreNos"), {ssr:false})
 export default function Home() {
 
   return (
-    <section  className="flex flex-col w-full scroll-section ">
+    <section  className="relative  flex flex-col w-full scroll-section ">
      <BannerComponent/>
-     <SobreNos/>
 
+     <section id='sobre-nos' className="relative mt-20 mb-10 overflow-hidden">
+     <SobreNos/>
+    </section>
     </section>
   );
 }

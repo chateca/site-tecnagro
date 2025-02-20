@@ -5,6 +5,7 @@ import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Script from "next/script";
 
 
 
@@ -40,7 +41,7 @@ export default function RootLayout({
         
         {children}
       
-        <script src="https://unpkg.com/scrollreveal" async></script>
+        <Script src="https://unpkg.com/scrollreveal" ></Script>
       </body>
     </html>
   );

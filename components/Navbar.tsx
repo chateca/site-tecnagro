@@ -80,7 +80,7 @@ const router = useRouter()
                   <Input type="search" placeholder="Pesquisar" />
              </div>
 
-                    <div  className='relative z-50 lg:hidden  ring-1 ring-white right-3 '>
+                    <div  className='relative z-50 lg:hidden lg:ring-0 ring-1 ring-white right-3 '>
                     <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2 cursor-pointer">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                   </svg>
