@@ -89,8 +89,8 @@ function BannerComponent() {
            />
             <div className='content'>
             <p className='font-mono lg:text-5xl md:text-3xl text-2xl  text-green-2 tracking-widest uppercase sub'>Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade </p>
-           <h2 className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-green-1 titulo'> <span className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-white'>Tecn</span>Agro</h2>
-           <p className='text-gray-200 lg:text-3xl md:text-2xl text-2xl font-ibm-plex-serif desc'>
+           <h2 className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-5xl font-bold text-green-1 titulo'> <span className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-white'>Tecn</span>Agro</h2>
+           <p className='text-gray-200 lg:text-3xl md:text-2xl text-xl text-justify tracking-tight leading-normal whitespace-normal font-ibm-plex-serif desc'>
            Elaboração de projetos personalizados e estudos de viabilidade econômica para novos empreendimentos agrícolas,
            garantindo a sustentabilidade e a rentabilidade dos investimentos. <Link href={"/produtos-servicos/22s1eeeeee21s2s2s"} className='text-green-2 text-xl'>Ver</Link>
            </p>
@@ -144,8 +144,8 @@ function BannerComponent() {
            />
             <div className='content'>
            <p className='font-mono lg:text-5xl md:text-3xl text-2xl  text-green-2 tracking-widest uppercase sub'>{item.sub}</p>
-           <h2 className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-green-1 titulo'><span className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-white'>Tecn</span>Agro</h2>
-           <p className='text-gray-200 lg:text-3xl md:text-2xl text-2xl font-ibm-plex-serif desc'>
+           <h2 className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-5xl font-bold text-green-1 titulo'><span className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-white'>Tecn</span>Agro</h2>
+           <p className='text-gray-200 lg:text-3xl md:text-2xl text-xl text-justify tracking-tight leading-normal whitespace-normal font-ibm-plex-serif desc'>
               {item.desc} <Link href={"/produtos-servicos/22s1eeeeee21s2s2s"} className='text-green-2 text-xl'>Ver</Link>
            </p>
            <div className='flex flex-col gap-2 sm:flex-row mt-3'>
