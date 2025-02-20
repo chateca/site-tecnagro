@@ -53,7 +53,7 @@ const router = useRouter()
             <div className='relative  cursor-pointer  items-center justify-center left-4'>
                 <Image
                 onError={(e) => console.error(e)}
-                src={"/assets/logo.png"}
+                src={"/assets/img/logo.png"}
                 alt='Logo'
                 width={120}
                 height={120}

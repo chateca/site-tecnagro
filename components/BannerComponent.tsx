@@ -1,33 +1,9 @@
 "use client"
+import { items } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
-
-const items = [
-  {
-    titulo:"TecnAgro",
-    sub:"Formações",
-    image:'img1.jpg',
-    desc:"lorem e mais alguma coisa que vai impactar o cliente",
-    id:1
-  }, 
-  {
-    titulo:"TecnAgro",
-    sub:"Formações",
-    image:'img7.jpg',
-    desc:"lorem e mais alguma coisa que vai impactar o cliente",
-    id:2
-  }, 
-  {
-    titulo:"TecnAgro",
-    sub:"Formações",
-    image:'img4.jpg',
-    desc:"lorem e mais alguma coisa que vai impactar o cliente",
-    id:3
-  }, 
-
-]
 
 
 
@@ -75,7 +51,7 @@ function BannerComponent() {
       let indice = 0
        if(itemAtive ===0 ){
          indice = 1 
-      }else if(itemAtive === 3){
+      }else if(itemAtive === 5){
         indice = 0
         }else{ 
         indice =  itemAtive+1
@@ -103,7 +79,7 @@ function BannerComponent() {
       <div
             className='relative flex  w-full h-full item ative'>
             <Image
-            src={`/assets/img14.jpg`}
+            src={`/assets/img/projetos.jpg`}
             alt='sliderImage'
             fill 
             sizes='100%'
@@ -112,11 +88,11 @@ function BannerComponent() {
            className='object-cover w-[100%] h-[100%] brightness-50'
            />
             <div className='content'>
-            <p className='font-mono lg:text-5xl md:text-3xl text-2xl  text-green-2 tracking-widest uppercase sub'>Formações</p>
+            <p className='font-mono lg:text-5xl md:text-3xl text-2xl  text-green-2 tracking-widest uppercase sub'>Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade </p>
            <h2 className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-green-1 titulo'> <span className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-white'>Tecn</span>Agro</h2>
            <p className='text-gray-200 lg:text-3xl md:text-2xl text-2xl font-ibm-plex-serif desc'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quasi.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, sed.
+           Elaboração de projetos personalizados e estudos de viabilidade econômica para novos empreendimentos agrícolas,
+           garantindo a sustentabilidade e a rentabilidade dos investimentos. <Link href={"/produtos-servicos/22s1eeeeee21s2s2s"} className='text-green-2 text-xl'>Ver</Link>
            </p>
            <div className='flex flex-col gap-2 sm:flex-row mt-3'>
             <button onClick={()=>router.push("/solicitar-produto")} className='btn'>
@@ -159,7 +135,7 @@ function BannerComponent() {
             key={item.id} 
             className='relative flex  w-full h-full item'>
             <Image
-            src={`/assets/${item.image}`}
+            src={`/assets/img/${item.image}`}
             alt='sliderImage'
             fill 
             sizes='100%'
@@ -167,11 +143,10 @@ function BannerComponent() {
            className='object-cover w-[100%] h-[100%] brightness-50'
            />
             <div className='content'>
-           <p className='font-mono lg:text-5xl md:text-3xl text-2xl  text-green-2 tracking-widest uppercase sub'>Formações</p>
+           <p className='font-mono lg:text-5xl md:text-3xl text-2xl  text-green-2 tracking-widest uppercase sub'>{item.sub}</p>
            <h2 className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-green-1 titulo'><span className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-6xl font-bold text-white'>Tecn</span>Agro</h2>
            <p className='text-gray-200 lg:text-3xl md:text-2xl text-2xl font-ibm-plex-serif desc'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quasi.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, sed.
+              {item.desc} <Link href={"/produtos-servicos/22s1eeeeee21s2s2s"} className='text-green-2 text-xl'>Ver</Link>
            </p>
            <div className='flex flex-col gap-2 sm:flex-row mt-3'>
             <button onClick={()=>router.push("/solicitar-produto")} className='btn'>
