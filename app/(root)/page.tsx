@@ -1,4 +1,6 @@
-import BannerComponent from "@/components/BannerComponent";
+"use client"
+import dynamic from 'next/dynamic'
+const  BannerComponent = dynamic(()=>import("@/components/BannerComponent"), {ssr:false});
 
 export default function Home() {
 

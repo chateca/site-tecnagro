@@ -48,31 +48,30 @@ function BannerComponent() {
     
     
     
-    proximo.onclick = function(){
+    proximo.onclick = async function(){
       itemAtive = itemAtive +1
       if(itemAtive >= countItem){
         itemAtive = 0
       }
-      showSlader()
+    await  showSlader()
     } 
     
     
-    anterior.onclick = function(){
+    anterior.onclick = async  function(){
      
       itemAtive = itemAtive -1
       if(itemAtive < 0){
         itemAtive = countItem-1
       }
-      showSlader()
+     await showSlader()
     } 
     
-    let refreshSlides = setInterval(()=>{
-    
-      proximo?.click()
+    let refreshSlides = setInterval( async ()=>{
+      await proximo?.click()
     },9000)
     
     
-    function showSlader(){
+    async function showSlader(){
       let indice = 0
        if(itemAtive ===0 ){
          indice = 1 
@@ -82,14 +81,14 @@ function BannerComponent() {
         indice =  itemAtive+1
         }
     
-       items[itemAtive]?.classList.remove('ative');
-        items[indice]?.classList.add('ative');
+      await items[itemAtive]?.classList.remove('ative');
+       await  items[indice]?.classList.add('ative');
      
        
 
          clearInterval(refreshSlides)
-         refreshSlides = setInterval(()=>{
-          proximo?.click()
+         refreshSlides = setInterval( async ()=>{
+         await  proximo?.click()
     },9000)
     }
   
@@ -107,7 +106,8 @@ function BannerComponent() {
             src={`/assets/img14.jpg`}
             alt='sliderImage'
             fill 
-          
+            sizes='100%'
+            priority
            className='object-cover w-[100%] h-[100%] brightness-50'
            />
             <div className='content'>
@@ -161,7 +161,8 @@ function BannerComponent() {
             src={`/assets/${item.image}`}
             alt='sliderImage'
             fill 
-          
+            sizes='100%'
+            loading='lazy'
            className='object-cover w-[100%] h-[100%] brightness-50'
            />
             <div className='content'>
