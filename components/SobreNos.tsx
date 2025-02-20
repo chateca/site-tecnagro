@@ -32,7 +32,7 @@ function SobreNos() {
   return (
     <section id='sobre-nos' className="relative mt-20 mb-10 overflow-hidden">
     
-        <div className='container space-y-10 xl:space-y-0'>
+        <div className='container space-y-10 xl:space-y-0 pb-4'>
           <div className='flex flex-col items-center lg:flex-row gap-5' >
            
             <div suppressHydrationWarning className='about__item__1-content flex flex-col w-full'>
@@ -79,13 +79,13 @@ function SobreNos() {
             </div>
           </div>
 
-          <div className='container grid lg:grid-cols-3 grid-cols-2 mt-4 '>
+          <div className='container grid lg:grid-cols-3 grid-cols-2 mt-4 px-2 gap-x-3'>
              <div className='about__item__1-numbers flex lg:items-center lg:justify-center relative space-x-1 lg:w-48 w-32 h-28'>
-                  <span className='md:text-2xl text-xl font-mono text-gray-300 font-bold' >Formações realizadas:</span>
+                  <span className='md:text-2xl ms:text-xl text-lg font-mono text-gray-300 font-bold' >Formações realizadas:</span>
                   <span className='lg:text-6xl md:text-5xl text-4xl text-green-2 font-bold'>20</span>
              </div>
              <div className='about__item__1-numbers flex lg:items-center lg:justify-center relative  lg:w-48 w-32 h-28'>
-                  <span className='md:text-2xl text-xl  font-mono text-gray-300 font-bold' >Projecto elaborados:</span>
+                  <span className='md:text-2xl sm:text-xl text-lg  font-mono text-gray-300 font-bold' >Projecto elaborados:</span>
                   <span className='lg:text-6xl md:text-5xl text-4xl text-green-2 font-bold'>15</span>
              </div>
              <div className='about__item__1-numbers relative  lg:w-80 h-28 w-full lg:col-span-1   col-span-2 '>
