@@ -52,14 +52,14 @@ const router = useRouter()
            <nav className='flex items-center justify-between  w-[100%]   h-16 sm:h-20 lg:px-12 px-3'>
             <div className='relative  cursor-pointer  items-center justify-center left-4'>
                 <Image
-             
+                onError={(e) => console.error(e)}
                 src={"/assets/logo.png"}
                 alt='Logo'
                 width={120}
                 height={120}
                 sizes="100px"
                 priority
-                
+                placeholder="empty"
                 className="object-contain size-32 right-4"
                 onClick={()=>router.push("/")} 
                 />

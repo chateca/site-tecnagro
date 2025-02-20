@@ -108,6 +108,7 @@ function BannerComponent() {
             fill 
             sizes='100%'
             priority
+            placeholder='empty'
            className='object-cover w-[100%] h-[100%] brightness-50'
            />
             <div className='content'>
