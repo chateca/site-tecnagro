@@ -1,9 +1,11 @@
 import BannerComponent from "@/components/BannerComponent";
 
 export default function Home() {
+
   return (
-    <section  className="flex flex-col w-full">
+    <section  className="flex flex-col w-full scroll-section ">
      <BannerComponent/>
+
     </section>
   );
 }
