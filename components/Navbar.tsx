@@ -50,7 +50,7 @@ const router = useRouter()
   return (
     <header id="navBar" className={`fixed top-0 left-0 w-full items-center justify-center  bg-green-950  z-50 `}>
            <nav className='flex items-center justify-between  w-[100%]   h-16 sm:h-20 lg:px-12 px-3'>
-            <div className='relative  cursor-pointer  items-center justify-center left-4'>
+            <div className='relative  cursor-pointer  items-center justify-center left-4 z-50'>
                 <Image
                 onError={(e) => console.error(e)}
                 src={"/assets/img/logo.png"}
@@ -70,6 +70,7 @@ const router = useRouter()
                   <li><Link className='nav-link activeLink' href={"/"}>Home</Link></li>
                   <li><Link className='nav-link' href={"/#sobre-nos"}>Sobre-nós</Link></li>
                   <li><Link className='nav-link' href={"/#produtos-servicos"}>Produtos e serviços</Link></li>
+                  <li><Link className='nav-link' href={"/galeriaNoTerreno"}>No Terreno</Link></li>
                   <li><Link className='nav-link' href={"/#contactos"}>Contactos</Link></li>
                   </ul>
                   

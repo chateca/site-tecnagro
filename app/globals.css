@@ -5,12 +5,9 @@
 
 
 
-html{
-  @apply overflow-x-hidden scroll-smooth 
-}
-
 
 @layer components{
+
 
   .swiper{
    @apply w-[100%] h-[100%]
@@ -81,7 +78,7 @@ span{
 
 
 .titulo{
-  @apply font-sans text-green-2 font-extrabold 
+  @apply font-sans text-green-2 font-extrabold lg:text-6xl md:text-4xl text-2xl
 }
 
 /*button style*/
@@ -117,6 +114,10 @@ span{
 
 
 @layer base {
+  html{
+    @apply overflow-x-hidden scroll-smooth 
+  }
+  
   
 }
 

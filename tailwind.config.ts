@@ -13,6 +13,16 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+	container: {
+		center:true,
+		padding: {
+		  DEFAULT: '1rem',
+		  sm: '2rem',
+		  lg: '3rem',
+		  xl: '4rem',
+		  '2xl': '4rem',
+		},
+	},
 	fontSize: {
 		'xs': '.75rem', // 12px
 		'sm': '.875rem', // 14px

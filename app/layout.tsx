@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 
+
 const inter = Inter({subsets:['latin'], variable:'--font-inter'});
 const  ibmPlaxSerif = IBM_Plex_Serif({
   subsets:['latin'], 
@@ -39,7 +40,7 @@ export default function RootLayout({
         
         {children}
       
-       
+        <script src="https://unpkg.com/scrollreveal" async></script>
       </body>
     </html>
   );
