@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
      // Adiciona utfs.io como um domínio confiável
     localPatterns: [
       {
-        pathname: '/assets/img/**',
+        pathname: '/assets/**',
         search: '',
       },
     ],

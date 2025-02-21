@@ -51,7 +51,7 @@ function Parceiros() {
              className='relative  w-full h-44 rounded-2xl'
              >
               <Image
-             src={`/icons/${item.image}`}
+             src={`/assets/icons/${item.image}`}
              alt='Icons'
              fill
              sizes="auto"

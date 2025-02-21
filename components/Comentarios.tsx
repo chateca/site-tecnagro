@@ -44,32 +44,7 @@ type Dados = {
   dataRegistro:string
 }  
 
-const cometariosTexte = [
-  {
-    _id:"sqfqwefwef9wef", 
-    nome:"fulano", 
-    descricao:"çdkcnlsdnlksdnvklnvlknsdklvnlksdnvlkndlkvnskldnv", 
-    dataRegistro:"20/01/2025"
-  },
-  {
-    _id:"sqfqwefwef9wefcdcsdcsdc", 
-    nome:"fulano", 
-    descricao:"çdkcnlsdnlksdnvklnvlknsdklvnlksdnvlkndlkvnskldnv", 
-    dataRegistro:"20/01/2025"
-  }, 
-  {
-    _id:"sqfqwefwef9wefcsdcsd", 
-    nome:"fulano", 
-    descricao:"çdkcnlsdnlksdnvklnvlknsdklvnlksdnvlkndlkvnskldnv", 
-    dataRegistro:"20/01/2025"
-  }, 
-  {
-    _id:"sqfqwefwef9wefjsdbkcjs", 
-    nome:"fulano", 
-    descricao:"çdkcnlsdnlksdnvklnvlknsdklvnlksdnvlkndlkvnskldnv", 
-    dataRegistro:"20/01/2025"
-  }
-]
+
 
 function Comentarios() {
   const [comentarios, setComentarios] = React.useState<Array<Dados>>()
@@ -135,8 +110,8 @@ function Comentarios() {
                 <DrawerTrigger asChild>
                     <Button className='bg-green-2' variant="outline">Diga-nos alguma coisa!</Button>
                 </DrawerTrigger>
-                <DrawerContent>
-                    <div className="flex w-full flex-col items-center justify-center">
+                <DrawerContent className='bg-white'>
+                    <div className="flex w-full flex-col items-center justify-center ">
                     <DrawerHeader>
                         <DrawerTitle>Comentario</DrawerTitle>
                         <DrawerDescription>
@@ -187,7 +162,7 @@ function Comentarios() {
                     <DrawerFooter>
                         
                         <DrawerClose asChild>
-                        <Button variant="outline">Cancel</Button>
+                        <Button variant="outline" className='bg-[#000] text-white'>Cancel</Button>
                         </DrawerClose>
                     </DrawerFooter>
                     </div>
@@ -225,7 +200,7 @@ function Comentarios() {
         className="swiper"
       >
         
-         {cometariosTexte?.map((item)=>(
+         {comentarios?.map((item)=>(
           <SwiperSlide key={item._id}>
           <Comentario 
           nome={item.nome}

@@ -9,7 +9,7 @@ function Rodape() {
       <div className="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
         <div>
           <h2 className="text-xl font-bold mb-3 text-green-3">TecnAgro</h2>
-          <p className="text-sm text-[12px] text-gray-950 text-justify">
+          <p className="text-sm  text-gray-950 text-justify">
             Consultoria Agrícola inovadora, 
             especializada em oferecer serviços de consultoria agrária,
             desenvolvimento de soluções na Agricultura Digital 

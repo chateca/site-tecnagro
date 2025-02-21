@@ -1,6 +1,4 @@
-
 "use client"
-
 import Image from 'next/image'
 import * as React from 'react'
 function SobreNos() {
@@ -9,7 +7,8 @@ function SobreNos() {
    //@ts-ignore
    const sr = ScrollReveal(({
       origin:"top", 
-      distance:"60px",       duration:2500, 
+      distance:"60px",      
+      duration:2500, 
       delay:300, 
       reset:true
   }))
@@ -18,7 +17,7 @@ function SobreNos() {
    sr.reveal(`.about__item__1-image`,   {origin:"right"})
    sr.reveal(`.about__item__1-content`, {origin:"left"})
    sr.reveal(`.about__item__1-numbers`, {delay:500, scale:0.5})
-  
+   sr.reveal('.atividade__item', {interval:100})
 
 
   },[])
@@ -29,7 +28,7 @@ function SobreNos() {
         <div className='container space-y-10 xl:space-y-0 pb-4'>
           <div className='flex flex-col items-center lg:flex-row gap-5' >
             <div suppressHydrationWarning className='about__item__1-content flex flex-col w-full'>
-            <div suppressHydrationWarning  className='about__item__title flex flex-col   gap-3  mb-4 md:mb-8 px-10 '>
+            <div suppressHydrationWarning  className='about__item__title flex flex-col   gap-3   mb-4 md:mb-8 px-10 '>
           <h2 className='titulo'>Apresentação</h2> 
         </div>
                 <div className='p-8  text-white'>

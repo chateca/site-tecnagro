@@ -105,3 +105,33 @@ export const items = [
 
 ]
 
+
+/*
+
+const cometariosTexte = [
+  {
+    _id:"sqfqwefwef9wef", 
+    nome:"fulano", 
+    descricao:"çdkcnlsdnlksdnvklnvl knsdklvnlksdn vlkndlkvnskldnv", 
+    dataRegistro:"20/01/2025"
+  },
+  {
+    _id:"sqfqwefwef9wefcdcsdcsdc", 
+    nome:"fulano", 
+    descricao:"çdkcnlsdnlksdnvk lnvlknsdklvnlksdnv lkndlkvnskldnv", 
+    dataRegistro:"20/01/2025"
+  }, 
+  {
+    _id:"sqfqwefwef9wefcsdcsd", 
+    nome:"fulano", 
+    descricao:"çdkcnlsdnlks dnvklnvlknsdklvnlk sdnvlkndlkvnskldnv", 
+    dataRegistro:"20/01/2025"
+  }, 
+  {
+    _id:"sqfqwefwef9wefjsdbkcjs", 
+    nome:"fulano", 
+    descricao:"çdkcnlsdnl ksdnvklnvlknsdklvnl ksdnvlkndlkvnskldnv", 
+    dataRegistro:"20/01/2025"
+  }
+]
+*/
