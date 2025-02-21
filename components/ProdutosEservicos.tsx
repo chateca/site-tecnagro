@@ -9,7 +9,7 @@ function ProdutosEservicos() {
   return (
     <>
      <div suppressHydrationWarning  className='about__item__title flex flex-col z-30 relative  gap-3  mb-4 md:mb-8 px-10 '>
-          <h2 className='titulo text-center '>Principais serciços</h2> 
+          <h2 className='titulo text-center '>Principais Serviços</h2> 
 
         </div>
     
@@ -44,7 +44,7 @@ function ProdutosEservicos() {
             </p>
             </div>
             <p>
-                Entregamos produtos agricolas em qualquer ludar de angola, faça já o seu pedido.
+                Entregamos produtos agrícolas em qualquer lugar de Angola, faça já o seu pedido.
             </p>
         </div>
 
@@ -56,11 +56,11 @@ function ProdutosEservicos() {
 
             <p className='md:text-lg font-bold'>
                 Formação <br/>
-                Agraria
+                Agrária
             </p>
             </div>
             <p>
-               Oferecemos formação em diverças areas da agricultura e não só!
+               Oferecemos formação diversa em agricultura.
             </p>
         </div>
 
@@ -76,7 +76,7 @@ function ProdutosEservicos() {
             </p>
             </div>
             <p>
-               Prestamos serviços de acompanhamento e elaboração de projecto.
+               Prestamos servisos de acompanhamento e elaboração de estudos de viabilidade e projecto.
             </p>
         </div>
     </div>

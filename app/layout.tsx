@@ -33,8 +33,8 @@ export default function RootLayout({
   return (
     <html lang="en">
     <head>
-    <meta charSet="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
     </head>
       <body
         className={`${inter.variable} ${ibmPlaxSerif.variable}`}>

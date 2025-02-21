@@ -106,9 +106,9 @@ export const items = [
 ]
 
 
-/*
 
-const cometariosTexte = [
+
+export const cometariosTexte = [
   {
     _id:"sqfqwefwef9wef", 
     nome:"fulano", 
@@ -134,4 +134,4 @@ const cometariosTexte = [
     dataRegistro:"20/01/2025"
   }
 ]
-*/
+

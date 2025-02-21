@@ -57,7 +57,7 @@ function SobreNos() {
                   <span className='md:text-2xl sm:text-xl text-lg  font-mono text-gray-300 font-bold' >Projecto elaborados:</span>
                   <span className='lg:text-6xl md:text-5xl text-4xl text-green-2 font-bold'>15</span>
              </div>
-             <div className='relative  lg:w-80 h-28 w-full lg:col-span-1 col-span-2 '>    
+             <div className='relative  lg:w-80 h-20 bg-yellow-300 w-full lg:col-span-1 col-span-2 '>    
                   <Image
                   src={"/assets/img/sucesso.jpg"}
                   alt="sucesso"

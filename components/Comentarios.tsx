@@ -32,6 +32,7 @@ import Swal from 'sweetalert2';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination , Autoplay} from 'swiper/modules';
 
+
 const formSchema = z.object({
     nome: z.string().min(3),
       descricao:z.string().min(3)
