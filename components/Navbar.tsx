@@ -69,7 +69,7 @@ const router = useRouter()
             <ul className='flex flex-col items-center gap-8  lg:flex-row'>
                   <li><Link className='nav-link activeLink' href={"/"}>Home</Link></li>
                   <li><Link className='nav-link' href={"/#sobre-nos"}>Sobre-nós</Link></li>
-                  <li><Link className='nav-link' href={"/#produtos-servicos"}>Produtos e serviços</Link></li>
+                  <li><Link className='nav-link' href={"/produtos-servicos"}>Produtos e serviços</Link></li>
                   <li><Link className='nav-link' href={"/galeriaNoTerreno"}>No Terreno</Link></li>
                   <li><Link className='nav-link' href={"/#contactos"}>Contactos</Link></li>
                   </ul>
