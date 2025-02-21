@@ -7,8 +7,8 @@ function page() {
     <section className='w-full flex flex-col pb-3'>
       <div className='relative w-full h-80 item'>
                       <Image
-                      src={"/assets/banner2.jpg"}
-                      alt="milho"
+                      src={"/assets/img/banner2.jpg"}
+                      alt="banner"
                       fill
                       sizes='auto'
                       className='object-cover w-[100%] h-[100%] brightness-50 '
@@ -28,7 +28,7 @@ function page() {
               <div className='flex flex-wrap gap-3 w-full items-center justify-center'>
                    <div className='relative w-16 h-16 rounded-full'>
                    <Image
-                      src={"/assets/milho.jpg"}
+                      src={"/assets/img/milho.jpg"}
                       alt="milho"
                       fill
                       sizes='auto'
@@ -38,7 +38,7 @@ function page() {
 
                    <div className='relative w-16 h-16 rounded-full'>
                    <Image
-                      src={"/assets/tomate.jpg"}
+                      src={"/assets/img/tomate.jpg"}
                       alt="tomate"
                       fill
                       sizes='auto'
@@ -48,7 +48,7 @@ function page() {
 
                    <div className='relative w-16 h-16 rounded-full'>
                    <Image
-                      src={"/assets/nhame.jpg"}
+                      src={"/assets/img/nhame.jpg"}
                       alt="nhame"
                       fill
                       sizes='auto'
@@ -57,7 +57,7 @@ function page() {
                    </div>
                    <div className='relative w-16 h-16 rounded-full'>
                    <Image
-                      src={"/assets/soja.jpg"}
+                      src={"/assets/img/soja.jpg"}
                       alt="soja"
                       fill
                       sizes='auto'
@@ -66,7 +66,7 @@ function page() {
                    </div>
                    <div className='relative w-16 h-16 rounded-full'>
                    <Image
-                      src={"/assets/mandioca.jpg"}
+                      src={"/assets/img/mandioca.jpg"}
                       alt="mandioca"
                       fill
                       sizes='auto'
@@ -75,7 +75,7 @@ function page() {
                    </div>
                    <div className='relative w-16 h-16 rounded-full'>
                    <Image
-                      src={"/assets/fejao.jpg"}
+                      src={"/assets/img/fejao.jpg"}
                       alt="fejao"
                       fill
                       sizes='auto'
@@ -85,7 +85,7 @@ function page() {
               </div>
             <div className='relative w-96 h-96'>
               <Image
-              src={"/assets/delivery.gif"}
+              src={"/assets/img/delivery.gif"}
               alt="delivey image"
               fill
               sizes='auto'

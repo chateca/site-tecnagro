@@ -12,7 +12,6 @@ function BannerComponent() {
 
   useEffect(()=>{
     const  items = document.querySelectorAll('.slider .list .item');
-   
     const proximo = document.getElementById('proximo');
     const anterior = document.getElementById('anterior');
     if(!proximo) return 
