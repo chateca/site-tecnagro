@@ -146,7 +146,7 @@ function BannerComponent() {
            <p className='font-mono lg:text-4xl md:text-3xl text-xl  text-green-2 tracking-widest font-bold uppercase sub'>{item.sub}</p>
            <h2 className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-4xl font-bold text-green-1 titulo'><span className='font-ibm-plex-serif lg:text-8xl md:text-7xl text-5xl font-bold text-white'>Tecn</span>Agro</h2>
            <p className='text-gray-200 lg:text-2xl md:text-2xl text-xl tracking-tight leading-normal whitespace-normal font-ibm-plex-serif font-bold desc'>
-              {item.desc} <Link href={"/produtos-servicos/22s1eeeeee21s2s2s"} className='text-green-2 text-xl'>Ver</Link>
+              {item.desc} 
            </p>
            <div className='flex flex-col gap-2 sm:flex-row mt-3'>
             <button onClick={()=>router.push("/solicitar-produto")} className='btn'>
