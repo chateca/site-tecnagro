@@ -1,26 +1,10 @@
 "use client"
 import Image from 'next/image'
-import React, { useEffect } from 'react'
+import React from 'react'
 
 
 function ProdutosEservicos() {
-    useEffect(()=>{
-        //@ts-ignore
-        const sr = ScrollReveal(({
-            origin:"top", 
-            distance:"60px", 
-            duration:2500, 
-            delay:300, 
-            reset:true
-        }))
-        
-        
-        
-        sr.reveal('.service__card', {interval:100})
-        sr.reveal(`.about__item__title`)
-        sr.reveal(`.about__item__folha`, {delay:500, scale:0.3})
 
-    },[])
     
   return (
     <>

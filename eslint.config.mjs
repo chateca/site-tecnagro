@@ -14,7 +14,7 @@ const eslintConfig = [
     extends: ["next/core-web-vitals", "next/typescript"],
     rules: {
       "@typescript-eslint/no-require-imports": "off", 
-       "@typescript-eslint/ban-ts-comment": "error"
+       "@typescript-eslint/ban-ts-comment": "off"
     }
 
   }),

@@ -4,11 +4,12 @@ import ActividadesRecentes from '@/components/ActividadesRecentes';
 import Comentarios from '@/components/Comentarios';
 import Contacto from '@/components/Contacto';
 import Parceiros from '@/components/Parceiros';
+import ProdutosEservicos from '@/components/ProdutosEservicos';
+import SobreNos from '@/components/SobreNos';
 
 import dynamic from 'next/dynamic'
 const  BannerComponent = dynamic(()=>import("@/components/BannerComponent"), {ssr:false})
-const  SobreNos= dynamic(()=>import("@/components/SobreNos"), {ssr:false})
-const ProdutosEservicos = dynamic(()=> import('@/components/ProdutosEservicos'), {ssr:false});
+
 
 export default function Home() {
 
