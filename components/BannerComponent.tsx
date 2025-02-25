@@ -42,7 +42,7 @@ function BannerComponent() {
     } 
     
     let refreshSlides = setInterval( async ()=>{
-      await proximo?.click()
+      proximo?.click()
     },9000)
     
     
@@ -56,14 +56,14 @@ function BannerComponent() {
         indice =  itemAtive+1
         }
     
-      await items[itemAtive]?.classList.remove('ative');
-       await  items[indice]?.classList.add('ative');
+    items[itemAtive]?.classList.remove('ative');
+       items[indice]?.classList.add('ative');
      
        
 
          clearInterval(refreshSlides)
          refreshSlides = setInterval( async ()=>{
-         await  proximo?.click()
+          proximo?.click()
     },9000)
     }
 
