@@ -105,7 +105,7 @@ function Comentarios() {
   return (
     <div className="flex flex-col gap-4 p-2 w-full h-full conteudo-actividades mt-10">
     
-    <h1 className='text-center text-white text-[28px] uppercase font-ibm-plex-serif font-extrabold'>Comentários</h1>
+    <h1 className='text-center text-white text-[28px] uppercase  font-extrabold'>Comentários</h1>
     <div className='w-full flex items-center justify-center'>
     <Drawer>
                 <DrawerTrigger asChild>

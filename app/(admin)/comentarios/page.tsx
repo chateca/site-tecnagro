@@ -20,7 +20,7 @@ async function page() {
   const dados = await getDados()
   return (
     <section className='flex flex-col w-full p-4'>
-      <h1 className='text-[28px] font-extrabold font-ibm-plex-serif text-green-2'>Comentarios</h1>
+      <h1 className='text-[28px] font-extrabold  text-green-2'>Comentarios</h1>
      
    <ComentariosAdmin 
    comentarios = {JSON.stringify(dados)}

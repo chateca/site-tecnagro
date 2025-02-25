@@ -80,31 +80,31 @@ function SolicitacoesRecentes({dados}:Props) {
                <div className={`flex flex-col  w-full gap-4 p-2 rounded-xl ${status ==="Aceite" ? 'bg-green-2/30' : status === "Negado" ? 'bg-red-500/30' : 'bg-yellow-400/30' }`}>
                <div className='flex flex-col w-full px-4 '>
                 <span className='text-end text-[14px] uppercase font-bold'>{status}</span>
-               <span className='text-[18px] text-center font-bold font-ibm-plex-serif uppercase'>Pedido feito por: <span className='text-green-3'>{nome}</span></span>
-               <span className='text-[14px] text-center font-ibm-plex-serif font-semibold text-gray-400'>Data em que o pedido foi feito: <span className='txet'>{dataRegistro}</span> </span>
+               <span className='text-[18px] text-center font-bold  uppercase'>Pedido feito por: <span className='text-green-3'>{nome}</span></span>
+               <span className='text-[14px] text-center  font-semibold text-gray-400'>Data em que o pedido foi feito: <span className='txet'>{dataRegistro}</span> </span>
                </div>
               
               <div className='flex w-full items-center justify-center'>
                      
               <div className='flex flex-col px-8'>
-               <span className='text-[18px] font-bold font-ibm-plex-serif uppercase'>Telefone:</span>
-               <span className='text-[14px] font-ibm-plex-serif font-semibold text-gray-400'>{telefone}</span>
+               <span className='text-[18px] font-bold  uppercase'>Telefone:</span>
+               <span className='text-[14px]  font-semibold text-gray-400'>{telefone}</span>
                </div>
 
                <div className='flex flex-col px-8'>
-               <span className='text-[18px] font-bold font-ibm-plex-serif uppercase'>Email:</span>
-               <span className='text-[14px] font-ibm-plex-serif font-semibold text-gray-400'> {email}</span>
+               <span className='text-[18px] font-bold  uppercase'>Email:</span>
+               <span className='text-[14px]  font-semibold text-gray-400'> {email}</span>
                </div>
 
                <div className='flex flex-col px-8'>
-               <span className='text-[18px] font-bold font-ibm-plex-serif uppercase'>Endereço:</span>
-               <span className='text-[14px] font-ibm-plex-serif font-semibold text-gray-400'>{endereco}</span>
+               <span className='text-[18px] font-bold  uppercase'>Endereço:</span>
+               <span className='text-[14px]  font-semibold text-gray-400'>{endereco}</span>
                </div>
               </div>
                </div>
                <div className='w-full h-[200px] p-4 border-[1px] mt-3 rounded-xl'>
                 <h2 className='text-center text-[18px] text-green-3 font-bold uppercase'>Detalhes do Pedido</h2>
-                    <span className='text-[14px] font-medium font-ibm-plex-serif'>
+                    <span className='text-[14px] font-medium '>
                        {descricao}
                     </span>
 
@@ -140,7 +140,7 @@ function SolicitacoesRecentes({dados}:Props) {
      <ul className='mt-4 flex flex-col gap-4'>
         {
         arrayItems.length <= 0 &&
-        <span className='text-center text-[24px] font-bold font-ibm-plex-serif uppercase text-gray-600'>
+        <span className='text-center text-[24px] font-bold  uppercase text-gray-600'>
            De Momento Não existe Pedidos Novos!
         </span>
         }
