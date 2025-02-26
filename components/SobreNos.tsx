@@ -1,10 +1,8 @@
 "use client"
 import Image from 'next/image'
 import * as React from 'react'
-function SobreNos() {
- 
-   
-   
+
+function SobreNos() {   
   return (
  
         <div className='container space-y-10 xl:space-y-0 pb-4'>

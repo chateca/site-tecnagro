@@ -22,14 +22,12 @@ function ActividadesRecentes(){
 
     const [actividades , setActividades] = React.useState<Array<Dados>>()
     useEffect(()=>{
-    
-
       async function buscarPublicacoes (){
         try {
           const dados= await BuscarActividadesActivasPaginaPrincipal()
           setActividades(JSON.parse(dados))
         } catch (error) {
-          console.log("nao seu buscar as publicacoes", error)
+          console.log("nao foi possivel buscar as publicacoes", error)
         }
       
     }

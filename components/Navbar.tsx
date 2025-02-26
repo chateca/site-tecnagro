@@ -42,7 +42,7 @@ navLink.forEach(link =>{
     })
 })
 
-  })
+  },[])
  
 const router = useRouter()
 

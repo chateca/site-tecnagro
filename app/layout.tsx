@@ -33,11 +33,8 @@ export default function RootLayout({
   return (
     <html lang="pt">
  
-      <body
-        className={`${inter.variable} ${ibmPlaxSerif.variable}`}>
-        
+      <body className={`${inter.variable} ${ibmPlaxSerif.variable} antialiased`}> 
         {children}
-      
         <Script src="https://unpkg.com/scrollreveal" ></Script>
       </body>
     </html>
