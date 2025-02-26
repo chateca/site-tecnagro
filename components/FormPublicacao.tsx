@@ -54,7 +54,7 @@ const [imageUrl , setImageUrl] = useState("")
   return (
     <div className='w-full flex justify-between gap-4 '>
          <div className='flex flex-col p-2 gap-4'>
-        <div className='relative flex w-[300px] h-[300px] border-[1px] border-black-3 rounded-xl'>
+        <div className='relative flex lg:w-[300px] lg:h-[300px] md:w-[200px] md:h-[200px] w-[150px] h-[150px] border-[1px] border-black-3 rounded-xl'>
            <Image
            src={imageUrl ? `${imageUrl}` : "/assets/img9.png"}
            alt='Image Publicacao'
@@ -64,7 +64,7 @@ const [imageUrl , setImageUrl] = useState("")
            />           
 
         </div>
-        <UploadButton className='bg-green-3'
+        <UploadButton className='bg-green-3 flex h-14 text-sm py-1  rounded-xl'
         endpoint="imageUploader"
         onClientUploadComplete={(res) => {
           // Do something with the response
@@ -80,7 +80,7 @@ const [imageUrl , setImageUrl] = useState("")
         </div>
   
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className=" flex flex-col space-y-1 w-[50%] border-green-3 border-[1px] rounded-2xl p-4 justify-between">
+                    <form onSubmit={form.handleSubmit(onSubmit)} className=" flex flex-col space-y-2 md:w-[50%] w-full border-green-3 border-[1px] rounded-2xl p-4 ">
                       
                         <FormField
                         control={form.control}
@@ -115,7 +115,7 @@ const [imageUrl , setImageUrl] = useState("")
                             )}
                             />
 
-                        <Button className='flex  bg-green-1' type="submit">Criar Publicação</Button>
+                        <Button className='flex  bg-green-1 mt-5' type="submit">Criar Publicação</Button>
                     </form>
                     </Form>
   

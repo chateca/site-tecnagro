@@ -37,7 +37,7 @@ export default function Home() {
           <Comentarios/>
         </section>
 
-        <section className='relative bg-[#000] text-white py-20'>
+        <section id='contactos' className='relative bg-[#000] text-white py-20'>
           <Contacto/>
         </section>
 

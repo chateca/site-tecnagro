@@ -48,17 +48,56 @@ export const BuscarActividadesActivasPaginaPrincipal = async ()=>{
     }
 }
 
+// buscar activas user
+type Paginacao = {
+    perPage:number, 
+    page:number
+}
 
+export const BuscarActividadesActivasUser = async ({perPage, page}:Paginacao)=>{
+  
+    try {
+        connectDB()
+       const data =  await Actividade.find({ativo:true})
+       .select('_id imagem titulo descricao dataRegistro')
+       .skip(perPage * (Number(page) - 1 ))
+       .limit(perPage)
+        
+      const total =  await  Actividade.countDocuments({ativo:true})
+
+     
+
+       return{
+            data:JSON.stringify(data),
+            total:total
+       } 
+        
+    } catch (error) {
+        console.log("Algo deu raado ao buscar actividades", error)
+        return {
+         data:   JSON.stringify('[]'),
+         total:0
+        }
+        //throw new Error("não foi possivel buscar os pedido",{cause:error})
+    }
+}
+
+//buscar activas admin
 
 
 export const BuscarActividadesActivas = async ()=>{
     try {
         connectDB()
-       return  await Actividade.find({ativo:true}).sort({dataRegsitro:-1})
+       const data =  await Actividade.find({ativo:true})
+       .select('_id imagem titulo descricao dataRegistro')
+       .sort({dataRegsitro:-1})
+       
+
+       return JSON.stringify(data)
         
     } catch (error) {
         console.log("Algo deu raado ao buscar actividades", error)
-        return []
+        return JSON.stringify('[]')
         //throw new Error("não foi possivel buscar os pedido",{cause:error})
     }
 }
@@ -87,6 +126,24 @@ export const BuscarActividadesNaoActivas = async ()=>{
         //throw new Error("não foi possivel buscar os pedido",{cause:error})
     }
 }
+
+// buscarActividadeuser
+export const BuscarAtividadeUser = async (id:string)=>{
+    try {    
+       connectDB()
+       return await Actividade.findOne({_id:id, ativo:true}).select('_id imagem titulo descricao')
+    } catch (error) {
+        console.log('algo deu errado ao buscar a atividade no banco de dados', error)
+        return {
+            imagem:"",
+            _id:"",
+            titulo:"", 
+            descricao:""
+
+        }
+    }
+}
+
 
 
 export const Publicar= async (id:string)=>{

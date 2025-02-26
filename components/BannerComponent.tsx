@@ -106,7 +106,7 @@ function BannerComponent() {
             <div className='content'>
             <p className='font-mono lg:text-4xl md:text-3xl text-xl  text-green-2 tracking-widest font-bold uppercase sub'>Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade </p>
             <h2 className=' lg:text-8xl md:text-7xl text-4xl font-bold text-green-1 titulo'><span className=' lg:text-8xl md:text-7xl text-5xl font-bold text-white'>Tecn</span>Agro</h2>
-            <p className='text-gray-200 lg:text-2xl md:text-2xl text-xl tracking-tight leading-normal whitespace-normal  font-bold desc'>
+            <p className='text-gray-300 lg:text-2xl md:text-2xl text-base italic tracking-tight leading-normal whitespace-normal  font-bold desc'>
            Elaboração de projetos personalizados e estudos de viabilidade econômica para novos empreendimentos agrícolas,
            garantindo a sustentabilidade e a rentabilidade dos investimentos.
            </p>
@@ -161,7 +161,7 @@ function BannerComponent() {
             <div className='content '>
            <p className='font-mono lg:text-4xl md:text-3xl text-xl  text-green-2 tracking-widest font-bold uppercase sub'>{item.sub}</p>
            <h2 className=' lg:text-8xl md:text-7xl text-4xl font-bold text-green-1 titulo'><span className=' lg:text-8xl md:text-7xl text-5xl font-bold text-white'>Tecn</span>Agro</h2>
-           <p className='text-gray-200 lg:text-2xl md:text-2xl text-xl tracking-tight leading-normal whitespace-normal  font-bold desc'>
+           <p className='text-gray-300 lg:text-2xl md:text-2xl text-lg italic tracking-tight leading-normal whitespace-normal  font-bold desc'>
               {item.desc} 
            </p>
            <div className='flex flex-col gap-2 sm:flex-row mt-3'>

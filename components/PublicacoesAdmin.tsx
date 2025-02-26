@@ -114,7 +114,7 @@ const  router = useRouter()
 
       const todas = ()=>{
         return (
-          <div className='grid grid-cols-4 gap-4 w-full mt-2 p-4'>
+          <div className='grid lg:grid-cols-4 mb:grid-cols-2 grid-cols-1 gap-4 w-full mt-2 p-4'>
           {
            dadosActividade.todas.map((item)=>(
                   <div key={item._id} className="flex flex-col  justify-between items-center rounded-xl ">
@@ -124,12 +124,12 @@ const  router = useRouter()
                      alt='consultoria'
                      fill
                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                     className='absolute object-cover'
+                     className='object-cover'
                      />
                    </div>
-                   <div className='flex size-full justify-between flex-col gap-2 p-2 bg-black-3 '>
+                   <div className='flex size-full justify-between flex-col gap-2 p-2 bg-black-3/50 '>
                         <h1 className='text-white font-bold text-[18px] max-xl:text-[20px]'>{item.titulo}</h1>
-                        <span className='text-[14px] font-semibold text-white text-wrap break-words truncate h-[100px] p-4  tracking-tighter'>{item.descricao}</span>
+                        <span className='text-[14px] font-semibold text-white text-wrap break-words truncate  p-4  tracking-tighter'>{item.descricao}</span>
                          <div className='flex w-full '>
                        <Drawer>
                                                            <DrawerTrigger asChild>
@@ -162,7 +162,7 @@ const  router = useRouter()
 
       const ativas = ()=>{
         return (
-          <div className='grid grid-cols-4 gap-4 w-full mt-2 p-4'>
+          <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 w-full mt-2 p-4'>
           {
            dadosActividade.activas.map((item)=>(
                   <div key={item._id} className="flex flex-col  justify-between items-center rounded-xl ">
@@ -175,7 +175,7 @@ const  router = useRouter()
                      className='absolute object-cover'
                      />
                    </div>
-                   <div className='flex size-full justify-between flex-col gap-2 p-2 bg-black-3 '>
+                   <div className='flex size-full justify-between flex-col gap-2 p-2 bg-black-3/50 '>
                         <h1 className='text-white font-bold text-[18px] max-xl:text-[20px]'>{item.titulo}</h1>
                         <span className='text-[14px] font-semibold text-white text-wrap break-words truncate h-[100px] p-4  tracking-tighter'>{item.descricao}</span>
                          <div className='flex w-full '>
@@ -210,7 +210,7 @@ const  router = useRouter()
 
       const naoAtivas = ()=>{
         return (
-          <div className='grid grid-cols-4 gap-4 w-full mt-2 p-4'>
+          <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 w-full mt-2 p-4'>
           {
            dadosActividade.naoActivas.map((item)=>(
                   <div key={item._id} className="flex flex-col  justify-between items-center rounded-xl ">
@@ -276,16 +276,16 @@ const  router = useRouter()
           const detalhesPublicacao = ({id, titulo, imagem , descricao}:Edicao)=>{
             
               return(
-                  <DrawerContent className='flex flex-col w-full ' >
+                  <DrawerContent className='flex flex-col w-full bg-white ' >
                   <div className="flex flex-col w-full ">
                   <DrawerHeader className='flex flex-col w-full items-center '>
                       <DrawerTitle className='text-[28px]'>Publicação</DrawerTitle>
                       <DrawerDescription className='text-[18px]'>Editar Publicacão</DrawerDescription>
                   </DrawerHeader>
                   <div className="flex flex-col  w-full p-4 pb-0 overflow-y-scroll">
-                  <div className='w-full flex justify-between gap-4 '>
+                  <div className='w-full flex md:flex-row flex-col justify-between gap-4 '>
          <div className='flex flex-col p-2 gap-4'>
-        <div className='relative flex w-[300px] h-[300px] border-[1px] border-black-3 rounded-xl'>
+        <div className='relative flex md:w-[300px] md:h-[300px] w-[150px] h-[150px] border-[1px] border-black-3 rounded-xl'>
            <Image
            src={imageUrl ? `${imageUrl}` : imagem}
            alt='Image Publicacao'
@@ -296,7 +296,7 @@ const  router = useRouter()
            />           
 
         </div>
-        <UploadButton className='bg-green-3'
+        <UploadButton className='bg-green-3 flex rounded-xl h-14'
         endpoint="imageUploader"
         onClientUploadComplete={(res) => {
           // Do something with the response
@@ -312,7 +312,7 @@ const  router = useRouter()
         </div>
   
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className=" flex flex-col space-y-1 w-[50%] border-green-3 border-[1px] rounded-2xl p-4">
+                    <form onSubmit={form.handleSubmit(onSubmit)} className=" flex flex-col space-y-1 md:w-[50%] w-full border-green-3 border-[1px] rounded-2xl p-4">
                       
                         <FormField
                         control={form.control}

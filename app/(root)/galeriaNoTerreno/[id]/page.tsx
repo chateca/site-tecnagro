@@ -1,18 +1,40 @@
 
-import { itemsProdutosServicos } from '@/constants'
+import ActividadesRecentes from '@/components/ActividadesRecentes'
+
+import { BuscarAtividadeUser } from '@/lib/actions/actividades.actions'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-async function page({params}:{params:{id:number}}) {
+
+type Atividade  = {
+  imagem:string, 
+  _id:string, 
+  descricao:string, 
+  titulo:string
+}
+
+
+
+const getActivite = async (id:string)=>{
+            try {
+             return  await BuscarAtividadeUser(id) 
+            } catch (error) {
+              console.log("nao foi possivel buscar o produto", error)
+            }
+}
+
+async function page({params}:{params:{id:string}}) {
   const {id} = await params
-  const item = itemsProdutosServicos.find((item) =>item.id === Number(id))
+  const getAtividade:Atividade = await  getActivite(id)
+  
+
 
   return (
     <div className='relative pt-14 bg-white'>
          <div className='relative w-full h-80 item'>
                             <Image
-                            src={"/assets/img/banner2.jpg"}
+                            src={"/assets/img/banner4.jpg"}
                             alt="banner"
                             fill
                             sizes='auto'
@@ -20,13 +42,13 @@ async function page({params}:{params:{id:number}}) {
                             />
             </div>
       <div className='container pt-14 pb-20'>
-      <h1 className='titulo'>{item?.titulo}</h1>
+      <h1 className='titulo'>{getAtividade?.titulo}</h1>
 
       <div className='flex justify-between gap-8 p-4'>
         <div className='relative w-full h-96'>
              <Image
-             src={`/assets/img/${item?.image}`}
-             alt={`${item?.titulo}`}
+             src={`${getAtividade?.imagem}`}
+             alt={`${getAtividade?.titulo}`}
              fill 
              sizes='100%'
              className='object-cover rounded-xl'            
@@ -34,7 +56,7 @@ async function page({params}:{params:{id:number}}) {
         </div>
 
         <div className='flex flex-col items-center space-y-14'>
-             <span className=' lg:text-2xl md:text-xl text-sm text-gray-500 font-mono'>{item?.desc}</span>
+             <span className=' lg:text-2xl md:text-xl text-sm text-gray-500 font-mono'>{getAtividade?.descricao}</span>
              <div className='flex gap-8 justify-between'>
              <Link href={"/solicitar-produto"}  className='btn btn_outline'>
               <span className='text-green-3 flex'>
@@ -50,6 +72,10 @@ async function page({params}:{params:{id:number}}) {
         </div>
 
       </div>
+      </div>
+
+      <div className='container'>
+       <ActividadesRecentes/>
       </div>
         
     </div>

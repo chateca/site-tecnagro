@@ -23,6 +23,8 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'utfs.io',
         pathname: '**',
+        port:'', 
+        search:''
       },
     ],
      // Adiciona utfs.io como um domínio confiável

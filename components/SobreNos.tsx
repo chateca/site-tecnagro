@@ -1,8 +1,11 @@
 "use client"
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+
 import * as React from 'react'
 
 function SobreNos() {   
+  const router = useRouter()
   return (
  
         <div className='container space-y-10 xl:space-y-0 pb-4'>
@@ -22,7 +25,8 @@ function SobreNos() {
                  
                 </div>
                 <div >
-                  <button className='btn'>
+                  <button onClick={()=>router.push("/sobre")} className='btn'>
+                  
                     <span className='flex gap-2'>
                       Saber mais
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -55,7 +59,7 @@ function SobreNos() {
                   <span className='md:text-2xl sm:text-xl text-lg  font-mono text-gray-300 font-bold' >Projecto elaborados:</span>
                   <span className='lg:text-6xl md:text-5xl text-4xl text-green-2 font-bold'>15</span>
              </div>
-             <div className='relative  lg:w-80 h-20 bg-yellow-300 w-full lg:col-span-1 col-span-2 '>    
+             <div className='relative  lg:w-80  w-full lg:col-span-1 col-span-2 '>    
                   <Image
                   src={"/assets/img/sucesso.jpg"}
                   alt="sucesso"
@@ -64,7 +68,7 @@ function SobreNos() {
                   sizes='100px'
                   className='rounded-xl float-right'
                   />
-                  <span className='text-lg italic font-semibold leading-normal text-gray-200'>
+                  <span className='text-lg italic font-medium leading-normal text-gray-200'>
                   Com a TecnAgro, você tem inovação, confiança e soluções inteligentes para impulsionar o seu agronegócio. 
                   Cresça com quem entende do campo!🌱🚜
                   </span>

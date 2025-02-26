@@ -3,20 +3,12 @@ import React from 'react'
 
 function Videos() {
   return (
-    <div className='w-full grid grid-cols-4 gap-4 p-4'>
-              <div className='w-[100%] h-[100%] '>
-              <video className='size-full' controls autoPlay={true} loop={true}  src="/video/video.mp4"/>
+
+              <div className='relative w-full h-96 '>
+              <video className='size-full' controls autoPlay={true} loop={true}  src="/assets/video/video.mp4"/>
               </div>
-              <div className='w-[100%] h-[100%] '>
-              <video className='size-full' controls autoPlay={true} loop={true}  src="/video/video.mp4"/>
-              </div>
-              <div className='w-[100%] h-[100%] '>
-              <video className='size-full' controls autoPlay={true} loop={true}  src="/video/video.mp4"/>
-              </div>
-              <div className='w-[100%] h-[100%] '>
-              <video className='size-full' controls autoPlay={true} loop={true}  src="/video/video.mp4"/>
-              </div>
-    </div>
+             
+  
   )
 }
 

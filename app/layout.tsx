@@ -31,9 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt">
+    <html lang="pt" className={`${inter.variable} ${ibmPlaxSerif.variable} antialiased`}>
  
-      <body className={`${inter.variable} ${ibmPlaxSerif.variable} antialiased`}> 
+      <body > 
         {children}
         <Script src="https://unpkg.com/scrollreveal" ></Script>
       </body>

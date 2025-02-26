@@ -158,7 +158,7 @@ function FormPedidos() {
                              )}
                              />
                        
-                         <Button  type='submit'  className={`mt-4 ${enviando ? 'disabled:opacity-75':""}`}>{enviando ? 'Enviando pedido':'Solicitar Produto'}</Button>
+                         <Button  type='submit'  className={`btn mt-4 ${enviando ? 'disabled:opacity-75':""}`}>{enviando ? 'Enviando pedido':'Solicitar Produto'}</Button>
                        
 
                      </form>
