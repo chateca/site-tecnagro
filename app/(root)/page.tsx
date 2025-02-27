@@ -9,7 +9,13 @@ import SobreNos from '@/components/SobreNos';
 
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react';
-const  BannerComponent = dynamic(()=>import("@/components/BannerComponent"), {ssr:false})
+const  BannerComponent = dynamic(
+  ()=>import("@/components/BannerComponent"),
+  {
+    loading:()=><p>Componente em processamento</p>
+  }
+
+)
 
 
 export default function Home() {
