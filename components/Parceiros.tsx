@@ -48,7 +48,7 @@ function Parceiros() {
         parceiros.map((item)=>(
           <SwiperSlide key={item.id}>
            <div
-             className='relative  w-full h-44 rounded-2xl'
+             className='relative bg-white  w-full h-44 rounded-2xl'
              >
               <Image
              src={`/assets/icons/${item.image}`}

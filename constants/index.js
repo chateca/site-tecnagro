@@ -37,6 +37,10 @@ export const parceiros = [
             id:3
         }, 
         {
+          image:"chateca.png", 
+          id:7
+        },
+        {
             image:"p4.gif",
             id:4
         }, 
@@ -47,11 +51,8 @@ export const parceiros = [
         {
             image:"p6.gif",
             id:6
-        }, 
-        {
-          imege:"chateca.png", 
-          id:7
         }
+        
 ]
 
 
