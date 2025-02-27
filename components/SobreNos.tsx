@@ -59,14 +59,16 @@ function SobreNos() {
                   <span className='md:text-2xl sm:text-xl text-lg  font-mono text-gray-300 font-bold' >Projecto elaborados:</span>
                   <span className='lg:text-6xl md:text-5xl text-4xl text-green-2 font-bold'>15</span>
              </div>
-             <div className='relative  lg:w-80  w-full lg:col-span-1 col-span-2 '>    
+             <div className='relative  lg:w-80  w-auto h-auto lg:col-span-1 col-span-2 '>    
                   <Image
                   src={"/assets/img/sucesso.jpg"}
                   alt="sucesso"
                   width={100}
                   height={100}
+                 
+                  unoptimized
                   sizes='100px'
-                  className='rounded-xl float-right'
+                  className='rounded-xl float-right w-[100px] h-[100px]'
                   />
                   <span className='text-lg italic font-medium leading-normal text-gray-200'>
                   Com a TecnAgro, você tem inovação, confiança e soluções inteligentes para impulsionar o seu agronegócio. 
