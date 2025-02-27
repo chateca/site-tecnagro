@@ -25,22 +25,21 @@ export const metadata: Metadata = {
   }
 };
 
-export async function generateStaticParams() {
-  return [{ lang: 'en-US' }, { lang: 'nl' }]
-}
+
 
 export default async function RootLayout({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ lang: 'en-US' | 'nl' }>
+ 
 }>) {
   return (
-    <html lang={(await params).lang} >
-      <body className={`${inter.variable} ${ibmPlaxSerif.variable} antialiased`} > 
+    <html lang='en' >
+      <body 
+      className={`${inter.variable} ${ibmPlaxSerif.variable} antialiased`} 
+      > 
         {children}
-        <Script src="https://unpkg.com/scrollreveal" ></Script>
+        <Script src="https://unpkg.com/scrollreveal"></Script>
       </body>
     </html>
   );
