@@ -22,8 +22,8 @@ async function page({params}:{params:{id:number}}) {
       <div className='container pt-14 pb-20'>
       <h1 className='titulo'>{item?.titulo}</h1>
 
-      <div className='flex justify-between gap-8 p-4'>
-        <div className='relative w-full h-96'>
+      <div className='flex md:flex-row flex-col justify-between gap-8 p-4'>
+        <div className='relative w-full lg:h-96 md:h-80 h-60'>
              <Image
              src={`/assets/img/${item?.image}`}
              alt={`${item?.titulo}`}

@@ -56,7 +56,7 @@ function SobreNos() {
                   <span className='lg:text-6xl md:text-5xl text-4xl text-green-2 font-bold'>20</span>
              </div>
              <div  className=' flex lg:items-center lg:justify-center relative  lg:w-48 w-32 h-28'>
-                  <span className='md:text-2xl sm:text-xl text-lg  font-mono text-gray-300 font-bold' >Projecto elaborados:</span>
+                  <span className='md:text-2xl sm:text-xl text-lg  font-mono text-gray-300 font-bold' >Projectos elaborados:</span>
                   <span className='lg:text-6xl md:text-5xl text-4xl text-green-2 font-bold'>15</span>
              </div>
              <div className='relative  lg:w-80  w-auto h-auto lg:col-span-1 col-span-2 '>    
