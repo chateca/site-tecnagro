@@ -9,7 +9,7 @@ function Rodape() {
       <div className='container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left'>
         
         <div className='flex flex-col items-center md:items-start gap-3'>
-          <Image src='/assets/img/logo.png' alt='logo' width={150} height={150} />
+          <Image src='/assets/img/logo.png' alt='logo' width={150} height={150} sizes='150px' />
 
 
           <p className=' text-[12px] text-justify '>  Nosso objetivo é ser reconhecido como um parceiro estratégico no agronegócio, 

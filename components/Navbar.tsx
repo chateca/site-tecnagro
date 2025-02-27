@@ -12,6 +12,9 @@ import { useRouter } from "next/navigation"
 
 function Navbar() {
   React.useEffect(()=>{
+    try {
+      
+  
     const navMenu = document.getElementById('nav-menu')
 const navLink = document.querySelectorAll('.nav-link')
 const hamburger = document.getElementById('hamburger')
@@ -41,6 +44,9 @@ navLink.forEach(link =>{
         closedMenu.classList?.add("hidden")
     })
 })
+} catch (error) {
+    console.log('erro na execução da nav', error)  
+}
 
   },[])
  

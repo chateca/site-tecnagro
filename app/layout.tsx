@@ -25,13 +25,19 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return [{ lang: 'en-US' }, { lang: 'nl' }]
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ lang: 'en-US' | 'nl' }>
 }>) {
   return (
-    <html lang="pt" className={`${inter.variable} ${ibmPlaxSerif.variable} antialiased`}>
+    <html lang={(await params).lang} className={`${inter.variable} ${ibmPlaxSerif.variable} antialiased`}>
  
       <body > 
         {children}

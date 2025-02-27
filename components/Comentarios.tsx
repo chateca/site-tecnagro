@@ -91,7 +91,7 @@ function Comentarios() {
           const convertDado = JSON.parse(dados)
         return   setComentarios(convertDado)
         } catch (error) {
-         return console.log(error)
+         return console.log('algo de errado ao buscar comentarios', error)
         }
         
       } 

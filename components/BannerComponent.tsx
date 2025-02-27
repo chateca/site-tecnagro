@@ -11,6 +11,10 @@ function BannerComponent() {
   const router = useRouter()
 
   useEffect(()=>{
+
+    try {
+      
+  
     const  items = document.querySelectorAll('.slider .list .item');
     const proximo = document.getElementById('proximo');
     const anterior = document.getElementById('anterior');
@@ -83,6 +87,11 @@ function BannerComponent() {
  sr.reveal('.atividade__item', {interval:100})
  sr.reveal('.service__card', {interval:100})
  sr.reveal(`.about__item__folha`, {delay:500, scale:0.3})
+
+} catch (error) {
+  console.log('erro ao executar as animaçoes do carrocel', error)
+      
+}
   
   },[])
   

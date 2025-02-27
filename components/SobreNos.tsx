@@ -70,7 +70,7 @@ function SobreNos() {
                   />
                   <span className='text-lg italic font-medium leading-normal text-gray-200'>
                   Com a TecnAgro, você tem inovação, confiança e soluções inteligentes para impulsionar o seu agronegócio. 
-                  Cresça com quem entende do campo!🌱🚜
+                  Cresça com quem entende do campo!
                   </span>
              </div>
           </div>
