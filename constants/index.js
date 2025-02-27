@@ -49,7 +49,8 @@ export const parceiros = [
             id:6
         }, 
         {
-          imege:"chateca.png"
+          imege:"chateca.png", 
+          id:7
         }
 ]
 
