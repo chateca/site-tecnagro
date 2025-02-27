@@ -116,7 +116,7 @@ function Comentarios() {
                     <DrawerHeader>
                         <DrawerTitle>Comentario</DrawerTitle>
                         <DrawerDescription>
-                          Deixe uma sujestão, critica ou reclamação !
+                          Deixe uma sugestão, crítica  ou reclamação !
                         </DrawerDescription>
                     </DrawerHeader>
                     <div className="flex w-full items-center justify-center  p-4 pb-0">
@@ -142,7 +142,7 @@ function Comentarios() {
                              name="descricao"
                             render={({ field }) => (
                                 <FormItem>
-                                <FormLabel>Comentario</FormLabel>
+                                <FormLabel>Comentário</FormLabel>
                                 <FormControl>
                                     <Textarea
                                     placeholder="Digite a sua mensagem "
@@ -163,7 +163,7 @@ function Comentarios() {
                     <DrawerFooter>
                         
                         <DrawerClose asChild>
-                        <Button variant="outline" className='bg-[#000] text-white'>Cancel</Button>
+                        <Button variant="outline" className='bg-[#000] text-white'>Cancelar</Button>
                         </DrawerClose>
                     </DrawerFooter>
                     </div>
