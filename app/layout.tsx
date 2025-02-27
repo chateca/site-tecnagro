@@ -37,8 +37,8 @@ export default async function RootLayout({
   params: Promise<{ lang: 'en-US' | 'nl' }>
 }>) {
   return (
-    <html lang={(await params).lang} className={`${inter.variable} ${ibmPlaxSerif.variable} antialiased`}>
-      <body > 
+    <html lang={(await params).lang} >
+      <body className={`${inter.variable} ${ibmPlaxSerif.variable} antialiased`} > 
         {children}
         <Script src="https://unpkg.com/scrollreveal" ></Script>
       </body>

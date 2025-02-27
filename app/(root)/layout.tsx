@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Rodape from "@/components/Rodape";
 
-export default function RootLayout({
+export default function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

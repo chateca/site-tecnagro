@@ -1,7 +1,7 @@
 import LeftSideBar from "@/components/LeftSideBar";
 
 
-export default function RootLayout({
+export default function AdminLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
