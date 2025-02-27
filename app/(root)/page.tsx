@@ -8,6 +8,7 @@ import ProdutosEservicos from '@/components/ProdutosEservicos';
 import SobreNos from '@/components/SobreNos';
 
 import dynamic from 'next/dynamic'
+import { Suspense } from 'react';
 const  BannerComponent = dynamic(()=>import("@/components/BannerComponent"), {ssr:false})
 
 
@@ -15,7 +16,10 @@ export default function Home() {
 
   return (
     <section  className="flex flex-col w-full scroll-section ">
-     <BannerComponent/>
+      <Suspense fallback={<p>Processando Dados</p>}>
+      <BannerComponent/>
+  
+    
 
      <section id='sobre-nos' className="relative lg:mt-20 xl:mt-20 mt-20 mb-10 overflow-hidden">
      <SobreNos/>
@@ -41,6 +45,7 @@ export default function Home() {
           <Contacto/>
         </section>
 
+        </Suspense>
     </section>
   );
 }
