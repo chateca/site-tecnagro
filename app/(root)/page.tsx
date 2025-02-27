@@ -1,21 +1,15 @@
 "use client"
 
 import ActividadesRecentes from '@/components/ActividadesRecentes';
+import BannerComponent from '@/components/BannerComponent';
 import Comentarios from '@/components/Comentarios';
 import Contacto from '@/components/Contacto';
 import Parceiros from '@/components/Parceiros';
 import ProdutosEservicos from '@/components/ProdutosEservicos';
 import SobreNos from '@/components/SobreNos';
 
-import dynamic from 'next/dynamic'
 import { Suspense } from 'react';
-const  BannerComponent = dynamic(
-  ()=>import("@/components/BannerComponent"),
-  {
-    loading:()=><p>Componente em progresso</p>
-  }
 
-)
 
 
 export default function Home() {

@@ -21,6 +21,7 @@ import Image from 'next/image';
 const formSchema = z.object({
     email: z.string().email(),
     nome: z.string().min(2, {message: "O nome tem que ter no minimo 2 letras.", }),
+    sobreNome: z.string().min(2, {message: "O apelido tem que ter no minimo 2 letras.", }),
     assunto: z.string().min(2),
     mensagem:z.string().min(3).max(100)
   })
@@ -36,6 +37,7 @@ function Contacto() {
           nome: "",
           email: "",
           assunto:"",
+          sobreNome:"",
           mensagem: "",
         },
       })
@@ -87,12 +89,12 @@ function Contacto() {
                         />
                         <FormField
                         control={form.control}
-                        name="nome"
+                        name="sobreNome"
                         render={({ field }) => (
                             <FormItem>
                             <FormLabel className='text-green-2 text-sm font-bold'>Apelido</FormLabel>
                             <FormControl>
-                                <Input placeholder="Nome" {...field} />
+                                <Input placeholder="Apelido" {...field} />
                             </FormControl>
                         
                             <FormMessage />
