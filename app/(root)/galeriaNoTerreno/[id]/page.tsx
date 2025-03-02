@@ -74,7 +74,7 @@ async function page({params}:{params:{id:string}}) {
       </div>
       </div>
 
-      <div className='container'>
+      <div className='container mb-10'>
        <ActividadesRecentes/>
       </div>
         
