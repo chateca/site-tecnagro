@@ -34,7 +34,7 @@ export default function Home() {
           <ActividadesRecentes/>
         </section>
 
-        <section>
+        <section id='parceiros'>
           <Parceiros/>
         </section>
 
