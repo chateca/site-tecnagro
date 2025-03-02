@@ -104,7 +104,7 @@ function BannerComponent() {
       <div
             className='relative flex  w-full h-full item ative'>
             <Image
-            src={`/assets/img/projetos.jpg`}
+            src={`/assets/img/banner.jpg`}
             alt='sliderImage'
             fill 
             sizes='100%'
