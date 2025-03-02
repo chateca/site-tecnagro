@@ -3,16 +3,18 @@ import { items } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useEffect } from 'react'
+import { useEffect} from 'react'
+import ScrollReveal from './../constants/Scrollreveal'
 
 
 
 function BannerComponent() {
   const router = useRouter()
+ 
 
   useEffect(()=>{
 
-    try {
+
       
   
     const  items = document.querySelectorAll('.slider .list .item');
@@ -71,7 +73,7 @@ function BannerComponent() {
     },9000)
     }
 
-       //@ts-ignore
+     
    const sr = ScrollReveal(({
     origin:"top", 
     distance:"60px",      
@@ -88,10 +90,7 @@ function BannerComponent() {
  sr.reveal('.service__card', {interval:100})
  sr.reveal(`.about__item__folha`, {delay:500, scale:0.3})
 
-} catch (error) {
-  console.log('erro ao executar as animaçoes do carrocel', error)
-      
-}
+
   
   },[])
   

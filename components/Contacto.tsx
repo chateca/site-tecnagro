@@ -54,11 +54,11 @@ function Contacto() {
        
         
 
-      <div className='container flex flex-row  w-full h-full   rounded-2xl justify-between max-sm:flex-col '>
+      <div className='container flex flex-row  w-full h-full   rounded-2xl justify-between max-md:flex-col '>
        
             
              
-        <div className="relative w-full min-h-full">
+        <div className="relative w-full min-h-full max-md:h-[40vh]">
        <Image
        src={"/assets/img/contacto.jpg"}
        alt='contacto'

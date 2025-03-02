@@ -5,7 +5,7 @@ import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 import 'swiper/css';
 import 'swiper/css/pagination';
-import Script from "next/script";
+
 
 
 
@@ -39,7 +39,7 @@ export default async function RootLayout({
       className={`${inter.variable} ${ibmPlaxSerif.variable} antialiased`} 
       > 
         {children}
-        <Script src="https://unpkg.com/scrollreveal"></Script>
+     
       </body>
     </html>
   );
