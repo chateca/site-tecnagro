@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import ActividadesRecentes from '@/components/ActividadesRecentes';
 
@@ -12,7 +12,7 @@ import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
 
-const  BannerComponent = dynamic(()=> import('@/components/BannerComponent'), {ssr:false});
+const  BannerComponent = dynamic(async ()=> import('@/components/BannerComponent'), {ssr:false});
 export default function Home() {
 
   return (
