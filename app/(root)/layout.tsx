@@ -4,7 +4,7 @@ import Rodape from "@/components/Rodape";
 export default function DashboardLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <main className="flex flex-col w-full h-full">
