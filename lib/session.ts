@@ -16,15 +16,19 @@ export async function encrypt(payload: FormState) {
  
 export async function decrypt(session: string | undefined = '') {
   try {
+    if (!session) throw new Error('Nenhuma sessão encontrada')
+    
     const { payload } = await jwtVerify(session, encodedKey, {
       algorithms: ['HS256'],
     })
+
+    console.log('Sessão válida:', payload)
     return payload
   } catch (error) {
-    console.log('Failed to verify session', error)
+    console.error('Erro ao verificar sessão:', error)
+    return null
   }
 }
-
 
 export async function createSession(userId: string) {
     const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
@@ -33,7 +37,7 @@ export async function createSession(userId: string) {
    
     cookieStore.set('session', session, {
       httpOnly: true,
-      secure: true,
+      secure: process.env.NODE_ENV === 'production',
       expires: expiresAt,
       sameSite: 'lax',
       path: '/',
@@ -53,7 +57,7 @@ export async function createSession(userId: string) {
     const cookieStore = await cookies()
     cookieStore.set('session', session, {
       httpOnly: true,
-      secure: true,
+      secure: process.env.NODE_ENV === 'production',
       expires: expires,
       sameSite: 'lax',
       path: '/',
