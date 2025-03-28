@@ -37,9 +37,9 @@ export async function createSession(userId: string) {
    
     cookieStore.set('session', session, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: true,
       expires: expiresAt,
-      sameSite: 'lax',
+      sameSite: 'none',
       path: '/',
     })
   }
@@ -57,9 +57,9 @@ export async function createSession(userId: string) {
     const cookieStore = await cookies()
     cookieStore.set('session', session, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: true,
       expires: expires,
-      sameSite: 'lax',
+      sameSite: 'none',
       path: '/',
     })
   }

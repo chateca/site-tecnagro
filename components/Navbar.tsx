@@ -2,8 +2,7 @@
 import * as React from "react"
 import Image from 'next/image'
 import Link from 'next/link'
-
-
+import {useEffect} from 'react'
 import { Input } from "./ui/input"
 import { useRouter } from "next/navigation"
 
@@ -11,7 +10,7 @@ import { useRouter } from "next/navigation"
 
 
 function Navbar() {
-  React.useEffect(()=>{
+  useEffect(()=>{
     try {
       
   
