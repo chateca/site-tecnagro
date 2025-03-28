@@ -6,45 +6,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
 import ScrollReveal from "./../constants/Scrollreveal";
 
-function BannerComponent() {
-  const router = useRouter();
-  const sliderRef = useRef<HTMLDivElement | null>(null);
-  const proximoRef = useRef<HTMLButtonElement | null>(null);
-  const anteriorRef = useRef<HTMLButtonElement | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    const sliderItems = sliderRef.current?.querySelectorAll(".slider .list .item");
-    if (!sliderItems || sliderItems.length === 0) return;
-
-    let itemAtivo = 0;
-
-    const showSlader = () => {
-      sliderItems.forEach((item, index) => item.classList.toggle("ative", index === itemAtivo));
-    };
-
-    const proximo = () => {
-      itemAtivo = (itemAtivo + 1) % sliderItems.length;
-      showSlader();
-    };
-
-    const anterior = () => {
-      itemAtivo = (itemAtivo - 1 + sliderItems.length) % sliderItems.length;
-      showSlader();
-    };
-
-    proximoRef.current?.addEventListener("click", proximo);
-    anteriorRef.current?.addEventListener("click", anterior);
-
-    intervalRef.current = setInterval(proximo, 9000);
-
-    return () => {
-      proximoRef.current?.removeEventListener("click", proximo);
-      anteriorRef.current?.removeEventListener("click", anterior);
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, []);
-
+function Animation(){
   useEffect(() => {
     const sr = ScrollReveal({
       origin: "top",
@@ -54,14 +17,67 @@ function BannerComponent() {
       reset: true,
     });
 
-    sr.reveal(".about__item__title");
-    sr.reveal(".about__item__1-image", { origin: "right" });
-    sr.reveal(".about__item__1-content", { origin: "left" });
-    sr.reveal(".about__item__1-numbers", { delay: 500, scale: 0.5 });
-    sr.reveal(".atividade__item", { interval: 100 });
-    sr.reveal(".service__card", { interval: 100 });
-    sr.reveal(".about__item__folha", { delay: 500, scale: 0.3 });
+    return ()=>{
+      sr.reveal(".about__item__title");
+      sr.reveal(".about__item__1-image", { origin: "right" });
+      sr.reveal(".about__item__1-content", { origin: "left" });
+      sr.reveal(".about__item__1-numbers", { delay: 500, scale: 0.5 });
+      sr.reveal(".atividade__item", { interval: 100 });
+      sr.reveal(".service__card", { interval: 100 });
+      sr.reveal(".about__item__folha", { delay: 500, scale: 0.3 });
+    }
   }, []);
+}
+
+function BannerComponent() {
+  const router = useRouter();
+  const sliderRef = useRef<HTMLDivElement | null>(null);
+  const proximoRef = useRef<HTMLButtonElement | null>(null);
+  const anteriorRef = useRef<HTMLButtonElement | null>(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  
+
+  useEffect(() => {
+    const sliderItems = sliderRef.current?.querySelectorAll(".slider .list .item");
+    if (!sliderItems || sliderItems.length === 0) return;
+  
+    let itemAtivo = 0;
+  
+    const showSlader = async () => {
+      sliderItems.forEach((item, index) => item.classList.toggle("ative", index === itemAtivo));
+    };
+  
+    const proximo = async () => {
+      itemAtivo = (itemAtivo + 1) % sliderItems.length;
+      await showSlader();
+    };
+  
+    const anterior = async () => {
+      itemAtivo = (itemAtivo - 1 + sliderItems.length) % sliderItems.length;
+      await showSlader();
+    };
+  
+    // Criar variáveis locais para capturar os elementos
+    const proximoBtn = proximoRef.current;
+    const anteriorBtn = anteriorRef.current;
+  
+    proximoBtn?.addEventListener("click", proximo);
+    anteriorBtn?.addEventListener("click", anterior);
+  
+    // Corrigindo o setInterval para realmente chamar a função
+    intervalRef.current = setInterval(proximo, 9000);
+  
+    return () => {
+      // Usando as variáveis locais na limpeza para evitar problemas de referência
+      proximoBtn?.removeEventListener("click", proximo);
+      anteriorBtn?.removeEventListener("click", anterior);
+  
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, []);
+
+    Animation()
+
 
   return (
     <div ref={sliderRef} className="relative flex w-full max-h-[100vh] h-[100vh] slider">

@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <section  className="flex flex-col w-full scroll-section ">
       <Suspense fallback={<p>Processando Dados</p>}>
-      <BannerComponent/>
+    <BannerComponent/>
   
     
 

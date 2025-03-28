@@ -1,55 +1,51 @@
 /** @type {import('next').NextConfig} */
 import type { NextConfig } from "next";
 
+const cspHeader = `
+    default-src 'self';
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://apis.google.com;
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' blob: data:;
+    font-src 'self' data:;
+    connect-src 'self' https://api.example.com;
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    upgrade-insecure-requests;
+`;
+
+
 const nextConfig: NextConfig = {
-  /* config options here */
-  experimental:{
-   serverActions:{
-      allowedOrigins:['*']
-   }
-  },
-  crossOrigin:'anonymous',
   reactStrictMode: true,
- 
-  typescript:{
-    ignoreBuildErrors:true,
-  },
-    serverExternalPackages: ["mongoose"], // <-- and this
-    pageExtensions:['tsx', 'ts', 'jsx', 'js'],
+
   images: {
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    qualities: [25, 50, 70],
+    domains:['utfs.io'],
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'utfs.io',
-        pathname: '**',
-        port:'', 
-        search:''
+        protocol: "https",
+        hostname: "utfs.io",
+        pathname: "**",
       },
+     
     ],
-     // Adiciona utfs.io como um domínio confiável
-    localPatterns: [
-      {
-        pathname: '/assets/**',
-        search: '',
-      },
-    ],
+    minimumCacheTTL: 86400,
+    
   },
+
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: "/(.*)",
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'no-store, max-age=0',
+            key: "Content-Security-Policy",
+            value: cspHeader.replace(/\n/g, " "),
           },
         ],
       },
-    ]
+    ];
   },
- 
 };
 
 export default nextConfig;
