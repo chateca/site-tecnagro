@@ -25,7 +25,7 @@ function SobreNos() {
                  
                 </div>
                 <div >
-                  <button onClick={()=>router.push("/sobre")} className='btn'>
+                  <button onClick={()=>router.push("/")} className='btn'>
                   
                     <span className='flex gap-2'>
                       Saber mais

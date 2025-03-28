@@ -49,12 +49,12 @@ for(let i = page - offSetNumber ; i <= page + offSetNumber; i++ ){
                   </div>
                       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#000] group-hover:from-[#000]/30 group-hover:via-[#000]/60 group-hover:to-[#000]/70'></div>
                       <div className='absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500'>
-                              <h1 className='lg:text-2xl md:text-xl text-lg  font-bold text-green-2'>
-                                {item?.titulo}
-                              </h1>   
-                              <p className='text-lg italic text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                               {item?.descricao}
-                              </p>
+                      <h1 className='lg:text-xl md:text-lg text-sm font-bold text-green-2 line-clamp-2'>
+                        {item.titulo}
+                      </h1>   
+                      <p className='text-lg italic text-white mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-3'>
+                        {item.descricao}
+                      </p>
                               <Link href={`/galeriaNoTerreno/${item._id}`} className='rounded-full shadow shadow-black-3/60 bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white'>
                                 Ver Mais
                               </Link>
