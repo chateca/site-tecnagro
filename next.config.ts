@@ -3,6 +3,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  experimental:{
+   serverActions:{
+      allowedOrigins:['*']
+   }
+  },
+  crossOrigin:'anonymous',
   reactStrictMode: true,
  
   typescript:{
