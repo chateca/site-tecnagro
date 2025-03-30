@@ -34,9 +34,9 @@ export default async function RootLayout({
  
 }) {
   return (
-    <html lang='en' >
+    <html lang='en'  className={`${inter.variable} ${ibmPlaxSerif.variable}`}  >
       <body 
-      className={`${inter.variable} ${ibmPlaxSerif.variable}`} 
+     
       > 
         {children}
      
