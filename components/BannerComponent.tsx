@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
-import ScrollReveal from "./../constants/Scrollreveal";
 
+
+
+    
 
 
 
@@ -18,7 +20,9 @@ function BannerComponent() {
   
 
   useEffect(() => {
+    if(typeof window !== "undefined"){
     const sliderItems = sliderRef.current?.querySelectorAll(".slider .list .item");
+    
     if (!sliderItems || sliderItems.length === 0) return;
   
     let itemAtivo = 0;
@@ -54,27 +58,9 @@ function BannerComponent() {
   
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
+  }
   }, []);
 
-  useEffect(() => {
-    const sr = ScrollReveal({
-      origin: "top",
-      distance: "60px",
-      duration: 2500,
-      delay: 300,
-      reset: true,
-    });
-
-    return ()=>{
-      sr.reveal(".about__item__title");
-      sr.reveal(".about__item__1-image", { origin: "right" });
-      sr.reveal(".about__item__1-content", { origin: "left" });
-      sr.reveal(".about__item__1-numbers", { delay: 500, scale: 0.5 });
-      sr.reveal(".atividade__item", { interval: 100 });
-      sr.reveal(".service__card", { interval: 100 });
-      sr.reveal(".about__item__folha", { delay: 500, scale: 0.3 });
-    }
-  }, []);
 
 
   return (

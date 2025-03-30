@@ -1,15 +1,9 @@
 "use client"
 import * as React from 'react'
 import Image from 'next/image'
-
-
 import { useEffect } from "react";
 import { BuscarActividadesActivasPaginaPrincipal } from '@/lib/actions/actividades.actions'
-
 import { useRouter } from 'next/navigation';
- 
-
-
   type Dados = {
      _id:string, 
      titulo:string, 

@@ -1,27 +1,18 @@
-'use client'
-
 import ActividadesRecentes from '@/components/ActividadesRecentes';
-
+import BannerComponent from '@/components/BannerComponent';
 import Comentarios from '@/components/Comentarios';
 import Contacto from '@/components/Contacto';
 import Parceiros from '@/components/Parceiros';
 import ProdutosEservicos from '@/components/ProdutosEservicos';
 import SobreNos from '@/components/SobreNos';
-import dynamic from 'next/dynamic';
-
 import { Suspense } from 'react';
 
-
-const  BannerComponent = dynamic(async ()=> import('@/components/BannerComponent'), {ssr:false});
 export default function Home() {
 
   return (
     <section  className="flex flex-col w-full scroll-section ">
       <Suspense fallback={<p>Processando Dados</p>}>
     <BannerComponent/>
-  
-    
-
      <section id='sobre-nos' className="relative lg:mt-20 xl:mt-20 mt-20 mb-10 overflow-hidden">
      <SobreNos/>
     </section>
