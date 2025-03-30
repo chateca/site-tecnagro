@@ -35,7 +35,7 @@ const router  = useRouter()
    
   return (
     <>
-    <div suppressHydrationWarning  className='about__item__title flex flex-col z-30 relative  gap-3  mb-4 md:mb-8 px-10 '>
+    <div   className='about__item__title flex flex-col z-30 relative  gap-3  mb-4 md:mb-8 px-10 '>
           <h2 className='titulo text-center '>Actividades Recentes</h2> 
 
         </div>
@@ -43,7 +43,7 @@ const router  = useRouter()
     <div className="container w-full grid md:grid-cols-2 lg:grid-cols-4 grid-cols-2 gap-8">
       {
         actividades?.map((item)=>(
-          <div key={item._id}  suppressHydrationWarning={true} className='atividade__item group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
+          <div key={item._id}   className='atividade__item group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
           <div className='relative h-96 w-full'>
              <Image
              src={item.imagem}

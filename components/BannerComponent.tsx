@@ -3,13 +3,7 @@ import { items } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef } from "react";
-
-
-
-    
-
-
+import { useEffect, useRef } from "react"
 
 function BannerComponent() {
   const router = useRouter();
