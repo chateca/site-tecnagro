@@ -1,11 +1,13 @@
 
-
-import BannerComponent from '@/components/BannerComponent';
+'use client'
+import ActividadesRecentes from '@/components/ActividadesRecentes';
 import Contacto from '@/components/Contacto';
 import Parceiros from '@/components/Parceiros';
 import ProdutosEservicos from '@/components/ProdutosEservicos';
 import SobreNos from '@/components/SobreNos';
+import dynamic from 'next/dynamic';
 
+const BannerComponent  = dynamic(()=> import('@/components/BannerComponent'), {ssr:false})
 
 export default function Home() {
 
@@ -22,7 +24,7 @@ export default function Home() {
        </section>
         
         <section className='relative py-20 bg-green-900'>
-         
+          <ActividadesRecentes/>
         </section>
 
         <section id='parceiros'>

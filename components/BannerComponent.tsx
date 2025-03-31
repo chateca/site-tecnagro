@@ -3,7 +3,7 @@ import { items } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef} from "react";
 import faceboock from './../public/assets/icons/facebook.svg';
 import whatsapp from './../public/assets/icons/whatsapp.svg';
 import x from './../public/assets/icons/x.svg';
@@ -61,6 +61,7 @@ function BannerComponent() {
   }, []);
 
   useEffect(() => {
+
     const sr = ScrollReveal({
       origin: "top",
       distance: "60px",
@@ -76,6 +77,7 @@ function BannerComponent() {
     sr.reveal(".atividade__item", { interval: 100 });
     sr.reveal(".service__card", { interval: 100 });
     sr.reveal(".about__item__folha", { delay: 500, scale: 0.3 });
+  
   }, []);
 
   return (
