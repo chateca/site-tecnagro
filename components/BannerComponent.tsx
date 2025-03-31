@@ -3,7 +3,10 @@ import { items } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
+import faceboock from './../public/assets/icons/facebook.svg';
+import whatsapp from './../public/assets/icons/whatsapp.svg';
+import x from './../public/assets/icons/x.svg';
 
 function BannerComponent() {
   const router = useRouter();
@@ -56,18 +59,16 @@ function BannerComponent() {
   }, []);
 
 
-
   return (
     <div ref={sliderRef} className="relative flex w-full max-h-[100vh] h-[100vh] slider">
       <div className="flex flex-col h-full w-full list">
         {items.map((item, index) => (
           <div key={item.id} className={`relative flex w-full h-full item ${index === 0 ? "ative" : ""}`}>
             <Image
-              src={`/assets/img/${item.image}`}
+              src={item.image}
               alt="sliderImage"
               fill
               sizes="100%"
-              loading="lazy"
               className="object-cover w-[100%] h-[100%] brightness-[.4]"
             />
             <div className="content">
@@ -90,13 +91,13 @@ function BannerComponent() {
               </div>
               <div className="mediaSocial">
                 <Link href="#" className="hover:scale-110 transition-transform">
-                  <Image src="/assets/icons/facebook.svg" alt="Facebook" width={24} height={24} className="animate-mediaAnimation" />
+                  <Image src={faceboock} alt="Facebook" width={24} height={24} className="animate-mediaAnimation" />
                 </Link>
                 <Link href="#" className="hover:scale-110 transition-transform">
-                  <Image src="/assets/icons/whatsapp.svg" alt="WhatsApp" width={24} height={24} className="animate-mediaAnimation" />
+                  <Image src={whatsapp} alt="WhatsApp" width={24} height={24} className="animate-mediaAnimation" />
                 </Link>
                 <Link href="#" className="hover:scale-110 transition-transform">
-                  <Image src="/assets/icons/x.svg" alt="X" width={24} height={24} className="animate-mediaAnimation" />
+                  <Image src={x} alt="X" width={24} height={24} className="animate-mediaAnimation" />
                 </Link>
               </div>
             </div>

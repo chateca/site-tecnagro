@@ -1,5 +1,6 @@
 
 
+import BannerComponent from '@/components/BannerComponent';
 import Contacto from '@/components/Contacto';
 import Parceiros from '@/components/Parceiros';
 import ProdutosEservicos from '@/components/ProdutosEservicos';
@@ -10,7 +11,7 @@ export default function Home() {
 
   return (
     <section  className="flex flex-col w-full scroll-section ">
-      
+      <BannerComponent/>
    
      <section id='sobre-nos' className="relative lg:mt-20 xl:mt-20 mt-20 mb-10 overflow-hidden">
      <SobreNos/>

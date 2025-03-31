@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "TecnAgro",
   description: "Consultoria e prestação de serviços",
   icons:{
-    icon:"/assets/img/logo.png"
+    icon:"/assets/img/logo.png",
     
   }
 };

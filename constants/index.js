@@ -1,3 +1,12 @@
+import sementes from './../public/assets/img/semente.jpg'
+import florestal from './../public/assets/img/florestal.jpg'
+import solo from './../public/assets/img/solo.jpg'
+import irrigacao from './../public/assets/img/irrigacao.jpg'
+import tecnologia from './../public/assets/img/tecnologia.jpg'
+
+
+
+
 export const links = [
     {
         nome:'Home', 
@@ -64,7 +73,7 @@ export const items = [
   {
     titulo:"TecnAgro",
     sub:"Formação em Práticas Agroflorestais ",
-    image:'florestal.jpg',
+    image:florestal,
     desc:`
     Programas de capacitação para agricultores, técnicos florestais e ambientalistas, 
     promovendo as melhores práticas agroecológicas e o uso eficiente de tecnologias modernas.
@@ -74,7 +83,7 @@ export const items = [
   {
     titulo:"TecnAgro",
     sub:"Estudos Ecológicos e Ambientais ",
-    image:'solo.jpg',
+    image:solo,
     desc:`
     Levantamentos e estudos detalhados sobre biodiversidade, ecossistemas e impactos ambientais, 
     incluindo análise de flora e fauna, avaliação de habitats, monitoramento ambiental e elaboração de relatórios de impacto ambiental.
@@ -84,7 +93,7 @@ export const items = [
   {
     titulo:"TecnAgro",
     sub:"Instalação e Montagem de Sistemas de Irrigação",
-    image:'irrigacao.jpg',
+    image:irrigacao,
     desc:`
     Desenvolvimento e implementação de sistemas de irrigação eficientes e sustentáveis, 
     adaptados às necessidades específicas de cada propriedade agrícola
@@ -94,7 +103,7 @@ export const items = [
   {
     titulo:"TecnAgro",
     sub:"Soluções de Agricultura Digital ",
-    image:'tecnologia.jpg',
+    image:tecnologia,
     desc:`
     Implementação de tecnologias digitais avançadas para monitoramento e gestão de operações agrícolas, 
     promovendo a agricultura de precisão e a otimização de recursos.
@@ -104,7 +113,7 @@ export const items = [
   {
     titulo:"TecnAgro",
     sub:"Comercialização de Sementes e Produção de Mudas ",
-    image:'semente.jpg',
+    image:sementes,
     desc:`
     Oferta de sementes de espécies nativas e florestais, além da produção de mudas adaptadas ao bioma angolano, 
     promovendo a conservação da biodiversidade e o reflorestamento sustentável
