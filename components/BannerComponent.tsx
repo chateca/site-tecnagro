@@ -7,6 +7,8 @@ import { useEffect, useRef } from "react";
 import faceboock from './../public/assets/icons/facebook.svg';
 import whatsapp from './../public/assets/icons/whatsapp.svg';
 import x from './../public/assets/icons/x.svg';
+import ScrollReveal from '@/constants/Scrollreveal'
+
 
 function BannerComponent() {
   const router = useRouter();
@@ -58,6 +60,23 @@ function BannerComponent() {
   }
   }, []);
 
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: "top",
+      distance: "60px",
+      duration: 2500,
+      delay: 300,
+      reset: true,
+    });
+
+    sr.reveal(".about__item__title");
+    sr.reveal(".about__item__1-image", { origin: "right" });
+    sr.reveal(".about__item__1-content", { origin: "left" });
+    sr.reveal(".about__item__1-numbers", { delay: 500, scale: 0.5 });
+    sr.reveal(".atividade__item", { interval: 100 });
+    sr.reveal(".service__card", { interval: 100 });
+    sr.reveal(".about__item__folha", { delay: 500, scale: 0.3 });
+  }, []);
 
   return (
     <div ref={sliderRef} className="relative flex w-full max-h-[100vh] h-[100vh] slider">
