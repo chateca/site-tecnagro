@@ -84,7 +84,18 @@ export const parceiros = [
 ]
 
 
+
 export const items = [
+  {
+    titulo:"TecnAgro",
+    sub:"Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade ",
+    image:banner,
+    desc:`
+     Elaboração de projetos personalizados e estudos de viabilidade econômica para novos empreendimentos agrícolas,
+     garantindo a sustentabilidade e a rentabilidade dos investimentos.
+    `,
+    id:6
+  }, 
   {
     titulo:"TecnAgro",
     sub:"Formação em Práticas Agroflorestais ",
