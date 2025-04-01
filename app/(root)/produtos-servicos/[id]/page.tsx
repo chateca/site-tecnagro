@@ -3,16 +3,17 @@ import { itemsProdutosServicos } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import banner2 from './../../../../public/assets/img/banner2.jpg'
 
 async function page({params}:{params:{id:number}}) {
   const {id} = await params
-  const item = itemsProdutosServicos.find((item) =>item.id === Number(id))
+  const item= itemsProdutosServicos.find((item) =>item.id === Number(id))
 
   return (
     <div className='relative pt-14 bg-white'>
          <div className='relative w-full h-80 item'>
                             <Image
-                            src={"/assets/img/banner2.jpg"}
+                            src={banner2}
                             alt="banner"
                             fill
                             sizes='auto'
@@ -25,7 +26,7 @@ async function page({params}:{params:{id:number}}) {
       <div className='flex md:flex-row flex-col justify-between gap-8 p-4'>
         <div className='relative w-full lg:h-96 md:h-80 h-60'>
              <Image
-             src={`/assets/img/${item?.image}`}
+             src={item?.image.src||""}
              alt={`${item?.titulo}`}
              fill 
              sizes='100%'

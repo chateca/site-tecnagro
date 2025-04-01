@@ -3,6 +3,16 @@ import florestal from './../public/assets/img/florestal.jpg'
 import solo from './../public/assets/img/solo.jpg'
 import irrigacao from './../public/assets/img/irrigacao.jpg'
 import tecnologia from './../public/assets/img/tecnologia.jpg'
+import banner from './../public/assets/img/banner.jpg'
+
+import p1 from './../public/assets/icons/p1.gif'
+import p2 from './../public/assets/icons/p2.gif'
+import p3 from './../public/assets/icons/p3.gif'
+import p4 from './../public/assets/icons/p4.gif'
+import p5 from './../public/assets/icons/p5.gif'
+import p6 from './../public/assets/icons/p6.gif'
+import chateca from './../public/assets/icons/chateca.png'
+import giz from './../public/assets/icons/giz.jpg'
 
 
 
@@ -34,35 +44,35 @@ export const links = [
 
 export const parceiros = [
         {
-            image:"p1.gif",
+            image:p1,
             id:1
         }, 
         {
-            image:"p2.gif",
+            image:p2,
             id:2
         }, 
         {
-            image:"p3.gif",
+            image:p3,
             id:3
         }, 
         {
-          image:"chateca.png", 
+          image:chateca, 
           id:7
         },
         {
-            image:"p4.gif",
+            image:p4,
             id:4
         }, 
         {
-            image:"p5.gif",
+            image:p5,
             id:5
         }, 
         {
-            image:"p6.gif",
+            image:p6,
             id:6
         },
         {
-          image:"giz.jpg",
+          image:giz,   
           id:8
       }
         
@@ -124,11 +134,12 @@ export const items = [
 ]
 
 
+
 export const itemsProdutosServicos = [
   {
     
     titulo:"Formação em Práticas Agroflorestais ",
-    image:'florestal.jpg',
+    image:florestal,
     desc:`
     Programas de capacitação para agricultores, técnicos florestais e ambientalistas, 
     promovendo as melhores práticas agroecológicas e o uso eficiente de tecnologias modernas.
@@ -138,7 +149,7 @@ export const itemsProdutosServicos = [
   {
     
     titulo:"Estudos Ecológicos e Ambientais ",
-    image:'solo.jpg',
+    image:solo,
     desc:`
     Levantamentos e estudos detalhados sobre biodiversidade, ecossistemas e impactos ambientais, 
     incluindo análise de flora e fauna, avaliação de habitats, monitoramento ambiental e elaboração de relatórios de impacto ambiental.
@@ -148,7 +159,7 @@ export const itemsProdutosServicos = [
   {
     
     titulo:"Instalação e Montagem de Sistemas de Irrigação",
-    image:'irrigacao.jpg',
+    image:irrigacao,
     desc:`
     Desenvolvimento e implementação de sistemas de irrigação eficientes e sustentáveis, 
     adaptados às necessidades específicas de cada propriedade agrícola
@@ -158,7 +169,7 @@ export const itemsProdutosServicos = [
   {
     
     titulo:"Soluções de Agricultura Digital ",
-    image:'tecnologia.jpg',
+    image:tecnologia,
     desc:`
     Implementação de tecnologias digitais avançadas para monitoramento e gestão de operações agrícolas, 
     promovendo a agricultura de precisão e a otimização de recursos.
@@ -168,7 +179,7 @@ export const itemsProdutosServicos = [
   {
     
     titulo:"Comercialização de Sementes e Produção de Mudas ",
-    image:'semente.jpg' ,
+    image:sementes ,
     desc:`
     Oferta de sementes de espécies nativas e florestais, além da produção de mudas adaptadas ao bioma angolano, 
     promovendo a conservação da biodiversidade e o reflorestamento sustentável
@@ -178,7 +189,7 @@ export const itemsProdutosServicos = [
   {
     
     titulo:"Desenvolvimento de Projetos Agrícolas e Estudos de Viabilidade",
-    image:'banner.jpg',
+    image:banner,
     desc:`
      Elaboração de projetos personalizados e estudos de viabilidade econômica para novos empreendimentos agrícolas,
      garantindo a sustentabilidade e a rentabilidade dos investimentos.

@@ -1,6 +1,8 @@
 "use client"
 import Image from 'next/image'
 import React from 'react'
+import folha1 from './../public/assets/img/folha1.png'
+import folha2 from './../public/assets/img/folha2.png'
 
 
 function ProdutosEservicos() {
@@ -16,7 +18,7 @@ function ProdutosEservicos() {
     <div className='container w-full grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8'>
         <Image
         suppressHydrationWarning
-        src={"/assets/img/folha1.png"}
+        src={folha1}
         alt='folha'
         width={200}
         height={200}
@@ -26,7 +28,7 @@ function ProdutosEservicos() {
 
         <Image
         suppressHydrationWarning
-        src={"/assets/img/folha2.png"}
+        src={folha2}
         alt='folha'
         width={200}
         height={200}

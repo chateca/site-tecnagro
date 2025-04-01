@@ -4,6 +4,7 @@ import { BuscarAtividadeUser } from '@/lib/actions/actividades.actions'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import banner4 from './../../../../public/assets/img/banner4.jpg'
 
 
 type Atividade  = {
@@ -33,7 +34,7 @@ console.log(getActivite)
     <div className='relative pt-14 bg-white'>
          <div className='relative w-full h-80 item'>
                             <Image
-                            src={"/assets/img/banner4.jpg"}
+                            src={banner4}
                             alt="banner"
                             fill
                             sizes='auto'

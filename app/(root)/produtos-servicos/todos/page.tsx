@@ -15,7 +15,7 @@ function page() {
             itemsProdutosServicos.map((item)=>(
               <ProdutoServicoItem
               key={item.id}
-              imagem={item.image}
+              imagem={item.image.src}
               titulo={item.titulo}
               descricao={item.desc}
               id={item.id}

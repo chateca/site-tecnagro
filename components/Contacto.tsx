@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from './ui/textarea';
 import Image from 'next/image';
+import contato from './../public/assets/img/contacto.jpg'
 
  
 const formSchema = z.object({
@@ -60,7 +61,7 @@ function Contacto() {
              
         <div className="relative w-full min-h-full max-md:h-[40vh]">
        <Image
-       src={"/assets/img/contacto.jpg"}
+       src={contato}
        alt='contacto'
        fill
        sizes='100%'

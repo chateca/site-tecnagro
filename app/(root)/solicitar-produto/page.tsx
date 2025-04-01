@@ -1,13 +1,21 @@
 import FormPedidos from '@/components/FormPedidos'
 import Image from 'next/image'
 import React from 'react'
+import banner2 from './../../../public/assets/img/banner2.jpg'
+import milho from './../../../public/assets/img/milho.jpg'
+import fejao from './../../../public/assets/img/fejao.jpg'
+import soja from './../../../public/assets/img/soja.jpg'
+import mandioca from './../../../public/assets/img/mandioca.jpg'
+import nhame from './../../../public/assets/img/nhame.jpg'
+import tomate from './../../../public/assets/img/tomate.jpg'
+import delivery from './../../../public/assets/img/delivery.gif'
 
 function page() {
   return (
     <section className='w-full flex flex-col pb-3'>
       <div className='relative w-full h-80 item'>
                       <Image
-                      src={"/assets/img/banner2.jpg"}
+                      src={banner2}
                       alt="banner"
                       fill
                       sizes='auto'
@@ -28,7 +36,7 @@ function page() {
               <div className='flex flex-wrap gap-3 w-full items-center justify-center'>
                    <div className='relative w-16 h-16 rounded-full'>
                    <Image
-                      src={"/assets/img/milho.jpg"}
+                      src={milho}
                       alt="milho"
                       fill
                       sizes='auto'
@@ -38,7 +46,7 @@ function page() {
 
                    <div className='relative w-16 h-16 rounded-full'>
                    <Image
-                      src={"/assets/img/tomate.jpg"}
+                      src={tomate}
                       alt="tomate"
                       fill
                       sizes='auto'
@@ -48,7 +56,7 @@ function page() {
 
                    <div className='relative w-16 h-16 rounded-full'>
                    <Image
-                      src={"/assets/img/nhame.jpg"}
+                      src={nhame}
                       alt="nhame"
                       fill
                       sizes='auto'
@@ -57,7 +65,7 @@ function page() {
                    </div>
                    <div className='relative w-16 h-16 rounded-full'>
                    <Image
-                      src={"/assets/img/soja.jpg"}
+                      src={soja}
                       alt="soja"
                       fill
                       sizes='auto'
@@ -66,7 +74,7 @@ function page() {
                    </div>
                    <div className='relative w-16 h-16 rounded-full'>
                    <Image
-                      src={"/assets/img/mandioca.jpg"}
+                      src={mandioca}
                       alt="mandioca"
                       fill
                       sizes='auto'
@@ -75,7 +83,7 @@ function page() {
                    </div>
                    <div className='relative w-16 h-16 rounded-full'>
                    <Image
-                      src={"/assets/img/fejao.jpg"}
+                      src={fejao}
                       alt="fejao"
                       fill
                       sizes='auto'
@@ -85,7 +93,7 @@ function page() {
               </div>
             <div className='relative w-96 h-96'>
               <Image
-              src={"/assets/img/delivery.gif"}
+              src={delivery}
               alt="delivey image"
               fill
               sizes='auto'

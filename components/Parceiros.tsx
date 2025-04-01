@@ -51,7 +51,7 @@ function Parceiros() {
              className='relative bg-white  w-full h-44 rounded-2xl'
              >
               <Image
-             src={`/assets/icons/${item.image}`}
+             src={item.image}
              alt='Icons'
              fill
              sizes="auto"

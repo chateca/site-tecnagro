@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import logo from './../public/assets/img/logo.png'
 
 function Rodape() {
   return (
@@ -9,7 +10,7 @@ function Rodape() {
       <div className='container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left'>
         
         <div className='relative flex  flex-col items-center md:items-start gap-3'>
-          <Image src='/assets/img/logo.png' 
+          <Image src={logo} 
           alt='logo' 
           width={150} 
           height={150} 

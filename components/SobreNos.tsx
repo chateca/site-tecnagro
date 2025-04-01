@@ -1,6 +1,8 @@
 "use client"
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import sobre from './../public/assets/img/sobre.jpg'
+import sucesso from './../public/assets/img/sucesso.jpg'
 
 import * as React from 'react'
 
@@ -40,7 +42,7 @@ function SobreNos() {
             <div suppressHydrationWarning className='about__item__1-image relative  items-center justify-center flex  w-full   animate-mediaAnimation'>
                 <div className='relative h-96 w-96  z-96'>
                 <Image
-                src={'/assets/img/sobre.jpg'}
+                src={sobre}
                 alt="sobre Image"
                 fill
                 sizes='100%'
@@ -61,7 +63,7 @@ function SobreNos() {
              </div>
              <div className='relative  lg:w-80  w-auto h-auto lg:col-span-1 col-span-2 '>    
                   <Image
-                  src={"/assets/img/sucesso.jpg"}
+                  src={sucesso}
                   alt="sucesso"
                   width={100}
                   height={100}
