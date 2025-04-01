@@ -1,8 +1,9 @@
 "use client"
-import React from 'react';
+import React, { Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from './../public/assets/img/logo.png'
+import LoadingComponentImage from './LoadingComponentImage';
 
 function Rodape() {
   return (
@@ -10,14 +11,16 @@ function Rodape() {
       <div className='container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left'>
         
         <div className='relative flex  flex-col items-center md:items-start gap-3'>
+          <Suspense fallback={<LoadingComponentImage/>} >
+
           <Image src={logo} 
           alt='logo' 
           width={150} 
           height={150} 
           sizes='150px' 
-          style={{ width:"auto", height:"auto"}}
-          unoptimized
+    
           />
+          </Suspense>
 
 
           <p className=' text-[12px] text-justify '>  Nosso objetivo é ser reconhecido como um parceiro estratégico no agronegócio, 
@@ -59,7 +62,7 @@ function Rodape() {
   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
 </svg>
- Luanda, Rua Kwame Nkrumah, Edifício Unitel Money, Nº 54, 5º Andar
+ Lubango, Rua 4 de Fevereiro, Prédio dos Laurianos 3º Andar
           </p>
         </div>
       </div>

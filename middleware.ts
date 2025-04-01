@@ -2,7 +2,7 @@ import { MiddlewareConfig, NextRequest, NextResponse } from "next/server"
 
 const publicRoutes = [
     {path:'/', whenAuthenticated:'next' },
-    {path:'/sign-in', whenAuthenticated:'redirect' },
+    {path:'/login', whenAuthenticated:'redirect' },
     {path:'/galeriaNoTerreno/todos', whenAuthenticated:'next' },
     {path:'/galeriaNoTerreno/:d', whenAuthenticated:'next' },
     {path:'/sobre', whenAuthenticated:'next' },
@@ -14,12 +14,12 @@ const publicRoutes = [
 
 
 ] as const 
-const REDITECT_WHEN_NOT_AUTHENTICATE_ROUTE = '/'
+const REDITECT_WHEN_NOT_AUTHENTICATE_ROUTE = '/login'
 
 export function middleware(request:NextRequest){
    const path = request.nextUrl.pathname
    const publicRoute = publicRoutes.find(route => route.path === path || (route.path.includes(":") && path.startsWith(route.path.split(":")[0])) )
-   const authToken  = request.cookies.get('token')
+   const authToken  = request.cookies.get('session')
 
    if(!authToken && publicRoute){
     return NextResponse.next()
@@ -33,7 +33,7 @@ export function middleware(request:NextRequest){
      
    if(authToken && publicRoute && publicRoute.whenAuthenticated === 'redirect'){
      const redirectUrl  = request.nextUrl.clone()
-     redirectUrl.pathname = '/dashboard'
+     redirectUrl.pathname = '/adminPage'
      return NextResponse.redirect(redirectUrl)
    }
 

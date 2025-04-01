@@ -26,7 +26,7 @@ async function page() {
   const dados = await getDados()
   return (
     <section className='flex flex-col w-full p-4'>
-      <h1 className='text-[28px] font-extrabold  text-green-2'>Solicitações de compra de produtos</h1>
+      <h1 className='text-[28px] max-sm:text-lg font-extrabold  text-green-2'>Solicitações de compra de produtos</h1>
       <Solicitacoes
       items = {JSON.stringify(dados)}
       />

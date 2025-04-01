@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { AuthUser} from '@/lib/actions/atuth.actions'
+import { useRouter } from 'next/navigation'
 
 
 const formSchema = z.object({
@@ -27,6 +28,7 @@ const formSchema = z.object({
 
 
 function LoginForm() {
+  const router = useRouter()
 
      const form = useForm<z.infer<typeof formSchema>>({
             resolver: zodResolver(formSchema),
@@ -83,6 +85,7 @@ function LoginForm() {
                         />
 
                         <Button className='flex  bg-green-1' type="submit">Entrar</Button>
+                        <Button onClick={()=>router.push('/')}  className='flex  bg-green-1' type='button' >Ir a pagina principal</Button>
                     </form>
                     </Form>
   

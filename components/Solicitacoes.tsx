@@ -51,7 +51,7 @@ function Solicitacoes({items}:Props) {
     }
   return (
     <>
-    <div className='w-full p-2 flex justify-between gap-2 mt-4'>
+    <div className='w-full p-2  grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2  gap-2 mt-4 '>
             <button onClick={()=>setMenunavegacao('todas')} className='flex w-full text-[14px] transition hover:scale-[1.02] duration-75 bg-black-3/30 p-4 font-semibold justify-center uppercase'>Todas</button>
             <button onClick={()=>setMenunavegacao('resolvidas')} className='flex w-full text-[14px] transition hover:scale-[1.02] duration-75 bg-green-1/60 p-4 font-semibold justify-center uppercase'>Resolvidas</button>
             <button onClick={()=>setMenunavegacao('pendentes')} className='flex w-full text-[14px] transition hover:scale-[1.02] duration-75 bg-yellow-400/30 p-4 font-semibold justify-center uppercase'>Pendentes</button>

@@ -70,40 +70,40 @@ function SolicitacoesRecentes({dados}:Props) {
 
     const detalhesDoPedido = ({id,nome, email, dataRegistro, telefone, descricao, status, endereco}:Details)=>{
         return(
-            <DrawerContent className='flex flex-col w-full ' >
+            <DrawerContent className='flex flex-col w-full bg-white text-black-3 ' >
             <div className="flex flex-col w-full ">
             <DrawerHeader className='flex flex-col w-full items-center '>
                 <DrawerTitle className='text-[28px]'>Solicitação de produto</DrawerTitle>
                 <DrawerDescription className='text-[18px]'>Dados sobre o pedido de produtos</DrawerDescription>
             </DrawerHeader>
             <div className="flex flex-col  w-full p-4 pb-0 overflow-y-scroll">
-               <div className={`flex flex-col  w-full gap-4 p-2 rounded-xl ${status ==="Aceite" ? 'bg-green-2/30' : status === "Negado" ? 'bg-red-500/30' : 'bg-yellow-400/30' }`}>
+               <div className={`flex flex-col  w-full gap-4 p-2 rounded-xl ${status ==="Aceite" ? 'bg-green-2/30' : status === "Negado" ? 'bg-red-500/30' : 'bg-black-3/80' }`}>
                <div className='flex flex-col w-full px-4 '>
                 <span className='text-end text-[14px] uppercase font-bold'>{status}</span>
-               <span className='text-[18px] text-center font-bold  uppercase'>Pedido feito por: <span className='text-green-3'>{nome}</span></span>
-               <span className='text-[14px] text-center  font-semibold text-gray-400'>Data em que o pedido foi feito: <span className='txet'>{dataRegistro}</span> </span>
+               <span className='lg:text-[18px] md:text-base text-sm text-center font-bold  uppercase'>Pedido feito por: <span className='text-white lg:text-[18px] md:text-base text-sm'>{nome}</span></span>
+               <span className='lg:text-[14px]  md:text-base text-sm text-center  font-semibold text-gray-400'>Data em que o pedido foi feito: <span className='lg:text-[14px] md:text-base text-sm'>{ new Date(dataRegistro).toLocaleDateString()}</span> </span>
                </div>
               
-              <div className='flex w-full items-center justify-center'>
+              <div className='flex flex-row flex-wrap  w-full items-center justify-center space-x-4 '>
                      
-              <div className='flex flex-col px-8'>
-               <span className='text-[18px] font-bold  uppercase'>Telefone:</span>
-               <span className='text-[14px]  font-semibold text-gray-400'>{telefone}</span>
+              <div className='flex flex-col items-center justify-center'>
+               <span className='lg:text-[18px] md:text-base text-sm font-bold  uppercase'>Telefone:</span>
+               <span className='lg:text-[18px] md:text-base text-sm  font-semibold text-gray-400'>{telefone}</span>
                </div>
 
-               <div className='flex flex-col px-8'>
-               <span className='text-[18px] font-bold  uppercase'>Email:</span>
-               <span className='text-[14px]  font-semibold text-gray-400'> {email}</span>
+               <div className='flex flex-col items-center justify-center'>
+               <span className='lg:text-[18px] md:text-base text-sm font-bold  uppercase'>Email:</span>
+               <span className='lg:text-[18px] md:text-base text-sm  font-semibold text-gray-400'> {email}</span>
                </div>
 
-               <div className='flex flex-col px-8'>
-               <span className='text-[18px] font-bold  uppercase'>Endereço:</span>
-               <span className='text-[14px]  font-semibold text-gray-400'>{endereco}</span>
+               <div className='flex flex-col items-center justify-center'>
+               <span className='lg:text-[18px] md:text-base text-sm font-bold  uppercase'>Endereço:</span>
+               <span className='lg:text-[18px] md:text-base text-sm  font-semibold text-gray-400'>{endereco}</span>
                </div>
               </div>
                </div>
                <div className='w-full h-[200px] p-4 border-[1px] mt-3 rounded-xl'>
-                <h2 className='text-center text-[18px] text-green-3 font-bold uppercase'>Detalhes do Pedido</h2>
+                <h2 className='text-center lg:text-[18px] md:text-base text-sm text-green-3 font-bold uppercase'>Detalhes do Pedido</h2>
                     <span className='text-[14px] font-medium '>
                        {descricao}
                     </span>

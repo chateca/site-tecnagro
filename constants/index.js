@@ -14,33 +14,38 @@ import p6 from './../public/assets/icons/p6.gif'
 import chateca from './../public/assets/icons/chateca.png'
 import giz from './../public/assets/icons/giz.jpg'
 
+import home from './../public/assets/img/home.png'
+import acti from './../public/assets/img/atividades.png'
+import coment from './../public/assets/img/comentarios.png'
+import solici from './../public/assets/img/solicitacao.png'
+
+
 
 
 
 export const links = [
     {
         nome:'Home', 
-        link:'/admin',
-        icon:'home.png'
+        link:'/adminPage',
+        icon:home
     }, 
     
     {
         nome:'Actividades', 
         link:'/actividades',
-        icon:'atividades.png'
+        icon:acti
     }, 
     {
         nome:'Comentarios', 
         link:'/comentarios',
-        icon:'comentarios.png'
+        icon:coment
     }, 
     {
         nome:'solicitações de compra', 
         link:'/solicitacaoDeCompras',
-        icon:'solicitacao.png'
+        icon:solici
     }
 ]
-
 
 export const parceiros = [
         {

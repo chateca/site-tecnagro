@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import {links} from '@/constants/index'
 import { logout } from '@/lib/actions/atuth.actions'
+import sair from './../public/assets/img/sair.png'
 
 function LeftSideBar() {
   return (
@@ -49,36 +50,39 @@ function LeftSideBar() {
             </div>
     </div>
       <div className='md:hidden flex backdrop-blur-3xl bg-black-3/40 rounded-t-2xl h-16 w-full absolute bottom-0'>
-      <ul className='flex  p-4 gap-8 items-center  justify-between w-full px-4'>
+      <ul className='flex  p-4 gap-8 items-center  justify-between w-full px-3'>
               {
                 links.map((item)=>(
                   
-                  <Link key={item.nome} href={item.link} className='flex  p-2 rounded-md' >
-                    <li  className='text-sm  font-semibold uppercase'>
+                  <Link key={item.nome} href={item.link} className='p-2 rounded-md' >
+                    <li  className='relative flex flex-col items-center justify-center '>
                       <Image
-                      src={`/assets/img/${item.icon}`}
+                      src={item.icon}
                       alt={item.nome}
                       sizes='40px'
                       width={40}
                       height={40}
                       className='object-cover rounded-full'
                       />
+                      <span className='text-[8px] line-clamp-1'>{item.nome}</span>
                     </li>
                     </Link>
                
                 ))
               }
-              <li  className='text-sm font-semibold uppercase'>
+              <li  className=' flex flex-col items-center justify-center'>
                       <button onClick={logout} className=''>
                       <Image
-                      src={`/assets/img/sair.png`}
+                      src={sair}
                       alt={"logoutIcon"}
                       sizes='40px'
                       width={40}
                       height={40}
                       className='object-cover rounded-full'
                       />
+                      
                       </button>
+                      <span className='text-[8px] line-clamp-1'>Sair</span>
                     </li>
             </ul>
       </div>
