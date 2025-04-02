@@ -15,10 +15,6 @@ function Rodape() {
 
           <Image src={logo} 
           alt='logo' 
-          width={150} 
-          height={150} 
-          sizes='150px' 
-    
           />
           
 
@@ -35,7 +31,7 @@ function Rodape() {
           <h2 className='text-lg font-semibold text-green-400 mb-3'>Navegação</h2>
           <ul className='space-y-2 text-sm'>
             <li><Link href='#' className='hover:text-green-300'>Home</Link></li>
-            <li><Link href='/sobre' className='hover:text-green-300'>Sobre nós</Link></li>
+            <li><Link href='#sobre-nos' className='hover:text-green-300'>Sobre nós</Link></li>
             <li><Link href='/produtos-servicos/todos' className='hover:text-green-300'>Serviços</Link></li>
             <li><Link href='#parceiros' className='hover:text-green-300'>Parceiros</Link></li>
             <li><Link href='#contactos' className='hover:text-green-300'>Contatos</Link></li>

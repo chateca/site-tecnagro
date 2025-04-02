@@ -1,9 +1,9 @@
 import LeftSideBar from "@/components/LeftSideBar";
 export default function AdminLayout({
   children,
-}:{
+}:Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
   
         <main className="flex w-full h-[100vh] max-h-screen">

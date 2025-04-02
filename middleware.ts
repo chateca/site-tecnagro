@@ -19,7 +19,7 @@ const REDITECT_WHEN_NOT_AUTHENTICATE_ROUTE = '/login'
 export function middleware(request:NextRequest){
    const path = request.nextUrl.pathname
    const publicRoute = publicRoutes.find(route => route.path === path || (route.path.includes(":") && path.startsWith(route.path.split(":")[0])) )
-   const authToken  = request.cookies.get('session')
+   const authToken  = request.cookies.get('sessionTecnagro')
 
    if(!authToken && publicRoute){
     return NextResponse.next()

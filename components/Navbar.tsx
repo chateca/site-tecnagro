@@ -55,16 +55,13 @@ const router = useRouter()
   return (
     <header id="navBar" className={`fixed top-0 left-0 w-full items-center justify-center  bg-green-950  z-50 `}>
            <nav className='flex items-center justify-between  w-[100%]   h-16 sm:h-20 lg:px-12 px-3'>
-            <div   onClick={()=>router.push("/")}  className='cursor-pointer  items-center justify-center left-4 z-10'>
+            <div    className='cursor-pointer  items-center justify-center left-4 z-10'>
                 <Image
                 onError={(e) => console.error(e)}
                 src={logo}
                 alt='Logo'
-                width={40}
-                height={40}
-                sizes="100px"
                 priority
-                
+                onClick={()=>router.push("/")}
                 className="object-contain size-32 right-4"
               
                 />
