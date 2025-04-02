@@ -3,9 +3,9 @@ import * as React from "react"
 import Image from 'next/image'
 import Link from 'next/link'
 import {useEffect} from 'react'
-import { Input } from "./ui/input"
-import { useRouter } from "next/navigation"
 
+import { useRouter } from "next/navigation"
+import logo from './../public/assets/img/logo.png'
    
 
 
@@ -55,18 +55,18 @@ const router = useRouter()
   return (
     <header id="navBar" className={`fixed top-0 left-0 w-full items-center justify-center  bg-green-950  z-50 `}>
            <nav className='flex items-center justify-between  w-[100%]   h-16 sm:h-20 lg:px-12 px-3'>
-            <div className='relative  cursor-pointer  items-center justify-center left-4 z-50'>
+            <div   onClick={()=>router.push("/")}  className='cursor-pointer  items-center justify-center left-4 z-10'>
                 <Image
                 onError={(e) => console.error(e)}
-                src={"/assets/img/logo.png"}
+                src={logo}
                 alt='Logo'
-                width={120}
-                height={120}
+                width={40}
+                height={40}
                 sizes="100px"
                 priority
-                placeholder="empty"
+                
                 className="object-contain size-32 right-4"
-                onClick={()=>router.push("/")} 
+              
                 />
             </div>
 
@@ -81,9 +81,7 @@ const router = useRouter()
                   
                   </div>
              
-             <div className="hidden lg:flex">
-                  <Input type="search" placeholder="Pesquisar" />
-             </div>
+            
 
                     <div  className='relative z-50 lg:hidden lg:ring-0 ring-1 ring-white right-3 '>
                     <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-green-2 cursor-pointer">
