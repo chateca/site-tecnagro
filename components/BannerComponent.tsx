@@ -3,7 +3,7 @@ import { items } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState} from "react";
+import { useState} from "react";
 import faceboock from './../public/assets/icons/facebook.svg';
 import whatsapp from './../public/assets/icons/whatsapp.svg';
 import linkedin from './../public/assets/icons/linkedin.svg';
