@@ -7,8 +7,8 @@ import SobreNos from '@/components/SobreNos';
 import { cache} from 'react';
 import { notFound } from 'next/navigation'
 import { BuscarActividadesActivasPaginaPrincipal } from '@/lib/actions/actividades.actions';
-//import BannerComponent from '@/components/BannerComponent';
-import BannerShow from '@/components/BannerShow';
+import BannerComponent from '@/components/BannerComponent';
+//import BannerShow from '@/components/BannerShow';
 
 
 
@@ -26,10 +26,10 @@ export default async function Home() {
 
   return (
     <section  className="flex flex-col w-full scroll-section ">
-         <BannerShow/>
+      <BannerComponent/>
+      
      <section id='sobre-nos' className="relative lg:mt-20 xl:mt-20 mt-20 mb-10 overflow-hidden">
      <SobreNos/>
-   
     </section>
 
         <section id='produtos-servicos' className="relative bg-white overflow-hidden text-green-2 py-20 xl:py-16  ">

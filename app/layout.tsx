@@ -4,8 +4,7 @@ import { Analytics } from '@vercel/analytics/next';
 
 
 import "./globals.css";
-import 'swiper/css';
-import 'swiper/css/pagination';
+
 
 
 

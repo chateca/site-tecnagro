@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { parceiros } from '@/constants';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination , Autoplay} from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
  
 function Parceiros() {
