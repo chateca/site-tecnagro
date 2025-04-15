@@ -64,7 +64,7 @@ const router = useRouter()
                 />
             </div>
 
-            <div id="nav-menu" className="absolute top-0 left-[-100%] min-h-[100vh] w-full bg-black-1/80 backdrop-blur-sm flex items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-full">
+            <div id="nav-menu" className="absolute top-0 left-[-100%] min-h-[100vh] w-full bg-green-950/80 backdrop-blur-sm flex items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-full">
             <ul className='flex flex-col items-center gap-8 lg:flex-row'>
                   <li><Link className='nav-link activeLink' href={"/"}>Home</Link></li>
                   <li><Link className='nav-link' href={"/#sobre-nos"}>Sobre nós</Link></li>

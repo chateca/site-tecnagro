@@ -23,7 +23,7 @@ function Parceiros() {
   }, [])
 
   return (
-    <div className="container flex flex-col w-full overflow-hidden">
+    <div className="container  relative  flex-col w-full overflow-hidden">
       <div className="py-2">
         {isClient?(
           <Swiper

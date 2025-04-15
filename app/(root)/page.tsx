@@ -1,5 +1,6 @@
 import ActividadesRecentes from "@/components/ActividadesRecentes";
 import BannerComponent from "@/components/BannerComponent";
+import Parceiros from "@/components/Parceiros";
 import ProdutosEservicos from "@/components/ProdutosEservicos";
 import SobreNos from "@/components/SobreNos";
 import { BuscarActividadesActivasPaginaPrincipal } from "@/lib/actions/actividades.actions";
@@ -27,6 +28,7 @@ export default async function Home() {
         <ActividadesRecentes
         actividades={publicacoes}
         />
+        <Parceiros/>
       </div>
   );
 }
