@@ -27,7 +27,7 @@ function LeftSideBar() {
               {
                 links.map((item)=>(
                   
-                  <Link key={item.nome} href={item.link} className='flex bg-white/60 p-2 rounded-md' >
+                  <Link key={item.nome} href={item.link} className='flex bg-white/60 p-2 rounded-md'>
                     <li  className='text-[18px] text-green-3 font-semibold uppercase'>  {item.nome}</li>
                     </Link>
                
@@ -36,12 +36,12 @@ function LeftSideBar() {
             </ul>
            </div>
            <div className='flex w-full  bottom-4'>
-              <ul className='flex flex-col w-full gap-2 '>
+              <ul className='flex flex-col w-full gap-2'>
                     <li  className='text-[18px] text-green-3 text-center font-semibold uppercase'>
-                      <button onClick={logout} className='px-8 py-4 bg-white/60 '>Sair</button>
+                      <button onClick={logout} className='px-8 py-4 bg-white/60'>Sair</button>
                     </li>
                   
-              <Link  href={'/'} className='flex bg-white/60 p-2 items-center justify-center' >
+              <Link  href={'/'} className='flex bg-white/60 p-2 items-center justify-center'>
                     <li  className='text-[18px] text-green-3 text-center font-semibold uppercase'>Config Site </li>
                     </Link>
 
@@ -54,7 +54,7 @@ function LeftSideBar() {
                 links.map((item)=>(
                   
                   <Link key={item.nome} href={item.link} className='p-2 rounded-md' >
-                    <li  className='relative flex flex-col items-center justify-center '>
+                    <li  className='relative flex flex-col items-center justify-center'>
                       <Image
                       src={item.icon}
                       alt={item.nome}
