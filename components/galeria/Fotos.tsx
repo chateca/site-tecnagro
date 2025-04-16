@@ -55,7 +55,7 @@ for(let i = page - offSetNumber ; i <= page + offSetNumber; i++ ){
                       <p className='text-lg italic text-white mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-3'>
                         {item.descricao}
                       </p>
-                              <Link href={`/galeriaNoTerreno/${item._id}`} className='rounded-full shadow shadow-black-3/60 bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white'>
+                              <Link prefetch={false} href={`/galeriaNoTerreno/${item._id}`} className='rounded-full shadow shadow-black-3/60 bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white'>
                                 Ver Mais
                               </Link>
                       </div>
@@ -71,13 +71,13 @@ for(let i = page - offSetNumber ; i <= page + offSetNumber; i++ ){
               Number(page) === 1 ?
               <div className='opacity-60  text-sm font-mono font-bold uppercase' aria-disabled="true" >Anterior</div>
             :
-            <Link className='text-sm text-green-2 font-mono font-bold uppercase' href={`?page=${prevPage}`} aria-label='Previous Page'>
+            <Link prefetch={false} className='text-sm text-green-2 font-mono font-bold uppercase' href={`?page=${prevPage}`} aria-label='Previous Page'>
             Anterior
             </Link> 
             }
             {
               pageNumbers.map((item)=>(
-              <Link className='text-sm hidden md:flex text-green-2 font-mono font-bold uppercase' key={item} href={`?page=${item}`}>{item}</Link>
+              <Link prefetch={false} className='text-sm hidden md:flex text-green-2 font-mono font-bold uppercase' key={item} href={`?page=${item}`}>{item}</Link>
               ))
             }
 
@@ -85,7 +85,7 @@ for(let i = page - offSetNumber ; i <= page + offSetNumber; i++ ){
               Number(page) === totalPage ?
               <div className='opacity-60 text-sm  font-mono font-bold uppercase' aria-disabled="true" >Proxima</div>
             :
-            <Link className='text-sm text-green-2 font-mono font-bold uppercase' href={`?page=${nextPage}`} aria-label='Next Page'>
+            <Link prefetch={false} className='text-sm text-green-2 font-mono font-bold uppercase' href={`?page=${nextPage}`} aria-label='Next Page'>
             Proximo
             </Link> 
             }

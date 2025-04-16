@@ -10,7 +10,7 @@ function LeftSideBar() {
     <>
     <div className='flex flex-col w-[300px] bg-green-1 justify-between max-sm:hidden'>
         
-            <Link href={'/'}>
+            <Link prefetch={false} href={'/'}>
             <div className='p-4 bg-black-3'>
                 <Image
                 src={'/assets/img/logo.png'}
@@ -27,7 +27,7 @@ function LeftSideBar() {
               {
                 links.map((item)=>(
                   
-                  <Link key={item.nome} href={item.link} className='flex bg-white/60 p-2 rounded-md'>
+                  <Link prefetch={false} key={item.nome} href={item.link} className='flex bg-white/60 p-2 rounded-md'>
                     <li  className='text-[18px] text-green-3 font-semibold uppercase'>  {item.nome}</li>
                     </Link>
                
@@ -41,7 +41,7 @@ function LeftSideBar() {
                       <button onClick={logout} className='px-8 py-4 bg-white/60'>Sair</button>
                     </li>
                   
-              <Link  href={'/'} className='flex bg-white/60 p-2 items-center justify-center'>
+              <Link prefetch={false}  href={'/'} className='flex bg-white/60 p-2 items-center justify-center'>
                     <li  className='text-[18px] text-green-3 text-center font-semibold uppercase'>Config Site </li>
                     </Link>
 
@@ -53,7 +53,7 @@ function LeftSideBar() {
               {
                 links.map((item)=>(
                   
-                  <Link key={item.nome} href={item.link} className='p-2 rounded-md' >
+                  <Link prefetch={false} key={item.nome} href={item.link} className='p-2 rounded-md' >
                     <li  className='relative flex flex-col items-center justify-center'>
                       <Image
                       src={item.icon}

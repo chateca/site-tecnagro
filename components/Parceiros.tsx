@@ -25,7 +25,7 @@ function Parceiros() {
   return (
     <div className="container  relative  flex-col w-full overflow-hidden">
       <div className="py-2">
-        {isClient?(
+        {isClient?
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
@@ -58,13 +58,13 @@ function Parceiros() {
           }
           </Swiper>
           
-        ):(
+              :
           <div className="grid grid-cols-3 gap-4">
             {parceiros.map((item) => (
               <div key={item.id} className="bg-gray-200 rounded-2xl h-44 animate-pulse"/>
             ))}
           </div>
-        )}
+        }
       </div>
     </div>
   )

@@ -105,13 +105,13 @@ function BannerComponent() {
                 </button>
               </div>
               <div className="mediaSocial">
-                <Link href="https://facebook.com/share/1FdubjDfdh/?mibextid=wwXIfr" className="hover:scale-110 transition-transform">
+                <Link prefetch={false} href="https://facebook.com/share/1FdubjDfdh/?mibextid=wwXIfr" className="hover:scale-110 transition-transform">
                   <Image src={faceboock} alt="Facebook" width={24} height={24} className="animate-mediaAnimation" />
                 </Link>
-                <Link href="#" className="hover:scale-110 transition-transform">
+                <Link prefetch={false} href="#" className="hover:scale-110 transition-transform">
                   <Image src={whatsapp} alt="WhatsApp" width={24} height={24} className="animate-mediaAnimation" />
                 </Link>
-                <Link href="https://linkedin.com/company/tecnagro/" className="hover:scale-110 transition-transform">
+                <Link prefetch={false} href="https://linkedin.com/company/tecnagro/" className="hover:scale-110 transition-transform">
                   <Image src={linkedin} alt="X" width={24} height={24} className="animate-mediaAnimation" />
                 </Link>
               </div>
