@@ -18,6 +18,8 @@ function LeftSideBar() {
                 sizes='100px'
                 width={100}
                 height={100}
+                  priority={true}
+                
                 />
             </div>
             </Link>
@@ -61,6 +63,7 @@ function LeftSideBar() {
                       sizes='40px'
                       width={40}
                       height={40}
+                      priority={true}
                       className='object-cover rounded-full'
                       />
                       <span className='text-[8px] line-clamp-1'>{item.nome}</span>
@@ -77,6 +80,7 @@ function LeftSideBar() {
                       sizes='40px'
                       width={40}
                       height={40}
+                      priority={true}
                       className='object-cover rounded-full'
                       />
                       

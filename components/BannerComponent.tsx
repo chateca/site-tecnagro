@@ -82,9 +82,8 @@ function BannerComponent() {
               fill
               sizes="100vw"
               className="object-cover brightness-[.4]"
-              priority={item.id === 1 ? true : false}
-              loading={item.id === 1 ? "eager" : "lazy"}
-            
+              priority={true}
+             
             />
             <div className="content">
               <p className="font-mono lg:text-2xl md:text-xl text-base text-green-2 tracking-widest font-bold uppercase sub">

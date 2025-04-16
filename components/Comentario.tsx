@@ -17,6 +17,7 @@ function Comentario({nome, descricao, data}:{nome:string, descricao:string, data
            fill
            sizes='auto'
            className=' rounded-full'
+           priority={true}
             /> 
           </div>
             

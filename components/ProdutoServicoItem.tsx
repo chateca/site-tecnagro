@@ -17,6 +17,7 @@ function ProdutoServicoItem({imagem, titulo, id}:Props) {
     <div    className='border-[#000] group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer pb-4'>
     <div className='relative lg:h-96 md:h-80 h-40  w-full'>
        <Image
+       priority={true}
        src={imagem}
        alt={"item image"}
        fill

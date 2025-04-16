@@ -66,6 +66,7 @@ function Contacto() {
        alt='contacto'
        fill
        sizes='100%'
+       priority={true}
        className='object-cover size-full brightness-50'
        />
         </div>

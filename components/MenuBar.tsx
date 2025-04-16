@@ -57,7 +57,7 @@ const router = useRouter()
                 onError={(e)=>console.error(e)}
                 src={logo}
                 alt='Logo'
-                priority
+                priority={true}
                 onClick={()=>router.push("/")}
                 className="object-contain size-32 right-4"
               

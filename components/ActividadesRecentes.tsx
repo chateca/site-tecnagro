@@ -50,7 +50,7 @@ const itens  = [1,2,3,4]
              alt={"item image"}
              fill
              sizes='384px'
-             priority={false}
+             priority={true}
              className='object-cover rounded-2xl h-full w-full group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500'
              />
           </div>

@@ -16,6 +16,7 @@ function ProdutosEservicos() {
     
     <div className='container w-full grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8'>
         <Image
+        priority={true}
         src={folha1}
         alt='folha'
         width={200}
@@ -25,6 +26,7 @@ function ProdutosEservicos() {
         />
 
         <Image
+        priority={true}
         src={folha2}
         alt='folha'
         width={200}

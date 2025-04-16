@@ -47,6 +47,7 @@ function SobreNos() {
         </div>
       )}
                 <Image
+                  priority={true}
                 onLoad={()=>setIsLoading(false)}
                 src={sobre}
                 alt="sobre Image"
@@ -75,13 +76,14 @@ function SobreNos() {
         </div>
       )}
     <Image
+      
         onLoad={()=>setIsLoading(false)}
       src={sucesso}
       alt="sucesso"
       width={250}  // Defina um valor adequado para desktop
       height={200} // Mantenha a proporção da imagem origina
       className='rounded-xl w-full h-auto' // Mantém a proporção
-      priority={false}
+      priority={true}
     />
   </div>
   <span className='lg:text-lg md:text-base text-sm italic font-medium leading-normal text-gray-200 block mt-4'>
