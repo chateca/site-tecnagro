@@ -3,9 +3,11 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import sobre from './../public/assets/img/sobre.jpg'
 import sucesso from './../public/assets/img/sucesso.jpg'
+import { useState } from 'react'
 
 function SobreNos() {   
   const router = useRouter()
+  const [isLoading, setIsLoading] = useState(true)
   return (
  
         <div className='container space-y-10 xl:space-y-0 pb-4'>
@@ -29,7 +31,7 @@ function SobreNos() {
                   
                     <span className='flex gap-2'>
                       Saber mais
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                      <svg xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                       <path strokeLinecap="round" strokeLinejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
                     </svg>
                       </span>
@@ -39,7 +41,13 @@ function SobreNos() {
 
             <div  className='about__item__1-image relative  items-center justify-center flex  w-full   animate-mediaAnimation'>
                 <div className='relative h-96 w-96  z-96'>
+                {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center z-50 bg-black">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-1"></div>
+        </div>
+      )}
                 <Image
+                onLoad={()=>setIsLoading(false)}
                 src={sobre}
                 alt="sobre Image"
                 fill
@@ -61,12 +69,17 @@ function SobreNos() {
              </div>
              <div className='relative flex lg:w-80 w-full h-auto lg:col-span-1 col-span-2 gap-3 items-center justify-center'>    
   <div className='float-right'>
+  {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center z-50 bg-black">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-1"></div>
+        </div>
+      )}
     <Image
+        onLoad={()=>setIsLoading(false)}
       src={sucesso}
       alt="sucesso"
       width={250}  // Defina um valor adequado para desktop
-      height={200} // Mantenha a proporção da imagem original
-      loading='eager'
+      height={200} // Mantenha a proporção da imagem origina
       className='rounded-xl w-full h-auto' // Mantém a proporção
       priority={false}
     />

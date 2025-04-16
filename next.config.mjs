@@ -23,19 +23,7 @@ const nextConfig = {
    loader: 'default',
       path: '/_next/image'
   },
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          {
-            key: "Content-Security-Policy",
-            value: "default-src 'self'; img-src *; script-src 'self'; style-src 'self' 'unsafe-inline';",
-          },
-        ],
-      },
-    ];
-  },
+   
 };
 
 export default nextConfig;

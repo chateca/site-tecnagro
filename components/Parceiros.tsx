@@ -16,36 +16,23 @@ import 'swiper/css/scrollbar';
 
 
 function Parceiros() {
-  const [isClient, setIsClient] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
 
   return (
-    <div className="container  relative  flex-col w-full overflow-hidden">
-      <div className="py-2">
-        {isClient?
-          <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
-            freeMode={true}
-            pagination={{ clickable: true }}
-            breakpoints={{
-              200: { slidesPerView: 1, spaceBetween: 1 },
-              640: { slidesPerView: 1, spaceBetween: 1 },
-              768: { slidesPerView: 2, spaceBetween: 40 },
-              1024: { slidesPerView: 3, spaceBetween: 50 },
-            }}
-            
-            modules={[EffectFade, Autoplay, Pagination, Virtual]}
-            effect='fade'
-            virtual
-          >
-            {
+    <div className="container  relative  flex-col w-full items-center justify-center overflow-hidden py-8">
+        <h1 className='titulo2 text-center'>Conheça nossos Parceiros</h1>
+      <div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-3 gap-4 py-2">
+{
             parceiros.map((item, index)=>(
-             <SwiperSlide key={item.id} virtualIndex={index} className="relative bg-white w-full h-44 rounded-2xl">
+              <div key={index} className='relative w-32 max-sm:w-20 max-sm:h-16 h-24 rounded-2xl bg-white'>
+                      {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center z-50 bg-black">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-1"></div>
+        </div>
+      )}
                 <Image
+                onLoad={()=>setIsLoading(false)}
                   src={item.image}
                   alt={'Parceiro'}
                   fill
@@ -53,20 +40,11 @@ function Parceiros() {
                   className="object-contain rounded-2xl"
                   priority={false}
                 />
-              </SwiperSlide>
-            ))
-          }
-          </Swiper>
-          
-              :
-          <div className="grid grid-cols-3 gap-4">
-            {parceiros.map((item) => (
-              <div key={item.id} className="bg-gray-200 rounded-2xl h-44 animate-pulse"/>
+              </div>
+   
             ))}
           </div>
-        }
       </div>
-    </div>
   )
 }
 

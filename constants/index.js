@@ -50,35 +50,43 @@ export const links = [
 export const parceiros = [
         {
             image:p1,
-            id:1
+            id:1,
+            nome:"p1"
         }, 
         {
             image:p2,
-            id:2
+            id:2, 
+            nome:'p2'
         }, 
         {
             image:p3,
-            id:3
+            id:3, 
+            nome:'p3'
         }, 
         {
           image:chateca, 
-          id:7
+          id:7, 
+          nome:'p4'
         },
         {
             image:p4,
-            id:4
+            id:4,
+            nome:'p5'
         }, 
         {
             image:p5,
-            id:5
+            id:5, 
+            nome:'p6'
         }, 
         {
             image:p6,
-            id:6
+            id:6, 
+            nome:'p7'
         },
         {
           image:giz,   
-          id:8
+          id:8, 
+          nome:'p9'
       }
         
 ]

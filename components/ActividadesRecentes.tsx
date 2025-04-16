@@ -1,7 +1,8 @@
 "use client"
+import { BuscarActividadesActivasPaginaPrincipal } from '@/lib/actions/actividades.actions';
 import Image from 'next/image'
-
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 type Atividade  = {
   imagem:string, 
@@ -10,10 +11,21 @@ type Atividade  = {
   titulo:string
 }[]
 
-function ActividadesRecentes({actividades}:{actividades:string}){
-const router  = useRouter()     
-const actividadeS:Atividade = JSON.parse(actividades)||[]
-   
+function ActividadesRecentes(){
+const router  = useRouter()
+  const [isClient, setIsClient] = useState(false)     
+  const [actividades, setActividades] = useState<Atividade>([])
+  const [isLoading, setIsLoading] = useState(true)
+useEffect(()=>{
+  const buscar = async ()=>{
+        const dados = await BuscarActividadesActivasPaginaPrincipal()
+        setActividades(JSON.parse(dados))
+     }
+     buscar()
+     setIsClient(true)
+     
+},[])
+const itens  = [1,2,3,4]
   return (
     <>
     <div className='flex flex-col z-30 relative  gap-3  mb-4 md:mb-8 px-10'>
@@ -23,10 +35,17 @@ const actividadeS:Atividade = JSON.parse(actividades)||[]
       
     <div className="container w-full grid md:grid-cols-2 lg:grid-cols-4 grid-cols-2 gap-8">
       {
-        actividadeS?.map((item)=>(
+        isClient ?
+        actividades?.map((item)=>(
           <div key={item._id} className='group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
           <div className='relative h-96 w-full'>
+          {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center z-50 bg-black">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-1"></div>
+        </div>
+      )}
              <Image
+              onLoad={()=>setIsLoading(false)}
              src={item.imagem}
              alt={"item image"}
              fill
@@ -49,6 +68,12 @@ const actividadeS:Atividade = JSON.parse(actividades)||[]
               </div>
         </div>
         ))
+        :
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-full gap-4">
+                    {itens.map((item:number, index:any) => (
+                      <div key={index} className="bg-gray-200 rounded-2xl w-full h-44 animate-pulse"/>
+                    ))}
+                  </div>
       }
         
 
