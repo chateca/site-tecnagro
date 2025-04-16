@@ -22,20 +22,20 @@ type Atividade  = {
 const getActivite = cache( async (id:string)=>{
           
              const atividade =  await BuscarAtividadeUser(id) 
-             const publicacoes =  await BuscarActividadesActivasPaginaPrincipal()
+           
 
-             if(!atividade && !publicacoes ){
+             if(!atividade ){
               return notFound()
                }
              
-             return {getAtividade:atividade, publicacoes}
+             return {getAtividade:atividade}
 }   
 )   
 
 async function page({params}:{params:{id:string}}) {
   const {id} = params
   const {getAtividade}:Atividade = await  getActivite(id)
-  const {publicacoes} = await  getActivite(id)
+ 
   
   return (
     <div className='relative pt-14 bg-white'>
@@ -84,7 +84,6 @@ async function page({params}:{params:{id:string}}) {
 
       <div className='container mb-10'>
        <ActividadesRecentes
-       actividades={publicacoes}
        />
       </div>
         
