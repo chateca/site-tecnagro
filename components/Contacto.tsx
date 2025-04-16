@@ -65,7 +65,7 @@ function Contacto() {
        src={contato}
        alt='contacto'
        fill
-       sizes='100%'
+       sizes='200px'
        priority={true}
        className='object-cover size-full brightness-50'
        />

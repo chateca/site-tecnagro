@@ -1,5 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+  },
+
     reactStrictMode: true,
   images: {
       dangerouslyAllowSVG: true,
@@ -23,8 +34,17 @@ const nextConfig = {
     minimumCacheTTL: 86400,
     deviceSizes: [360, 640, 750, 828, 1080, 1200, 1920], // Adicionei 360 para mobile
     imageSizes: [16, 32, 48, 64, 96],
+    qualities:[75,80],
    loader: 'default',
       path: '/_next/image'
+  },
+
+  webpack: (
+    config,
+    { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
+  ) => {
+    // Important: return the modified config
+    return config
   },
    
 };
