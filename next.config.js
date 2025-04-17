@@ -1,4 +1,18 @@
 /** @type {import('next').NextConfig} */
+
+const cspHeader = `
+  default-src 'self';
+  script-src 'self' 'unsafe-eval' 'unsafe-inline';
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' data: blob:;
+  font-src 'self';
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+  frame-ancestors 'none';
+  upgrade-insecure-requests;
+`;
+
 const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
@@ -68,7 +82,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "script-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob:; object-src 'none'; base-uri 'self';",
+            value: cspHeader.replace(/\n/g, ''),
           },
         ],
       },
