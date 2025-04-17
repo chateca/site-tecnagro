@@ -23,7 +23,7 @@ const getDados = async ()=>{
 
 
 async function page() {
-  const session = (await cookies()).get('session')?.value
+  const session = (await cookies()).get('sessionTecnagro')?.value
   if (!session) return redirect('/login')
   const dados = await getDados()
   return (

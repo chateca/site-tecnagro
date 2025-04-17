@@ -19,7 +19,7 @@ function Parceiros() {
   }, [])
 
   return (
-    <div className="flex flex-col w-full overflow-hidden">
+    <div id='parceiros' className="flex flex-col w-full overflow-hidden">
       <h1 className='titulo2 text-center mt-12 '>Nossos Parceiros</h1>
       <div className="container flex items-center justify-center py-2">
         {isClient ? 

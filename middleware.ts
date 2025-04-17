@@ -9,10 +9,7 @@ const publicRoutes = [
     {path:'/solicitar-produto', whenAuthenticated:'next' },
     {path:'/produtos-servicos/todos', whenAuthenticated:'next' },
     {path:'/produtos-servicos/:id', whenAuthenticated:'next' },
-   
-
-
-
+  
 ] as const 
 const REDITECT_WHEN_NOT_AUTHENTICATE_ROUTE = '/login'
 

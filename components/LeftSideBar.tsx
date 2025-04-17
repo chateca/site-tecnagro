@@ -6,6 +6,9 @@ import { logout } from '@/lib/actions/atuth.actions'
 import sair from './../public/assets/img/sair.png'
 
 function LeftSideBar() {
+  const Logout = async ()=>{
+      await logout()
+  }
   return (
     <>
     <div className='flex flex-col w-[300px] bg-green-1 justify-between max-sm:hidden'>
@@ -42,7 +45,7 @@ function LeftSideBar() {
            <div className='flex w-full  bottom-4'>
               <ul className='flex flex-col w-full gap-2'>
                     <li  className='text-[18px] text-green-3 text-center font-semibold uppercase'>
-                      <button onClick={logout} className='px-8 py-4 bg-white/60'>Sair</button>
+                      <button onClick={()=>Logout()} className='px-8 py-4 bg-white/60'>Sair</button>
                     </li>
                   
               <Link prefetch={false}  href={'/'} className='flex bg-white/60 p-2 items-center justify-center'>
@@ -75,7 +78,7 @@ function LeftSideBar() {
                 ))
               }
               <li  className=' flex flex-col items-center justify-center'>
-                      <button onClick={logout} className=''>
+                      <button onClick={()=>Logout()} className=''>
                       <Image
                       src={sair}
                       alt={"logoutIcon"}
@@ -85,7 +88,6 @@ function LeftSideBar() {
                       priority={true}
                       className='object-cover rounded-full'
                       />
-                      
                       </button>
                       <span className='text-[8px] line-clamp-1'>Sair</span>
                     </li>

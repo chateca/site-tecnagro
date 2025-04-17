@@ -29,7 +29,7 @@ function page() {
             <div className='flex flex-col w-full items-center text-center space-y-4 justify-center p-4'>
                  <h1 className='lg:text-8xl md:text-6xl sm:text-4xl text-2xl font-extrabold text-green-2'>TecnAgro</h1>
                  <span className='lg:text-4xl md:text-3xl sm:text-xl text-lg font-bold text-gray-400'>
-                  Faça a solicitacao do seu produto, e receba em pouco tempo! <br/>
+                  Faça a solicitação do seu produto, e receba em pouco tempo! <br/>
                   Garantimos segurança e rapidez na entrega. 
                  </span>
             </div>
