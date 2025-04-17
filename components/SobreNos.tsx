@@ -52,7 +52,7 @@ function SobreNos() {
                 src={sobre}
                 alt="sobre Image"
                 fill
-                sizes='100%'
+                sizes='100px'
                 className='object-cover rounded-xl'
                 />
                 </div>

@@ -17,10 +17,15 @@ const router  = useRouter()
   const [actividades, setActividades] = useState<Atividade>([])
   const [isLoading, setIsLoading] = useState(true)
 useEffect(()=>{
-  const buscar = async ()=>{
+
+    const buscar = async ()=>{
+      try {
         const dados = await BuscarActividadesActivasPaginaPrincipal()
         setActividades(JSON.parse(dados))
-     }
+      } catch (error) {
+        console.log('erro ao buscar actividades', error)
+      }
+   }
      buscar()
      setIsClient(true)
      

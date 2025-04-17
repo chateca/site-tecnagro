@@ -2,12 +2,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {useEffect} from 'react'
-
 import { useRouter } from "next/navigation"
-import logo from './../public/assets/img/logo.png'
+import logo from '../public/assets/img/logo.png'
    
-
-
 function NavBar() {
   useEffect(()=>{
   
@@ -52,15 +49,22 @@ const router = useRouter()
   return (
     <header id="navBar" className='fixed top-0 left-0 w-full items-center justify-center bg-green-950 z-50'>
            <nav className='flex items-center justify-between w-[100%] h-14 sm:h-16 lg:px-12 px-3'>
-            <div className='cursor-pointer h-full flex items-center justify-center left-4 z-10'>
+            <div onClick={()=>router.push("/")} className='cursor-pointer h-full flex items-center justify-center left-4 z-10'>
                 <Image
                 onError={(e)=>console.error(e)}
                 src={logo}
                 alt='Logo'
-                priority={true}
-                onClick={()=>router.push("/")}
-                className="object-contain size-32 right-4"
-              
+                width={50}
+                height={50}
+                style={{
+                  width:'auto',
+                  height:'auto'
+                }}
+                
+                 loading='eager'
+                 placeholder='empty'
+                 overrideSrc='/override.png'
+                className="object-cover right-4"
                 />
             </div>
 

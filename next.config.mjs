@@ -20,7 +20,13 @@ const nextConfig = {
       dangerouslyAllowSVG: true,
       contentDispositionType: 'attachment',
       contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    remotePatterns: [
+      localPatterns: [
+        {
+          pathname: '/assets/**',
+          search: '',
+        },
+      ],
+      remotePatterns: [
       {
         protocol: "https",
         hostname: "utfs.io",

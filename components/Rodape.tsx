@@ -11,13 +11,14 @@ function Rodape() {
       <div className='container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left'>
         
         <div className='relative flex  flex-col items-center md:items-start gap-3'>
-        
-
-          <Image src={logo} 
-          alt='logo' 
+          <Image 
+          src={logo} 
+          alt='logo'
+          fill
+           sizes='100px'
+           priority={true}
+           className='object-cover'
           />
-          
-
           <p className=' text-[12px] text-justify'>  Nosso objetivo é ser reconhecido como um parceiro estratégico no agronegócio, 
             liderando a transformação digital do sector e impulsionando o desenvolvimento sustentável da agricultura.</p>
         </div>

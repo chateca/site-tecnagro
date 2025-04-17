@@ -80,7 +80,7 @@ function BannerComponent() {
               src={item.image.src}
               alt="sliderImage"
               fill
-              sizes="100vw"
+              sizes="100px"
               className="object-cover brightness-[.4]"
               priority={true}
              
