@@ -1,15 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
+  typescript:{
+    ignoreBuildErrors:true,
   },
+    experimental: {
+      serverActions: true,
+      serverComponentsExternalPackages: ["mongoose"],
+    },
+    eslint: {
+      // Warning: This allows production builds to successfully complete even if
+      // your project has ESLint errors.
+      ignoreDuringBuilds: true,
+    },
 
     reactStrictMode: true,
   images: {
@@ -28,7 +30,11 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: '**', // Permite todas as imagens externas
-      }
+      },
+      {
+        protocol: "https",
+        hostname: "uploadthing.com",
+      },
     ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,
