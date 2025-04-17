@@ -12,18 +12,25 @@ function Rodape() {
     <footer className='bg-green-950 text-white py-8'>
       <div className='container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left'>
         
-        <div className='relative flex  flex-col items-center md:items-start gap-3'>
+        <div className=' flex  flex-col items-center md:items-start gap-3'>
+          <div className="p-4">
           <Image 
           onLoad={()=>setIsLoading(false)}
           src={logo} 
           alt='logo'
-          fill
+           width={100}
+           height={100}
+           style={{
+            width:'auto', 
+            height:'auto'
+           }}
            className='object-cover'
            loading='lazy'
            blurDataURL={'logo'}
            placeholder='blur'
-           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          
           />
+          </div>
           <p className=' text-[12px] text-justify'>  Nosso objetivo é ser reconhecido como um parceiro estratégico no agronegócio, 
             liderando a transformação digital do sector e impulsionando o desenvolvimento sustentável da agricultura.</p>
         </div>
