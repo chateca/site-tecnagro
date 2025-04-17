@@ -2,6 +2,7 @@
 import NavBar from "@/components/MenuBar";
 import Rodape from "@/components/Rodape";
 import AOS from 'aos'
+import {useEffect} from 'react'
 import 'aos/dist/aos.css';
 
 export default function RootLayout({
