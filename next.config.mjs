@@ -4,8 +4,10 @@ const nextConfig = {
     ignoreBuildErrors:true,
   },
     experimental: {
-      serverActions: true,
-      serverComponentsExternalPackages: ["mongoose"],
+      serverActions:{
+        bodySizeLimit:"4MB",
+       serverComponentsExternalPackages: ["mongoose"],
+     }
     },
     eslint: {
       // Warning: This allows production builds to successfully complete even if
