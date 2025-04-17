@@ -30,10 +30,7 @@ async function page({ searchParams }: { searchParams: { page: number } }) {
       <div className="container pt-28">
         <div className="flex lg:flex-row flex-col space-x-4 shadow-black-3 shadow-lg rounded-2xl px-8">
           <div className="flex flex-col p-16">
-            <h1
-              suppressHydrationWarning
-              className=" atividade__item text-green-2 font-extrabold text-3xl "
-            >
+            <h1  data-aos="fade-down" className=" text-green-2 font-extrabold text-3xl">
               Galeria de midia TecnAgro
             </h1>
             <span className="text-black-3 lg:text-2xl md:text-xl text-lg ">

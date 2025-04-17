@@ -98,6 +98,7 @@ function page() {
               fill
               sizes='auto'
               className='object-cover'
+              unoptimized
               />
             </div>
 

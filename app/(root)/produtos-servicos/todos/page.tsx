@@ -7,7 +7,7 @@ function page() {
   return (
     <div className='bg-white w-full flex flex-col pt-28 pb-10'>
       <div className='container'>
-      <div className='w-full flex mb-4'>
+      <div data-aos="fade-down" className='w-full flex mb-4'>
          <h1 className='titulo'>Produtos e Serviços</h1>
       </div>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-4'>

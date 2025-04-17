@@ -14,7 +14,7 @@ interface Props{
 function ProdutoServicoItem({imagem, titulo, id}:Props) {
     const router=useRouter()
   return ( 
-    <div    className='border-[#000] group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer pb-4'>
+    <div data-aos="zoom-out" className='border-[#000] group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer pb-4'>
     <div className='relative lg:h-96 md:h-80 h-40  w-full'>
        <Image
       

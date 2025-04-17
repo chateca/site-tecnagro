@@ -3,6 +3,9 @@ import { BuscarActividadesActivasPaginaPrincipal } from '@/lib/actions/actividad
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import folha1 from './../public/assets/img/folha1.png'
+import folha2 from './../public/assets/img/folha2.png'
+
 
 type Atividade  = {
   imagem:string, 
@@ -32,17 +35,43 @@ useEffect(()=>{
 },[])
 const itens  = [1,2,3,4]
   return (
-    <>
-    <div className='flex flex-col z-30 relative  gap-3  mb-4 md:mb-8 px-10'>
+    <div className='relative overflow-hidden'>
+    <div data-aos="fade-down" className='flex flex-col z-30 relative  gap-3  mb-4 md:mb-8 px-10'>
           <h2 className='titulo text-center '>Actividades Recentes</h2> 
 
         </div>
       
     <div className="container w-full grid md:grid-cols-2 lg:grid-cols-4 grid-cols-2 gap-8">
+           
+      
+              <Image
+              src={folha2}
+              alt='folha'
+              width={200}
+              height={200}
+              sizes='100px'
+              className='absolute bottom-0 -right-20 animate-mediaAnimation'
+              loading='lazy'
+              blurDataURL={'folha2'}
+              placeholder='blur'
+                         
+              />
+              <Image
+              src={folha1}
+              alt='folha'
+              width={200}
+              height={200}
+              sizes='100px'
+              className='absolute  -top-14 left-14 animate-mediaAnimation'
+              loading='lazy'
+              blurDataURL={'folha1'}
+              placeholder='blur'
+          
+              />
       {
         isClient ?
         actividades?.map((item)=>(
-          <div key={item._id} className='group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
+          <div data-aos="fade-up" key={item._id} className='group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
           <div className='relative h-96 w-full'>
           {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center z-50 bg-black">
@@ -86,7 +115,7 @@ const itens  = [1,2,3,4]
 
         
         </div>
-        </>
+        </div>
   )
 }
 
