@@ -4,6 +4,7 @@ const nextConfig = {
     ignoreBuildErrors:true,
   },
     experimental: {
+      poweredByHeader: false,
       serverActions:{
         bodySizeLimit:"4MB",
        serverComponentsExternalPackages: ["mongoose"],
@@ -64,16 +65,53 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)', // aplica para todas as rotas
+        source: '/(.*)', // Aplica para todas as rotas
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "script-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob:; object-src 'none'; base-uri 'self'; default-src 'self';", 
+            value: `
+              default-src * data: blob: 'unsafe-inline' 'unsafe-eval';
+              script-src * data: blob: 'unsafe-inline' 'unsafe-eval';
+              style-src * data: blob: 'unsafe-inline';
+              img-src * data: blob:;
+              font-src * data: blob:;
+              connect-src * data: blob:;
+              media-src * data: blob:;
+              frame-src * data: blob:;
+              object-src * data: blob:;
+              base-uri *;
+              form-action *;
+              frame-ancestors *;
+            `.replace(/\n/g, '').trim(),
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'ALLOWALL',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '0',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'unsafe-url',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'interest-cohort=()',
+          },
+          {
+            key: 'X-Powered-By',
+            value: '', // Remove o header x-powered-by
           },
         ],
       },
     ];
-  },
+  }
 };
 
 export default nextConfig;
