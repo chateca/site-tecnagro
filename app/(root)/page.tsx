@@ -11,8 +11,12 @@ export default function Home(){
   
   return (
       <div>
-     
-     
+        <BannerComponent/>
+        <SobreNos/>
+        <ProdutosEservicos/>
+        <ActividadesRecentes/>
+        <Contacto/>
+        <Parceiros/>
       </div>
   );
 }
