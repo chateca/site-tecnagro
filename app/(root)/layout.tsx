@@ -12,13 +12,13 @@ export default function RootLayout({
     return (
       <>
       
-    
+      <NavBar/>
         <main>
         <section className='bg-green-950'>
             {children}
         </section>
        </main>
-       
+        
       </>
      
     );
