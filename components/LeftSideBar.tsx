@@ -18,7 +18,9 @@ function LeftSideBar() {
                 sizes='100px'
                 width={100}
                 height={100}
-                  priority={true}
+                loading='lazy'
+                blurDataURL={'item.image'}
+                placeholder='blur'
                 
                 />
             </div>

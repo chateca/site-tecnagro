@@ -77,13 +77,14 @@ function BannerComponent() {
           <div key={item.id} className={`relative flex w-full h-full item ${index === 0 ? "ative" : ""}`}>
             <Image
              onLoad={() => setIsLoading(false)}
-              src={item.image.src}
+              src={item.image}
               alt="sliderImage"
               fill
               sizes="100px"
-              className="object-cover brightness-[.4]"
-              priority={true}
-             
+              className="object-cover brightness-[.4]" 
+              loading='lazy'
+              blurDataURL={'item.image'}
+              placeholder='blur'
             />
             <div className="content">
               <p className="font-mono lg:text-2xl md:text-xl text-base text-green-2 tracking-widest font-bold uppercase sub">

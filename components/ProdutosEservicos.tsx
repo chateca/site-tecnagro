@@ -16,23 +16,29 @@ function ProdutosEservicos() {
     
     <div className='container w-full grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8'>
         <Image
-        priority={true}
         src={folha1}
         alt='folha'
         width={200}
         height={200}
-        sizes='200'
+        sizes='100px'
         className='absolute  -top-14 left-14 animate-mediaAnimation'
+        loading='lazy'
+        blurDataURL={'folha1'}
+        placeholder='blur'
+    
         />
 
         <Image
-        priority={true}
         src={folha2}
         alt='folha'
         width={200}
         height={200}
-        sizes='200'
+        sizes='100px'
         className='absolute bottom-0 -right-20 animate-mediaAnimation'
+        loading='lazy'
+        blurDataURL={'folha2'}
+        placeholder='blur'
+                   
         />
         <div data-aos='fade-up' className='relative bg-green-1 border p-5 cursor-pointer rounded-md hover:-translate-y-5 duration-300 space-y-5'>
             <div className='flex items-center gap-5'>

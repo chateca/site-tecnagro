@@ -47,13 +47,15 @@ function SobreNos() {
         </div>
       )}
                 <Image
-                  priority={true}
                 onLoad={()=>setIsLoading(false)}
                 src={sobre}
                 alt="sobre Image"
                 fill
-                sizes='100px'
                 className='object-cover rounded-xl'
+                loading='lazy'
+                blurDataURL={'sobre'}
+                placeholder='blur'
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 </div>
             </div>
@@ -83,7 +85,10 @@ function SobreNos() {
       width={250}  // Defina um valor adequado para desktop
       height={200} // Mantenha a proporção da imagem origina
       className='rounded-xl w-full h-auto' // Mantém a proporção
-      priority={true}
+      loading='lazy'
+      blurDataURL={'sucesso'}
+      placeholder='blur'
+     
     />
   </div>
   <span className='lg:text-lg md:text-base text-sm italic font-medium leading-normal text-gray-200 block mt-4'>

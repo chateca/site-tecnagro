@@ -65,9 +65,11 @@ function Contacto() {
        src={contato}
        alt='contacto'
        fill
-       sizes='200px'
-       priority={true}
+       sizes='100px'
        className='object-cover size-full brightness-50'
+       loading='lazy'
+       blurDataURL={'contato'}
+       placeholder='blur'
        />
         </div>
                 <div className='flex flex-col  p-4  bg-white'>

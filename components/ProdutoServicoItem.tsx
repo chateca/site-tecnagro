@@ -17,12 +17,15 @@ function ProdutoServicoItem({imagem, titulo, id}:Props) {
     <div    className='border-[#000] group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer pb-4'>
     <div className='relative lg:h-96 md:h-80 h-40  w-full'>
        <Image
-       priority={true}
+      
        src={imagem}
        alt={"item image"}
        fill
-       sizes='384px'
-       className='object-cover rounded-2xl h-full w-full '
+       className='object-cover rounded-2xl h-full w-full'
+       loading='lazy'
+       blurDataURL={'image'}
+       placeholder='blur'
+       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
        />
     </div>
 

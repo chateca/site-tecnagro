@@ -55,9 +55,11 @@ const itens  = [1,2,3,4]
              alt={"item image"}
              fill
              sizes='384px'
-             priority={true}
              className='object-cover rounded-2xl h-full w-full group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500'
-             />
+             loading='lazy'
+             blurDataURL={'item.image'}
+             placeholder='blur'
+            />
           </div>
               <div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#000] group-hover:from-[#000]/30 group-hover:via-[#000]/60 group-hover:to-[#000]/70'></div>
               <div className='absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all duration-500'>
