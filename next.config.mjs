@@ -61,6 +61,19 @@ const nextConfig = {
     return config
   },
    
+  async headers() {
+    return [
+      {
+        source: '/(.*)', // aplica para todas as rotas
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: "script-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob:; object-src 'none'; base-uri 'self';", 
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

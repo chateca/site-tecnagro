@@ -52,22 +52,22 @@ const router = useRouter()
   return (
     <header id="navBar" className='fixed top-0 left-0 w-full items-center justify-center bg-green-950 z-50'>
            <nav className='flex items-center justify-between w-[100%] h-14 sm:h-16 lg:px-12 px-3'>
-            <div onClick={()=>router.push("/")} className='cursor-pointer h-full flex items-center justify-center left-4 z-10'>
+            <div onClick={()=>router.push("/")} className='relative cursor-pointer h-full flex items-center justify-center left-4 z-10'>
                 <Image
                 onLoad={()=>setIsLoading(false)}
                 onError={(e)=>console.error(e)}
                 src={logo}
                 alt='Logo'
-                width={50}
-                height={50}
+                width={100}
+                height={100}
                 style={{
-                  height:'auto',
-                  width:'auto'
+                  height:'20px',
+                  width:'100px'
                 }}
                  className="object-cover right-4"
                  loading='lazy'
                  blurDataURL={'logo'}
-                 placeholder='blur'
+          
                 />
             </div>
 
