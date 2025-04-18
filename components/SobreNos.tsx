@@ -13,7 +13,7 @@ function SobreNos() {
       <div className="flex flex-col items-center lg:flex-row gap-5">
         <div data-aos="fade-right" className="flex flex-col w-full">
           <div data-aos="fade-down"  className="flex flex-col   gap-3   mb-4 md:mb-8 px-10 ">
-            <h2 className="titulo">Apresentação</h2>
+            <h2 className="titulo3">Apresentação</h2>
           </div>
           <div className="p-8  text-white">
             <h3 className="text-2xl font-mono">
@@ -35,7 +35,7 @@ function SobreNos() {
             </p>
           </div>
           <div>
-            <button onClick={() => router.push("/")} className="btn">
+            <button onClick={() => router.push("/sobre")} className="btn">
               <span className="flex gap-2">
                 Saber mais
                 <svg

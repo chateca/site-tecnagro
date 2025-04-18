@@ -42,7 +42,7 @@ function Parceiros() {
           >
             {
             parceiros.map((item, index)=>(
-             <SwiperSlide key={item.id} virtualIndex={index} className="relative bg-white w-full h-44 rounded-2xl flex items-center justify-center">
+             <SwiperSlide key={item.id} virtualIndex={index} className="relative bg-white rounded-2xl flex items-center justify-center">
                 <Image
                   src={item.image}
                   alt={'Parceiro'}

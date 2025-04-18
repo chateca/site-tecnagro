@@ -72,7 +72,7 @@ const itens  = [1,2,3,4]
         isClient ?
         actividades?.map((item)=>(
           <div data-aos="fade-up" key={item._id} className='group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
-          <div className='relative h-96 w-full'>
+          <div className='relative h-72 w-full'>
           {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center z-50 bg-black">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-1"></div>

@@ -73,6 +73,11 @@
   .titulo2{
     @apply font-sans text-green-2 font-extrabold lg:text-4xl md:text-2xl text-xl
   }
+
+  .titulo3{
+    @apply font-sans text-green-2 font-extrabold lg:text-6xl md:text-5xl text-4xl
+  }
+  
   
   
   /*button style*/

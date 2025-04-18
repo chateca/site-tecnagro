@@ -55,7 +55,7 @@ function LeftSideBar() {
               </ul>
             </div>
     </div>
-      <div className='md:hidden flex backdrop-blur-3xl bg-black-3/40 rounded-t-2xl h-16 w-full absolute bottom-0'>
+      <div className='md:hidden flex backdrop-blur-3xl bg-black-3/40 rounded-t-2xl h-16 w-full absolute bottom-0 z-30'>
       <ul className='flex  p-4 gap-8 items-center  justify-between w-full px-3'>
               {
                 links.map((item)=>(

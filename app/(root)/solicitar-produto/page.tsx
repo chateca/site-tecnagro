@@ -12,7 +12,7 @@ import delivery from './../../../public/assets/img/delivery.gif'
 
 function page() {
   return (
-    <section className='w-full flex flex-col pb-3'>
+    <section className='w-full flex flex-col pb-3 bg-white'>
       <div className='relative w-full h-80 item'>
                       <Image
                       src={banner2}
@@ -27,8 +27,8 @@ function page() {
         <div className='relative  w-full flex md:flex-row flex-col p-2  rounded-tr-3xl rounded-bl-3xl bg-white  '>
           <div className='flex flex-col gap-4'>
             <div className='flex flex-col w-full items-center text-center space-y-4 justify-center p-4'>
-                 <h1 className='lg:text-8xl md:text-6xl sm:text-4xl text-2xl font-extrabold text-green-2'>TecnAgro</h1>
-                 <span className='lg:text-4xl md:text-3xl sm:text-xl text-lg font-bold text-gray-400'>
+                 <h1 className='lg:text-6xl md:text-4xl sm:text-2xl text-xl font-extrabold text-green-2'>TecnAgro</h1>
+                 <span className='lg:text-2xl md:text-xl sm:text-base text-sm font-bold text-gray-400'>
                   Faça a solicitação do seu produto, e receba em pouco tempo! <br/>
                   Garantimos segurança e rapidez na entrega. 
                  </span>
@@ -91,7 +91,7 @@ function page() {
                       />
                    </div>
               </div>
-            <div className='relative w-96 h-96'>
+            <div className='relative  h-96'>
               <Image
               src={delivery}
               alt="delivey image"

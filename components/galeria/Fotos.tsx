@@ -38,7 +38,7 @@ for(let i = page - offSetNumber ; i <= page + offSetNumber; i++ ){
               {
                   totalAtividades.map((item)=>(
                   <div data-aos="zoom-out" key={item?._id}  suppressHydrationWarning={true} className='atividade__item group relative rounded-2xl items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black-3 transition-shadow'>
-                  <div className='relative h-96 w-full'>
+                  <div className='relative h-72 w-full'>
                      <Image
                      src={`${item.imagem}`}
                      alt={"item image"}

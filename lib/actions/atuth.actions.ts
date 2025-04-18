@@ -36,8 +36,17 @@ export const AuthUser = async (dadosAuth:AuTh)=>{
     try {
         connectDB()
         const getUser = await User.findOne({email:dadosAuth.email, password:dadosAuth.password}).select('_id name  email')    
-         await createSession(getUser._id)
-      revalidatePath("/adminPage")
+        if(getUser !== null){
+          await createSession(getUser._id)
+          revalidatePath("/adminPage")
+        }else{
+          
+          return {
+            status:400, 
+            mesage:"Usuario nao encontrado",
+            data:getUser
+          }
+        }
     } catch (error) {
         console.log("Algo deu errado ao realizar o login", error)
     }

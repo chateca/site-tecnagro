@@ -104,7 +104,7 @@ function SolicitacoesRecentes({dados}:Props) {
                </div>
                <div className='w-full h-[200px] p-4 border-[1px] mt-3 rounded-xl'>
                 <h2 className='text-center lg:text-[18px] md:text-base text-sm text-green-3 font-bold uppercase'>Detalhes do Pedido</h2>
-                    <span className='text-[14px] font-medium '>
+                    <span className='text-[14px] text-black-3 font-medium '>
                        {descricao}
                     </span>
 
@@ -150,11 +150,11 @@ function SolicitacoesRecentes({dados}:Props) {
                 <li key={item._id} className={`flex gap-4 ${item.status ==="Aceite" ? 'bg-green-2/30' : item.status === "Negado" ? 'bg-red-500/30' : 'bg-yellow-400/30' } p-2 rounded-xl justify-between`}>
                     <span className='text-[14px] font-semibold  uppercase'>{item.nome}</span>
                     <span>{item.status}</span>
-                    <span className='text-gray-600 text-[14px]'>Data: {item.dataRegistro}</span>
+                    <span className='text-gray-600 text-[14px]'>{ new Date(item?.dataRegistro).toLocaleDateString()}</span>
                     
                       <Drawer>
                                     <DrawerTrigger asChild>
-                                        <Button variant="outline">Ver detalhes</Button>
+                                        <Button className='text-sm'  variant="outline">Detalhes</Button>
                                     </DrawerTrigger>
                                      {
                                       detalhesDoPedido({

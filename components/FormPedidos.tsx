@@ -80,16 +80,18 @@ function FormPedidos() {
     <div className="flex w-full p-4 pb-2 bg-green-2/60 rounded-tl-3xl rounded-br-full">
            
     <Form {...form}>
-                     <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col  w-full h-full ">
-                       
+                     <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col justify-between w-full h-full ">
+                       <div className='flex gap-3 flex-col'>
+                           <div className='flex gap-2'>
+
                          <FormField
                          control={form.control}
                          name="nome"
                          render={({ field }) => (
                              <FormItem>
-                             <FormLabel>Seu Nome</FormLabel>
+                             <FormLabel>Nome</FormLabel>
                              <FormControl>
-                                 <Input placeholder="Nome" {...field} />
+                                 <Input className='border-green-950 border-2' placeholder="Nome" {...field} />
                              </FormControl>
                            
                              <FormMessage />
@@ -101,15 +103,18 @@ function FormPedidos() {
                          name="email"
                          render={({ field }) => (
                              <FormItem>
-                             <FormLabel>Seu Email</FormLabel>
+                             <FormLabel>Email</FormLabel>
                              <FormControl>
-                                 <Input placeholder="Email" {...field} />
+                                 <Input className='border-green-950 border-2' placeholder="Email" {...field} />
                              </FormControl>
                             
                              <FormMessage />
                              </FormItem>
                          )}
                          />
+                           </div>
+                           <div className='flex gap-2'>
+
                           <FormField
                          control={form.control}
                          name="telefone"
@@ -117,7 +122,7 @@ function FormPedidos() {
                              <FormItem>
                              <FormLabel>Telefone</FormLabel>
                              <FormControl>
-                                 <Input placeholder="+244 999 999 999" {...field} />
+                                 <Input className='border-green-950 border-2' placeholder="+244 999 999 999" {...field} />
                              </FormControl>
                             
                              <FormMessage />
@@ -132,13 +137,14 @@ function FormPedidos() {
                              <FormItem>
                              <FormLabel>Seu endereço completo</FormLabel>
                              <FormControl>
-                                 <Input placeholder="endereco inclui(Pais, Provincia, Municipio e Bairro)" {...field} />
+                                 <Input className='border-green-950 border-2' placeholder="endereco inclui(Pais, Provincia, Municipio e Bairro)" {...field} />
                              </FormControl>
                             
                              <FormMessage />
                              </FormItem>
                          )}
                          />
+                           </div>
                           <FormField
                                  control={form.control}
                                  name="descricao"
@@ -147,8 +153,8 @@ function FormPedidos() {
                                      <FormLabel>Produtos a Solicitar</FormLabel>
                                      <FormControl>
                                          <Textarea
-                                         placeholder="Digite a sua mensagem "
-                                         className=" flex full max-xl:h-full"
+                                         placeholder="Faça o seu pedido"
+                                         className="flex full h-96 border-green-950 border-2 "
                                          {...field}
                                          />
                                      </FormControl>
@@ -157,6 +163,8 @@ function FormPedidos() {
                                      </FormItem>
                              )}
                              />
+
+                           </div>
                        
                          <Button  type='submit'  className={`btn mt-4 ${enviando ? 'disabled:opacity-75':""}`}>{enviando ? 'Enviando pedido':'Solicitar Produto'}</Button>
                        
