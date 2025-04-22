@@ -2,12 +2,20 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {useEffect, useState} from 'react'
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import logo from '../public/assets/img/logo.png'
+import { navLinks } from '@/constants'
+
 
    
 function NavBar() {
   const [isLoading, setIsLoading] = useState(true)
+  const [linkColor, setLinkColor] = useState()
+  const pathname = usePathname()
+  const pathName = pathname.split('/')[1]
+ 
+
+
   useEffect(()=>{
   
     const navMenu = document.getElementById('nav-menu')
@@ -43,6 +51,8 @@ navLink.forEach(link =>{
     })
 })
 
+    
+
   },[])
  
 const router = useRouter()
@@ -70,11 +80,26 @@ const router = useRouter()
 
             <div id="nav-menu" className="absolute top-0 left-[-100%] min-h-[100vh] w-full bg-green-950/80 backdrop-blur-sm flex items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-full">
             <ul className='flex flex-col items-center gap-8 lg:flex-row'>
-                  <li><Link prefetch={false} className='nav-link activeLink' href={"/"}>Home</Link></li>
-                  <li><Link prefetch={false} className='nav-link' href={"/#sobre-nos"}>Sobre nós</Link></li>
-                  <li><Link prefetch={false} className='nav-link' href={"/#produtos-servicos"}>Produtos e serviços</Link></li>
-                  <li><Link prefetch={false} className='nav-link' href={`/galeriaNoTerreno/todos?page=${1}`}>No Terreno</Link></li>
-                  <li><Link prefetch={false} className='nav-link' href={"/#contactos"}>Contactos</Link></li>
+              {
+                navLinks.map((item)=>{
+                    return (
+                     <li key={item.id} ><Link prefetch={false} className={`
+                      nav-link 
+                      ${item.link === '/#sobre-nos' && pathname === '/sobre' ? 
+                        'activeLink'
+                        :item.link === '/' && pathname ==='/' ? 'activeLink'
+                        :item.link ==='/galeriaNoTerreno' && pathName === 'galeriaNoTerreno' ? 'activeLink'
+                        :item.link === '/#produtos-servicos' && pathName === 'produtos-servicos' ? 'activeLink'
+                        :item.link === '/solicitar-produto' && pathname === '/solicitar-produto' ? 'activeLink'
+                        :''}  
+                        
+                        `} href={item.link ==='/galeriaNoTerreno'? `${item.link}/todos?page=${1}` :item.link}>{item.nome}</Link></li>
+                  )
+                  
+                  
+                    })
+              }
+             
                   </ul>
                   </div>
         
