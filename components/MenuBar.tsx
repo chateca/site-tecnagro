@@ -58,12 +58,9 @@ const router = useRouter()
                 onError={(e)=>console.error(e)}
                 src={logo}
                 alt='Logo'
-                width={100}
-                height={100}
-                style={{
-                  height:'20px',
-                  width:'100px'
-                }}
+                width={150}
+                height={150}
+                
                  className="object-cover right-4"
                  loading='lazy'
                  blurDataURL={'logo'}
